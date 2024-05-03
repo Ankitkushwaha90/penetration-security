@@ -33,7 +33,7 @@ const config: DocsThemeConfig = {
     link: 'https://github.com/ankitkushwaha90',
   },
   chat: {
-    link: 'https://discord.com',
+    link: 'https://anonymous-hat-hacker.vercel.app/',
   },
   docsRepositoryBase: 'https://github.com/ankitkushwaha90',
   footer: {
