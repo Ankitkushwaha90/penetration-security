@@ -1,0 +1,72 @@
+
+# Ngrok Overview
+Ngrok is a powerful tool that creates secure tunnels to localhost, exposing local servers behind NATs and firewalls to the public internet over secure tunnels. It's commonly used for testing webhooks and APIs during development or for securely accessing local services remotely.
+
+[Ngrok token](https://dashboard.ngrok.com/get-started/setup/linux)
+## Key Features
+- Expose local servers to the internet securely.
+- Supports TCP, HTTP, and HTTPS protocols.
+- Secure end-to-end encryption.
+- Inspection and replay of HTTP requests.
+- Custom subdomains.
+## Basic Commands
+- 1. Download Ngrok
+```md
+$ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+```
+## Downloads Ngrok for Linux. (Replace with appropriate OS version if needed)
+
+- 2. Unzip Ngrok
+```md
+$ unzip ngrok-stable-linux-amd64.zip
+```
+Unzips the Ngrok archive.
+
+- 3. Authentication
+```md
+$ ./ngrok authtoken <your-auth-token>
+```
+Authenticates Ngrok with your account. (Get your auth token from ngrok.com)
+
+- 4. Start a Tunnel
+```md
+$ ./ngrok http 80
+```
+Starts a tunnel on port 80. Replace 80 with your local server port.
+
+- 5. Inspect Traffic
+```md
+$ ./ngrok http 80 --inspect
+```
+Starts a tunnel with traffic inspection enabled.
+
+- 6. Custom Subdomain
+```md
+$ ./ngrok http -subdomain=example 80
+```
+Creates a tunnel with a custom subdomain "example".
+
+- 7. List Tunnels
+```md
+$ ./ngrok tunnels
+```
+Lists all active tunnels.
+
+- 8. Stop All Tunnels
+```md
+$ ./ngrok kill
+```
+Stops all Ngrok tunnels.
+
+- 9. Version Information
+```md
+$ ./ngrok version
+```
+Displays Ngrok version information.
+
+- 10. Help
+```md
+$ ./ngrok help
+```
+Displays help information for Ngrok.
+

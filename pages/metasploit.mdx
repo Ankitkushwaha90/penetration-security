@@ -1,0 +1,74 @@
+### Basic Commands in Metasploit Framework
+- 1. Help Command
+```md
+msf > help
+```
+Displays a list of available commands and their descriptions.
+
+- 2. Show Command
+```md
+msf > show options
+```
+Displays options for the currently selected module.
+
+- 3. Use Command
+```md
+msf > use exploit/multi/handler
+```
+Selects an exploit or auxiliary module to use.
+
+- 4. Search Command
+```md
+msf > search type:exploit platform:windows
+```
+Searches for modules based on criteria such as type, platform, etc.
+
+- 5. Info Command
+```md
+msf > info exploit/windows/smb/ms17_010_eternalblue
+```
+Displays information about a specific module.
+
+- 6. Set Command
+```md
+msf > set RHOSTS 192.168.1.100
+```
+Sets a value for a specific option in the currently selected module.
+
+- 7. Exploit Command
+```md
+msf > exploit
+```
+Executes the selected exploit module.
+
+- 8. Check Command
+```md
+msf > check
+```
+Checks whether a target is vulnerable to a particular exploit.
+
+- 9. Sessions Command
+```md
+msf > sessions -l
+```
+Lists all active sessions.
+
+- 10. Interact Command
+```md
+msf > sessions -i 1
+```
+Interacts with a specific session.
+
+- 11. Background Command
+```md
+msf > background
+```
+Puts the current session into the background.
+
+- 12. Exit Command
+```md
+msf > exit
+```
+Exits the Metasploit Framework console.
+
+These are some of the basic commands used in the Metasploit Framework for penetration testing and exploitation purposes.

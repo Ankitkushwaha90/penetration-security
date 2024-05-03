@@ -1,0 +1,135 @@
+-- File Handling in Java: Using Separate Keywords
+
+# Introduction
+Welcome to the File Handling in Java tutorial! File handling is an essential aspect of programming that involves reading from and writing to files. In Java, file handling can be achieved using various keywords and constructs. In this tutorial, we'll explore how to perform file handling in Java using specific keywords: `try`, `catch`, `finally`, `throws`, and `throw`.
+
+## Using `try` for Exception Handling
+The `try` block is used to enclose the code that might throw an exception. It is followed by one or more `catch` blocks to handle the exceptions. Let's see an example:
+
+```java
+import java.io.*;
+
+public class TryExample {
+    public static void main(String[] args) {
+        try {
+            // Code that might throw an exception
+            File file = new File("example.txt");
+            FileReader reader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(reader);
+            String line = bufferedReader.readLine();
+            System.out.println("Content of file: " + line);
+            bufferedReader.close();
+        } catch (IOException e) {
+            // Handle IOException
+            System.out.println("Error reading file: " + e.getMessage());
+        }
+    }
+}
+```
+In this example, we use a `try` block to read from a file. If an `IOException` occurs during file reading, it is `caught` by the catch block.
+
+## Using catch for Exception Handling
+The `catch` block is used to handle exceptions caught by the `try` block. It contains code to handle specific types of exceptions. Here's an example:
+
+```java
+public class CatchExample {
+    public static void main(String[] args) {
+        try {
+            int result = divide(10, 0);
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            // Handle ArithmeticException
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+    public static int divide(int dividend, int divisor) {
+        // Divide operation that might throw ArithmeticException
+        return dividend / divisor;
+    }
+}
+```
+In this example, the divide method performs a division operation that might throw an ArithmeticException. The exception is caught and handled by the catch block in the main method.
+
+## Using `finally` for Cleanup Operations
+The `finally` block is used to execute code after the `try` block, regardless of whether an exception is thrown or not. It is often used for cleanup operations such as closing resources. Here's an example:
+
+```java
+public class FinallyExample {
+    public static void main(String[] args) {
+        BufferedReader reader = null;
+        try {
+            File file = new File("example.txt");
+            FileReader fileReader = new FileReader(file);
+            reader = new BufferedReader(fileReader);
+            String line = reader.readLine();
+            System.out.println("Content of file: " + line);
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
+        } finally {
+            try {
+                if (reader != null) {
+                    reader.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error closing reader: " + e.getMessage());
+            }
+        }
+    }
+}
+```
+In this example, the `finally` block is used to close the `BufferedReader` resource, ensuring that it is properly closed even if an exception occurs.
+
+## Using `throws` for Exception Propagation
+The `throws` keyword is used in method signatures to declare that the method might throw certain exceptions. It is used when the method does not handle the exception itself, but instead propagates it to the calling code. Here's an example:
+
+```java
+public class ThrowsExample {
+    public static void main(String[] args) {
+        try {
+            readFile("example.txt");
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
+        }
+    }
+
+    public static void readFile(String filename) throws IOException {
+        // Code that might throw IOException
+        File file = new File(filename);
+        FileReader reader = new FileReader(file);
+        BufferedReader bufferedReader = new BufferedReader(reader);
+        String line = bufferedReader.readLine();
+        System.out.println("Content of file: " + line);
+        bufferedReader.close();
+    }
+}
+```
+In this example, the readFile method declares that it might throw an IOException by using the throws keyword in its signature.
+
+## Using throw for Manual Exception Throwing
+The `throw` keyword is used to manually throw an exception. It is often used to indicate exceptional conditions that cannot be handled within the current scope. Here's an example:
+
+```java
+public class ThrowExample {
+    public static void main(String[] args) {
+        try {
+            int result = divide(10, 0);
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            // Handle ArithmeticException
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+    public static int divide(int dividend, int divisor) {
+        if (divisor == 0) {
+            throw new ArithmeticException("Divisor cannot be zero");
+        }
+        return dividend / divisor;
+    }
+}
+```
+In this example, the `divide` method throws an `ArithmeticException` if the divisor is zero.
+
+## Conclusion
+Congratulations! You've learned how to perform file handling in Java using specific keywords: try, catch, finally, throws, and throw. Understanding these keywords is essential for effective exception handling and resource management in Java programs. Practice writing and experimenting with file handling code to become proficient in handling file-related operations and managing exceptions in Java.

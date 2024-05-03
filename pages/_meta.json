@@ -1,0 +1,16 @@
+{
+  "index": "Linux commands",
+  "another": "Docker commands",
+  "windows_cmd": "Windows cmd",
+  "java": "Java",
+  "about": {
+    "title": "About",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://twitter.com/shuding_",
+    "newWindow": true
+  }
+}

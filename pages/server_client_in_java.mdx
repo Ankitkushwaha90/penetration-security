@@ -1,0 +1,93 @@
+-- Private Client and Server Communication: Java Tutorial
+
+# Introduction
+Welcome to the Private Client and Server Communication tutorial in Java! In this tutorial, we'll explore how to create a client-server communication system using Java, where the client communicates with the server using a private IP address. We'll discuss both the client and server code and provide a step-by-step explanation.
+
+## Client Code
+Java 
+```java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+public class PrivateClient {
+    public static void main(String[] args) {
+        String serverAddress = "192.168.77.28"; // Private IP address of the server
+        int serverPort = 8000;
+
+        try {
+            // Connect to the server
+            Socket socket = new Socket(serverAddress, serverPort);
+
+            // Open input and output streams for communication with the server
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+
+            // Send data to the server
+            out.println("Hello from the client!");
+
+            // Read the server's response
+            String response = in.readLine();
+            System.out.println("Server response: " + response);
+
+            // Close streams and socket
+            in.close();
+            out.close();
+            socket.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+## Server Code
+Java 
+```java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class PrivateServer {
+    public static void main(String[] args) {
+        int port = 8000;
+
+        try {
+            // Create a server socket bound to a private IP address and port
+            ServerSocket serverSocket = new ServerSocket(port);
+            System.out.println("Server started on port " + port);
+
+            // Listen for incoming connections
+            while (true) {
+                Socket clientSocket = serverSocket.accept(); // Accept connection from client
+
+                // Open input and output streams for communication with the client
+                BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+
+                // Read data from the client and echo it back
+                String inputLine;
+                if ((inputLine = in.readLine()) != null) {
+                    System.out.println("Received from client: " + inputLine);
+                    out.println("Server received: " + inputLine); // Echo the received data back to the client
+                }
+
+                // Close streams and socket
+                in.close();
+                out.close();
+                clientSocket.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+## Tutorial Overview
+In this tutorial, we have two main components:
+
+- Client: The client code establishes a connection to the server using a private IP address and sends a message to the server.
+- Server: The server code listens for incoming connections from clients, receives messages from clients, and echoes them back to the clients.
+This tutorial provides a foundational understanding of how to create a simple client-server communication system using Java, suitable for various networking applications.

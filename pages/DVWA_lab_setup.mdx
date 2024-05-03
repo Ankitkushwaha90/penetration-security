@@ -1,0 +1,89 @@
+
+### Setting up a Damn Vulnerable Web Application (DVWA) lab in Kali Linux is a great way to learn about web application security and penetration testing techniques. Here's a step-by-step tutorial to guide you through the process:
+
+### Step 1: Install Kali Linux
+If you haven't already, download and install Kali Linux on your system. You can get the latest version from the official Kali Linux website.
+
+### Step 2: Install DVWA
+- 1.Open a terminal window in Kali Linux.
+- 2.Update the package repository by running:
+
+sql
+```bash
+sudo apt update
+```
+- 3.Install the required packages for DVWA:
+```bash
+sudo apt install apache2 php mysql-server php-mysql
+```
+
+- 4.Clone the DVWA repository from GitHub:
+```bash
+git clone https://github.com/ethicalhack3r/DVWA /var/www/html/DVWA
+```
+- 5.Change the ownership of the DVWA directory to the Apache user:
+kotlin
+```bash
+sudo chown -R www-data:www-data /var/www/html/DVWA
+```
+- 6.Navigate to the DVWA directory:
+```bash
+cd /var/www/html/DVWA
+```
+- 7.Copy the DVWA configuration file:
+arduino
+```bash 
+cp config/config.inc.php.dist config/config.inc.php
+```
+- 8.Open the DVWA configuration file:
+arduino
+```bash
+nano config/config.inc.php
+```
+- 9.Modify the database settings according to your MySQL setup. Change the values of db_user, db_password, and db_database to your MySQL username, password, and database name respectively.
+### Step 3: Set Up the Database
+- 1.Log in to MySQL:
+```bash
+mysql -u root -p
+- 2.Create a new database for DVWA:
+```
+sql
+```bash 
+CREATE DATABASE dvwa;
+- 3.Grant privileges to the DVWA database user:
+sql
+```bash
+GRANT ALL ON dvwa.* TO 'yourusername'@'localhost' IDENTIFIED BY 'yourpassword';
+```
+Replace 'yourusername' and 'yourpassword' with your desired username and password.
+- 4. Exit MySQL:
+```bash
+exit
+``` 
+### Step 4: Configure PHP Settings
+- 1.Open the php.ini file:
+```bash
+sudo nano /etc/php/7.x/apache2/php.ini
+``` 
+Replace 7.x with your PHP version.
+- 2.Find the following lines and set them as follows:
+```graphql
+allow_url_include = On
+allow_url_fopen = On
+```
+- 3.Save and close the file.
+### Step 5: Start the Apache and MySQL Services
+- 1.Start Apache:
+```sql
+sudo service apache2 start
+```
+- 2.Start MySQL:
+```sql
+sudo service mysql start
+```
+### Step 6: Access DVWA
+- 1.Open a web browser and navigate to http://localhost/DVWA/setup.php.
+- 2.Follow the instructions to set up DVWA. Make sure to create the database and set the security level.
+- 3.After setup, you can access DVWA at http://localhost/DVWA/index.php.
+That's it! You've successfully set up DVWA on your Kali Linux system. Now you can start exploring and learning about web application security. Remember to use this lab responsibly and ethically.
+

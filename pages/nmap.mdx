@@ -1,0 +1,57 @@
+-- Nmap Commands Tutorial
+
+# Introduction
+Welcome to the Nmap Commands tutorial! Nmap is a powerful network scanning and reconnaissance tool used by network administrators, security professionals, and penetration testers to discover hosts and services on a computer network. This tutorial provides an overview of essential Nmap commands for network discovery, port scanning, version detection, and more.
+
+## Installation
+Before using Nmap commands, ensure that Nmap is installed on your system. You can download and install Nmap from the official website or package managers available for your operating system.
+
+## Basic Usage
+Explore the basic usage of Nmap with these commands:
+
+- `nmap <target>`: Perform a basic scan on the specified target.
+- `nmap -sP <target>`: Ping scan to determine which hosts are online.
+- `nmap -sn <target>`: Disable port scanning, only perform host discovery.
+- `nmap -O <target>`: Enable OS detection to determine the operating system of the target.
+
+## Port Scanning
+Scan for open ports on a target system with these commands:
+
+- `nmap -p <port(s)> <target>`: Scan specific port(s) on the target.
+- `nmap -F <target>`: Fast scan, only scan the most common ports.
+- `nmap -T4 <target>`: Set timing template to speed up the scan.
+- `nmap -A <target>`: Aggressive scan, includes OS detection, version detection, and script scanning.
+
+## Version Detection
+Identify service versions running on open ports with these commands:
+
+- `nmap -sV <target>`: Enable version detection.
+- `nmap -sV -p <port(s)> <target>`: Version detection on specific port(s).
+- `nmap --version-intensity <intensity> <target>`: Adjust version detection intensity (0-9).
+
+## Scripting Engine
+Utilize Nmap's scripting engine to perform advanced tasks with these commands:
+
+- `nmap --script <script> <target>`: Execute a specific Nmap script.
+- `nmap --script vuln <target>`: Scan for known vulnerabilities.
+- `nmap --script-updatedb`: Update the script database.
+
+## Output Options
+Customize scan output and save results with these commands:
+
+- `nmap -oN <file> <target>`: Save scan results in normal format.
+- `nmap -oX <file.xml> <target>`: Save scan results in XML format.
+- `nmap -oG <file> <target>`: Save scan results in grepable format.
+
+## Advanced Options
+Explore advanced options and customization with these commands:
+
+- `nmap -v <target>`: Increase verbosity to display more information.
+- `nmap -sS <target>`: TCP SYN scan, stealthier than a full connect scan.
+- `nmap --traceroute <target>`: Perform a traceroute to the target.
+
+## Additional Resources
+For more information and advanced usage of Nmap, refer to the official Nmap documentation, tutorials, and online resources. Experiment with different options and commands to enhance your network scanning and security assessment skills.
+
+# Conclusion
+Congratulations! You've learned the basics of Nmap commands for network scanning and reconnaissance. Practice using Nmap in various scenarios to become proficient in network security assessment and penetration testing.

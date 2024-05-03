@@ -1,0 +1,78 @@
+---
+title: Docker Basic Commands
+---
+### 1. Installation Docker in Linux
+```bash 
+sudo apt update
+sudo apt install docker.io 
+```
+
+### 2. Docker Images 
+- Image examples
+owncloud, nginx, ubuntu, etc ...
+```bash 
+sudo docker pull owncloud 
+sudo docker pull nginx
+sudo docker pull ubuntu
+```
+
+# Docker Basic Commands
+
+## Image Management
+
+- **docker images:** List all Docker images.
+- **docker pull \<image>:** Pull an image from a registry.
+- **docker build \<path>:** Build an image from a Dockerfile.
+- **docker push \<image>:** Push an image to a registry.
+- **docker rmi \<image>:** Remove one or more images.
+
+## Container Management
+
+- **docker ps:** List running containers.
+- **docker ps -a:** List all containers (including stopped ones).
+- **docker run \<image>:** Create and start a container from an image.
+- **docker start \<container>:** Start a stopped container.
+- **docker stop \<container>:** Stop a running container.
+- **docker rm \<container>:** Remove one or more containers.
+- **docker exec -it \<container> \<command>:** Execute a command inside a running container.
+- **docker logs \<container>:** Fetch the logs of a container.
+
+## Network Management
+
+- **docker network ls:** List Docker networks.
+- **docker network create \<name>:** Create a new Docker network.
+- **docker network inspect \<network>:** Inspect a Docker network.
+- **docker network connect \<network> \<container>:** Connect a container to a network.
+- **docker network disconnect \<network> \<container>:** Disconnect a container from a network.
+
+## Volume Management
+
+- **docker volume ls:** List Docker volumes.
+- **docker volume create \<name>:** Create a new Docker volume.
+- **docker volume inspect \<volume>:** Inspect a Docker volume.
+- **docker volume rm \<volume>:** Remove one or more Docker volumes.
+
+## Registry Management
+
+- **docker login:** Log in to a Docker registry.
+- **docker logout:** Log out from a Docker registry.
+- **docker search \<term>:** Search for an image on Docker Hub.
+
+## System Management
+
+- **docker info:** Display Docker system-wide information.
+- **docker version:** Show the Docker version information.
+
+## Container Lifecycle
+
+- **docker start:** Start one or more stopped containers.
+- **docker stop:** Stop one or more running containers.
+- **docker restart:** Restart one or more containers.
+- **docker pause:** Pause all processes within one or more containers.
+- **docker unpause:** Unpause all processes within one or more containers.
+- **docker wait:** Block until one or more containers stop, then print their exit codes.
+
+## Miscellaneous
+
+- **docker-compose up:** Build and start Docker containers defined in a Docker Compose file.
+- **docker-compose down:** Stop and remove Docker containers started with docker-compose up.
