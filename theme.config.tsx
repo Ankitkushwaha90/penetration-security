@@ -37,7 +37,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/ankitkushwaha90',
   footer: {
-    text: 'Kali Society',
+    text: 'penetration-security',
   },
 }
 
