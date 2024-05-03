@@ -11,7 +11,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 // }
 
 const config: DocsThemeConfig = {
-  // logo: ,<span>Kali Society</span>
+  // logo: ,<span>penetration-security</span>
   // title: "Your Title Here", // Add the title here
 
   // titleImage: (
@@ -22,11 +22,11 @@ const config: DocsThemeConfig = {
   //   />
   // ),
   
-  logo: (<span><img src={"https://raw.githubusercontent.com/Ankitkushwaha90/AnkitKushwaha/main/icon.png"} width={50} alt="Kali Society" />Kali Society</span>), // Use the imported image as the logo
+  logo: (<span><img src={"https://raw.githubusercontent.com/Ankitkushwaha90/AnkitKushwaha/main/icon.png"} width={50} alt="penetration-security" />penetration-security</span>), // Use the imported image as the logo
   
     // <div style={{ display: 'flex', alignItems: 'center' }}>
-    // <img src={"https://raw.githubusercontent.com/Ankitkushwaha90/AnkitKushwaha/main/icon.png"} width={100} alt="Kali Society" />
-    //   <span style={{ fontWeight: 'bold' }}>Kali Society</span>
+    // <img src={"https://raw.githubusercontent.com/Ankitkushwaha90/AnkitKushwaha/main/icon.png"} width={100} alt="penetration-security" />
+    //   <span style={{ fontWeight: 'bold' }}>penetration-security</span>
     // </div>
   
   project: {
