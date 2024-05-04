@@ -3,6 +3,8 @@
   "another": "Docker commands",
   "windows_cmd": "Windows cmd",
   "java": "Java",
+  "python": "Python",
+  "c": "C language",
   "about": {
     "title": "About",
     "type": "page"
