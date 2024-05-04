@@ -1,0 +1,19 @@
+# Getting Started with Bash Scripting
+
+In this tutorial, we'll cover the essential steps to get started with Bash scripting, including setting up your environment, writing your first Bash script, and running Bash scripts.
+
+## Setting up Your Environment
+
+Before you begin Bash scripting, ensure that you have a Unix/Linux environment available. Most Unix-like operating systems come with Bash installed by default. You can open a terminal or command prompt to access the Bash shell.
+
+If you're using macOS or Linux, you can open a terminal application such as Terminal or iTerm. For Windows users, you can use the Windows Subsystem for Linux (WSL) or install a Bash shell through tools like Git Bash or Cygwin.
+
+## Writing Your First Bash Script
+
+Once you have access to a Bash shell, you can start writing Bash scripts using a text editor of your choice. Here's a simple "Hello, World!" script to get you started:
+
+```bash
+#!/bin/bash
+
+# This is a comment
+echo "Hello, World!"
