@@ -1,5 +1,5 @@
 const withNextra = require('nextra')({
-  theme: 'nextra-theme-docs',
+  theme: 'penetration-testing-security',
   themeConfig: './theme.config.tsx',
 })
 
