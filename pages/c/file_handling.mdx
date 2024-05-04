@@ -1,0 +1,65 @@
+---
+title: "C Programming Tutorial: File Handling"
+date: "2024-05-04"
+---
+
+# C Programming Tutorial: File Handling
+
+In this tutorial, we'll explore file handling in C programming. File handling allows us to read data from files, write data to files, and perform various operations on files.
+
+## File Pointers
+
+In C programming, file handling is performed using file pointers. A file pointer is a variable that stores the address of the file being accessed.
+
+To work with files in C, you need to include the `<stdio.h>` header file, which contains functions and macros for file handling.
+
+## Opening a File
+
+To open a file in C, you can use the `fopen()` function. The syntax is:
+
+```c
+FILE *fptr;
+fptr = fopen("filename", "mode");
+```
+- `filename`: The name of the file to be opened.
+- `mode`: The mode in which the file should be opened (e.g., "r" for reading, "w" for writing, "a" for appending).
+### Reading from a File
+To read from a file in C, you can use functions like fscanf() or fgets(). Here's an example using fscanf() to read integers from a file:
+
+```c
+FILE *fptr;
+int num;
+fptr = fopen("data.txt", "r");
+if (fptr == NULL) {
+    printf("File does not exist.");
+} else {
+    while (fscanf(fptr, "%d", &num) != EOF) {
+        printf("%d ", num);
+    }
+    fclose(fptr);
+}
+```
+### Writing to a File
+To write to a file in C, you can use functions like `fprintf()` or `fputs()`. Here's an example using `fprintf()` to write integers to a file:
+
+```c
+FILE *fptr;
+int num;
+fptr = fopen("output.txt", "w");
+if (fptr == NULL) {
+    printf("File creation failed.");
+} else {
+    for (num = 1; num <= 5; num++) {
+        fprintf(fptr, "%d\n", num);
+    }
+    fclose(fptr);
+}
+```
+Closing a File
+After performing file operations, it's essential to close the file using the fclose() function to release system resources. The syntax is:
+
+```c
+fclose(fptr);
+```
+### Conclusion
+File handling is an essential aspect of C programming, allowing you to work with external files for reading, writing, and other operations. Understanding file handling operations is crucial for many real-world applications.
