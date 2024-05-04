@@ -1,0 +1,61 @@
+# Tutorial: Minimum Votes Required for Nominee
+
+## Introduction
+
+In this tutorial, we'll discuss a C program to calculate the minimum number of votes required for a nominee to win an election, given the number of nominees and voters.
+
+## Key Concepts
+
+- **Test Cases (T)**: The program takes an integer T representing the number of test cases.
+- **Nominees (N) and Voters (M)**: For each test case, the program takes two integers N and M, where N is the number of nominees and M is the number of voters.
+- **Minimum Votes Required**: The program calculates the minimum number of votes required for a nominee to win based on the number of voters.
+
+## Code Explanation
+
+```c
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int N, M; // Number of nominees and number of voters
+        scanf("%d %d", &N, &M);
+
+        int min_votes_required;
+        if (M % 2 == 0) {
+            min_votes_required = M / 2 + 1;
+        } else {
+            min_votes_required = (M + 1) / 2;
+        }
+
+        printf("%d\n", min_votes_required);
+    }
+
+    return 0;
+}
+```
+### Algorithm Explanation
+- 1.Input: Read the number of test cases (T) from the standard input.
+- 2.For Each Test Case:
+    -Read the number of nominees (N) and the number of voters (M) from the standard input.
+    -Calculate the minimum votes required for a nominee to win:
+    -If the number of voters (M) is even, the minimum votes required is (M / 2) + 1.
+    -If the number of voters (M) is odd, the minimum votes required is ((M + 1) / 2).
+  -3 .Output: Print the minimum votes required for each test case.
+Example
+Suppose we have 2 test cases:
+
+- Test Case 1: N = 3 nominees, M = 5 voters.
+- Test Case 2: N = 4 nominees, M = 6 voters.
+For Test Case 1:
+
+- Number of voters is odd (M = 5).
+- Minimum votes required = (5 + 1) / 2 = 3 votes.
+For Test Case 2:
+
+- Number of voters is even (M = 6).
+- Minimum votes required = 6 / 2 + 1 = 4 votes.
+### Conclusion
+This C program efficiently calculates the minimum number of votes required for a nominee to win an election based on the number of voters and nominees. Understanding this algorithm can be useful in designing fair voting systems and analyzing election outcomes.
