@@ -1,0 +1,58 @@
+# Tutorial: Determining Sports Section Page
+
+In this tutorial, we'll create a simple program in C to determine if a given page number is dedicated to the sports section of a newspaper.
+
+## Overview
+
+We'll write a C program that takes an input page number and checks if it's dedicated to the sports section based on a given condition.
+
+## Prerequisites
+
+Before we begin, make sure you have the following:
+
+- Basic understanding of C programming language
+- Compiler (e.g., GCC, Clang)
+- Terminal or Command Prompt
+
+## Steps
+
+### Step 1: Writing the C Code
+
+Create a new C file (e.g., `sports_section.c`) and write the following code:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int page_number;
+
+    // Input the page number
+    printf("Enter the page number: ");
+    scanf("%d", &page_number);
+
+    // Check if the page number is dedicated to the sports section
+    if (page_number >= 8) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
+    }
+
+    return 0;
+}
+```
+### Step 2: Understanding the Code
+- We declare an integer variable page_number to store the input page number.
+- We prompt the user to input the page number using printf and read the input using scanf.
+- We use an if statement to check if the page number is greater than or equal to 8, which indicates that it's dedicated to the sports section.
+- Depending on the condition, we print either "YES" or "NO" to indicate whether the page is dedicated to the sports section.
+### Step 3: Compiling and Running the Program
+Compile the C program using a C compiler (e.g., GCC) and run the executable:
+
+```bash
+gcc sports_section.c -o sports_section
+./sports_section
+```
+Enter a page number when prompted, and the program will output whether it's dedicated to the sports section or not.
+
+### Conclusion
+Congratulations! You've created a simple C program to determine if a given page number is dedicated to the sports section of a newspaper. Feel free to further customize and expand it based on your requirements.
