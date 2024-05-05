@@ -1,0 +1,91 @@
+# Conditional Statements in Bash Scripting
+
+Conditional statements allow you to control the flow of your Bash scripts based on certain conditions. In this tutorial, we'll cover if statements, case statements, and conditional operators in Bash scripting.
+
+## If Statements
+
+If statements in Bash are used to execute a block of code based on a condition. Here's the basic syntax of an if statement:
+
+```bash
+if [ condition ]; then
+    # code to execute if condition is true
+fi
+```
+For example:
+
+```bash
+age=20
+
+if [ "$age" -ge 18 ]; then
+    echo "You are an adult."
+fi
+```
+In the above example, the `-ge` operator checks if the variable `age` is greater than or equal to 18. If the condition is true, it prints "You are an adult."
+
+### Case Statements
+Case statements provide a way to perform multiple conditional checks in a more concise manner. Here's the basic syntax of a case statement:
+
+```bash
+case expression in
+    pattern1)
+        # code to execute if expression matches pattern1
+        ;;
+    pattern2)
+        # code to execute if expression matches pattern2
+        ;;
+    *)
+        # default code to execute if no patterns match
+        ;;
+esac
+```
+For example:
+
+```bash
+fruit="apple"
+
+case $fruit in
+    "apple")
+        echo "It's an apple."
+        ;;
+    "banana")
+        echo "It's a banana."
+        ;;
+    *)
+        echo "Unknown fruit."
+        ;;
+esac
+```
+In the above example, the case statement checks the value of the variable `fruit` and executes the corresponding code block based on the matching pattern.
+
+### Conditional Operators
+Bash supports various conditional operators for comparing values and testing conditions. Some common operators include:
+
+- `-eq`: equal to
+- `-ne`: not equal to
+- `-gt`: greater than
+- `-lt`: less than
+- `-ge`: greater than or equal to
+- `-le`: less than or equal to
+For example:
+
+```bash
+num1=10
+num2=20
+
+if [ "$num1" -eq "$num2" ]; then
+    echo "The numbers are equal."
+fi
+```
+In the above example, the `-eq` operator checks if `num1` is equal to `num2`.
+
+### Conclusion
+Conditional statements are powerful tools for controlling the flow of your Bash scripts based on certain conditions. By mastering if statements, case statements, and conditional operators, you'll be able to write more flexible and dynamic Bash scripts to handle various scenarios.
+
+```vbnet
+
+This tutorial provides an overview of conditional statements in Bash scripting, covering if statements, case statements, and conditional operators. Feel free to customize or expand upon it to suit your tutorial website's needs.
+```
+
+
+
+
