@@ -1,0 +1,55 @@
+# Functions in Bash Scripting
+
+Functions allow you to encapsulate a block of code that can be reused multiple times within a Bash script. In this tutorial, we'll cover declaring functions, passing arguments to functions, and returning values from functions in Bash scripting.
+
+## Declaring Functions
+
+Functions in Bash are declared using the `function` keyword followed by the function name and parentheses. Here's the basic syntax of declaring a function:
+
+```bash
+function_name() {
+    # code to execute
+}
+```
+For example:
+
+```bash
+greet() {
+    echo "Hello, World!"
+}
+```
+In the above example, we've declared a function named `greet` that echoes "Hello, World!" when called.
+
+### Passing Arguments to Functions
+You can pass arguments to functions in Bash using positional parameters. Within the function, you can access these arguments using special variables like `$1`, `$2`, etc., for the first, second, and subsequent arguments, respectively. Here's how you can pass arguments to a function:
+
+```bash
+greet() {
+    echo "Hello, $1!"
+}
+
+greet "John"
+```
+In the above example, we've passed the argument "John" to the `greet` function, which prints "Hello, John!".
+
+### Returning Values from Functions
+Bash functions can return values using the `return` statement. The return value is stored in the `$?` variable, which can be accessed after calling the function. Here's how you can return values from a function:
+
+```bash
+add() {
+    local result=$(( $1 + $2 ))
+    return $result
+}
+
+add 10 20
+echo "Sum: $?"
+```
+In the above example, the add function calculates the sum of two numbers passed as arguments and returns the result. The return value is then printed using echo.
+
+### Conclusion
+Functions are valuable tools in Bash scripting for organizing and reusing code. By mastering how to declare functions, pass arguments to functions, and return values from functions, you'll be able to write more modular and maintainable Bash scripts for various tasks.
+
+```vbnet
+
+This tutorial provides an overview of functions in Bash scripting, covering how to declare functions, pass arguments to functions, and return values from functions. Feel free to customize or expand upon it to suit your tutorial website's needs.
+```
