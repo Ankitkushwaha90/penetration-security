@@ -1,4 +1,4 @@
-# Kali-Society Docs Template 
+# bug-bounty Docs Template 
 
 This is a template for creating documentation with [Kali-Socity](https://nextra.site).
 
