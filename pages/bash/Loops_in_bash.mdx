@@ -1,0 +1,66 @@
+# Loops in Bash Scripting
+
+Loops are essential constructs in Bash scripting for repeating a block of code multiple times. In this tutorial, we'll cover for loops, while loops, and loop control statements in Bash scripting.
+
+## For Loops
+
+For loops in Bash allow you to iterate over a sequence of values and execute a block of code for each value. Here's the basic syntax of a for loop:
+
+```bash
+for variable in sequence; do
+    # code to execute for each value in the sequence
+done
+```
+For example:
+
+```bash
+for i in {1..5}; do
+    echo "Number: $i"
+done
+```
+In the above example, the for loop iterates over the sequence of numbers from 1 to 5 and prints each number.
+
+### While Loops
+While loops in Bash execute a block of code as long as a specified condition is true. Here's the basic syntax of a while loop:
+
+```bash
+while condition; do
+    # code to execute as long as condition is true
+done
+```
+For example:
+
+```bash
+count=0
+
+while [ "$count" -lt 5 ]; do
+    echo "Count: $count"
+    count=$((count + 1))
+done
+```
+In the above example, the while loop continues to execute as long as the value of `count` is less than 5, printing the value of `count` in each iteration.
+
+### Loop Control
+Bash provides loop control statements to modify the behavior of loops, such as `break` and `continue`.
+
+- `break`: Terminates the loop and exits the loop block.
+- `continue`: Skips the remaining code in the current iteration and continues with the next iteration of the loop.
+For example:
+
+```bash
+for i in {1..10}; do
+    if [ "$i" -eq 5 ]; then
+        break
+    fi
+    echo "Number: $i"
+done
+```
+In the above example, the loop breaks when the value of i is equal to 5, terminating the loop prematurely.
+
+### Conclusion
+Loops are powerful constructs in Bash scripting for repeating tasks and iterating over sequences of values. By mastering for loops, while loops, and loop control statements, you'll be able to write more dynamic and efficient Bash scripts to handle various scenarios.
+
+```vbnet
+
+This tutorial provides an overview of loops in Bash scripting, covering for loops, while loops, and loop control statements. Feel free to customize or expand upon it to suit your tutorial website's needs.
+```
