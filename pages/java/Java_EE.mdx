@@ -1,0 +1,110 @@
+---
+title: Introduction to Java EE (Enterprise Edition)
+description: Learn about Java EE (Enterprise Edition), including an overview of Java EE, servlets, JSP (JavaServer Pages), JavaBeans, and MVC architecture.
+---
+
+# Introduction to Java EE (Enterprise Edition)
+
+Java EE (Enterprise Edition) is a collection of APIs and technologies for building enterprise-level applications in Java. It provides a robust platform for developing scalable, secure, and reliable web-based and enterprise applications. In this tutorial, we'll explore the basics of Java EE, including an overview of Java EE, servlets, JSP (JavaServer Pages), JavaBeans, and MVC architecture.
+
+## Overview of Java EE
+
+Java EE is a platform-independent, scalable, and secure environment for developing and deploying enterprise applications. It provides a comprehensive set of APIs and services for building web-based, distributed, and transactional applications. Java EE includes technologies for web services, messaging, persistence, security, and more.
+
+```java
+public class HelloWorldServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
+        out.println("Hello, Java EE!");
+    }
+}
+```
+### Servlets
+Servlets are Java classes that extend the functionality of web servers to handle client requests and generate dynamic content. They provide a powerful mechanism for building server-side components of web applications. Servlets interact with clients through HTTP requests and responses.
+
+```java
+@WebServlet("/HelloServlet")
+public class HelloServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("<h1>Hello, Servlet!</h1>");
+        out.println("</body></html>");
+    }
+}
+```
+### JSP (JavaServer Pages)
+JSP (JavaServer Pages) is a technology that allows developers to create dynamic web pages using HTML and Java code. JSP pages are compiled into servlets by the server, enabling the execution of Java code within HTML pages. JSP simplifies the process of building dynamic web applications by separating presentation logic from business logic.
+
+```jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello JSP</title>
+</head>
+<body>
+    <h1>Hello, <%= request.getParameter("name") %></h1>
+</body>
+</html>
+```
+### JavaBeans
+JavaBeans are reusable software components that encapsulate data and behavior. They are simple Java classes with properties, constructors, and methods following certain conventions. JavaBeans are commonly used in Java EE applications for representing data objects, business logic components, and reusable UI components.
+
+```java
+public class UserBean implements Serializable {
+    private String username;
+    private String password;
+
+    // Getters and setters
+}
+```
+### MVC Architecture
+MVC (Model-View-Controller) is a software architectural pattern commonly used in Java EE applications for separating concerns and organizing code. In MVC architecture, the model represents the application's data and business logic, the view represents the presentation layer, and the controller acts as an intermediary between the model and view, handling user input and updating the model accordingly.
+
+```java
+// Model
+public class User {
+    private String username;
+    private String password;
+    // Getters and setters
+}
+
+// View (JSP)
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+    <form action="LoginController" method="post">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
+
+// Controller (Servlet)
+@WebServlet("/LoginController")
+public class LoginController extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        // Business logic for authentication
+    }
+}
+```
+### Conclusion
+Java EE (Enterprise Edition) provides a powerful platform for building enterprise-level applications in Java. By leveraging technologies such as servlets, JSP, JavaBeans, and MVC architecture, developers can create scalable, secure, and maintainable web-based and enterprise applications.
+
+That's it for this tutorial on Java EE! Whether you're developing web applications, enterprise systems, or distributed applications, Java EE offers a rich set of APIs and technologies for building robust and reliable software solutions.
+
+```vbnet
+
+This tutorial page covers the basics of Java EE (Enterprise Edition), including an overview of Java EE, servlets, JSP (JavaServer Pages), JavaBeans, and MVC architecture. Feel free to customize it further to suit your website's needs!
+```
