@@ -1,0 +1,99 @@
+---
+title: Java GUI Programming with JavaFX
+description: Learn about Java GUI programming with JavaFX, including an introduction to JavaFX, building user interfaces, event handling, layout management, animation, and effects.
+---
+
+# Java GUI Programming with JavaFX
+
+JavaFX is a set of graphics and media packages that enables developers to design, create, test, debug, and deploy rich client applications that operate consistently across diverse platforms. It provides a modern, Java-based GUI toolkit for developing cross-platform applications with rich user interfaces. In this tutorial, we'll explore the basics of Java GUI programming with JavaFX.
+
+## Introduction to JavaFX
+
+JavaFX is a powerful toolkit for building rich client applications in Java. It provides a comprehensive set of graphics, media, and UI controls that enable developers to create modern and visually appealing user interfaces. JavaFX applications can run on various platforms, including desktop, web, and mobile.
+
+```java
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+public class HelloWorld extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        Button btn = new Button("Hello, World!");
+        btn.setOnAction(e -> System.out.println("Hello, World!"));
+
+        Scene scene = new Scene(btn, 200, 100);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Hello World Application");
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+```
+### Building User Interfaces
+JavaFX provides a wide range of UI controls, such as buttons, labels, text fields, checkboxes, and more, for building user interfaces. You can arrange these controls in layouts, such as VBox, HBox, GridPane, BorderPane, etc., to create complex UI designs.
+
+```java
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+
+VBox root = new VBox();
+Label label = new Label("Enter your name:");
+TextField textField = new TextField();
+root.getChildren().addAll(label, textField);
+```
+### Event Handling
+JavaFX supports event-driven programming, where user interactions and system events trigger actions in the application. You can handle events, such as button clicks, mouse movements, key presses, etc., using event handlers.
+
+```java
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
+
+Button btn = new Button("Click Me");
+btn.setOnAction(new EventHandler<ActionEvent>() {
+    @Override
+    public void handle(ActionEvent event) {
+        System.out.println("Button clicked!");
+    }
+});
+```
+### Layout Management
+Layout management in JavaFX involves arranging UI controls within containers in a structured manner. JavaFX provides various layout panes, such as VBox, HBox, StackPane, GridPane, etc., for organizing UI elements effectively.
+
+```java
+import javafx.scene.layout.HBox;
+import javafx.scene.control.Button;
+
+HBox root = new HBox();
+Button btn1 = new Button("Button 1");
+Button btn2 = new Button("Button 2");
+root.getChildren().addAll(btn1, btn2);
+```
+### Animation and Effects
+JavaFX allows you to create animations and apply visual effects to UI elements to enhance the user experience. You can animate properties of nodes, such as size, position, opacity, etc., and apply effects like shadows, blurs, reflections, etc.
+
+```java
+import javafx.animation.TranslateTransition;
+import javafx.scene.shape.Rectangle;
+import javafx.util.Duration;
+
+Rectangle rect = new Rectangle(100, 100, 50, 50);
+TranslateTransition transition = new TranslateTransition(Duration.seconds(1), rect);
+transition.setToX(200);
+transition.play();
+```
+### Conclusion
+JavaFX provides a powerful platform for developing modern and visually appealing GUI applications in Java. By leveraging its rich set of UI controls, layout management capabilities, event handling mechanisms, and support for animation and effects, you can create engaging user interfaces for a wide range of applications.
+
+That's it for this tutorial on Java GUI programming with JavaFX! Whether you're building desktop applications, mobile apps, or web applications, JavaFX offers a versatile toolkit for creating compelling user interfaces.
+
+```vbnet
+
+This tutorial page covers the basics of Java GUI programming with JavaFX, including an introduction to JavaFX, building user interfaces, event handling, layout management, animation, and effects. Feel free to customize it further to suit your website's needs!
+```
