@@ -1,0 +1,126 @@
+---
+title: Object-Oriented
+description: Learn about object-oriented programming (OOP) concepts in Java, including classes, objects, constructors, encapsulation, inheritance, polymorphism, method overloading, and method overriding.
+---
+
+# Object-Oriented Programming in Java
+
+Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects," which can contain data in the form of fields and code in the form of methods. Java is a powerful object-oriented programming language that supports various OOP concepts. In this tutorial, we'll cover the key OOP concepts in Java.
+
+## Classes and Objects
+
+In Java, a class is a blueprint for creating objects. It defines the properties (fields) and behaviors (methods) that objects of the class will have. Here's an example of a simple class and its instantiation:
+
+```java
+// Defining a class
+public class Car {
+    // Fields
+    String make;
+    String model;
+    int year;
+
+    // Method
+    public void start() {
+        System.out.println("The car is starting...");
+    }
+}
+
+// Creating an object of the Car class
+Car myCar = new Car();
+```
+### Constructors
+A constructor is a special method used to initialize objects. It has the same name as the class and is invoked when an object of the class is created. Constructors can be used to set initial values for object fields.
+
+```java
+public class Car {
+    String make;
+    String model;
+    int year;
+
+    // Constructor
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+}
+
+// Creating an object of the Car class using a constructor
+Car myCar = new Car("Toyota", "Corolla", 2022);
+```
+### Encapsulation
+Encapsulation is the mechanism of wrapping data (fields) and methods within a single unit (class). It helps in hiding the internal state of an object and only exposing the necessary functionality.
+
+```java
+public class Car {
+    private String make;
+    private String model;
+    private int year;
+
+    // Getters and setters
+    public String getMake() {
+        return make;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    // Other methods...
+}
+```
+### Inheritance
+Inheritance is a mechanism in which a new class inherits properties and behaviors from an existing class. The existing class is called the superclass or parent class, and the new class is called the subclass or child class.
+
+```java
+// Parent class
+public class Vehicle {
+    // Fields and methods...
+}
+
+// Child class inheriting from Vehicle
+public class Car extends Vehicle {
+    // Additional fields and methods specific to Car...
+}
+```
+### Polymorphism
+Polymorphism allows objects to be treated as instances of their parent class. It enables the same method to behave differently based on the object that invokes it. Polymorphism is achieved through method overriding and method overloading.
+
+```java
+// Method overriding
+public class Vehicle {
+    public void start() {
+        System.out.println("Vehicle is starting...");
+    }
+}
+
+public class Car extends Vehicle {
+    @Override
+    public void start() {
+        System.out.println("Car is starting...");
+    }
+}
+
+// Method overloading
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+```
+### Conclusion
+Object-oriented programming is a powerful paradigm that allows you to model real-world entities in your software. By understanding the concepts of classes, objects, constructors, encapsulation, inheritance, polymorphism, method overloading, and method overriding, you'll be able to design and implement robust Java applications.
+
+That's it for this tutorial on object-oriented programming in Java! In the next module, we'll explore exception handling.
+
+```vbnet
+
+This tutorial page covers the essential concepts of object-oriented programming in Java, providing examples for each concept. Feel free to customize it further to suit your website's needs!
+```
+
+
+
