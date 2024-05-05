@@ -1,0 +1,107 @@
+---
+title: Java Standard Library
+description: Learn about various components of the Java Standard Library, including string handling, date and time API, collection framework, input and output (I/O) operations, and serialization.
+---
+
+# Java Standard Library
+
+The Java Standard Library, also known as the Java API (Application Programming Interface), is a collection of classes and interfaces that provide essential functionalities for Java programming. In this tutorial, we'll explore some key components of the Java Standard Library.
+
+## String Handling
+
+Strings are fundamental data types in Java, and the Java Standard Library provides extensive support for string manipulation. Some common operations include:
+
+- Concatenation
+- Substring extraction
+- Searching and replacing
+- Case conversion
+- String formatting
+
+```java
+String str = "Hello, World!";
+System.out.println(str.substring(0, 5)); // Output: Hello
+System.out.println(str.toUpperCase()); // Output: HELLO, WORLD!
+```
+### Date and Time API
+Java 8 introduced the Date and Time API, which provides comprehensive support for date and time manipulation. It includes classes like `LocalDate`, `LocalTime`, `LocalDateTime`, `ZonedDateTime`, and more.
+
+```java
+LocalDate currentDate = LocalDate.now();
+System.out.println(currentDate); // Output: 2024-05-03
+
+LocalTime currentTime = LocalTime.now();
+System.out.println(currentTime); // Output: 15:30:45.123456789
+```
+### Collection Framework (Lists, Sets, Maps)
+The Collection Framework provides a set of interfaces and classes for storing and manipulating groups of objects. Key interfaces include `List`, `Set`, and `Map`, with implementations such as `ArrayList`, `HashSet`, and `HashMap`.
+
+```java
+// Creating a list
+List<String> names = new ArrayList<>();
+names.add("Alice");
+names.add("Bob");
+names.add("Charlie");
+
+// Creating a set
+Set<Integer> numbers = new HashSet<>();
+numbers.add(1);
+numbers.add(2);
+numbers.add(3);
+
+// Creating a map
+Map<String, Integer> scores = new HashMap<>();
+scores.put("Alice", 85);
+scores.put("Bob", 92);
+scores.put("Charlie", 78);
+```
+### Input and Output (I/O) Operations
+The Java I/O API allows you to perform input and output operations in Java programs. It includes classes for reading and writing data from/to various sources, such as files, streams, and network connections.
+
+```java
+// Reading from a file
+try (BufferedReader reader = new BufferedReader(new FileReader("input.txt"))) {
+    String line;
+    while ((line = reader.readLine()) != null) {
+        System.out.println(line);
+    }
+} catch (IOException e) {
+    e.printStackTrace();
+}
+
+// Writing to a file
+try (BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"))) {
+    writer.write("Hello, World!");
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+### Serialization
+Serialization is the process of converting Java objects into a stream of bytes for storage or transmission. Java provides built-in support for serialization through the `Serializable` interface and classes like `ObjectInputStream` and `ObjectOutputStream`.
+
+```java
+// Serializing an object
+try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("data.ser"))) {
+    out.writeObject(object);
+} catch (IOException e) {
+    e.printStackTrace();
+}
+
+// Deserializing an object
+try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.ser"))) {
+    Object object = in.readObject();
+} catch (IOException | ClassNotFoundException e) {
+    e.printStackTrace();
+}
+```
+### Conclusion
+The Java Standard Library offers a rich set of functionalities that simplify common programming tasks, ranging from string manipulation to date and time handling, collection management, I/O operations, and serialization. By leveraging these components, Java developers can build robust and efficient applications with ease.
+
+That's it for this tutorial on the Java Standard Library! In the next module, we'll delve into advanced topics in Java programming.
+
+```vbnet
+
+This tutorial page covers various components of the Java Standard Library, providing examples and explanations for each concept. Feel free to customize it further to suit your website's needs!
+```
+
+
+
