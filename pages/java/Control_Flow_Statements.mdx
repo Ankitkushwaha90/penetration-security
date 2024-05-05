@@ -1,0 +1,122 @@
+---
+title: Control Flow Statements
+description: Learn about conditional statements, switch statement, loops, break, and continue statements in Java programming.
+---
+
+# Module 4: Control Flow Statements
+
+Control flow statements in Java allow you to control the flow of execution in your programs based on certain conditions or loops. In this module, we'll cover conditional statements, switch statement, loops, break, and continue statements.
+
+## Conditional Statements (if, else-if, else)
+
+Conditional statements in Java allow you to execute different blocks of code based on the evaluation of a boolean expression. The basic syntax for if-else statements is as follows:
+
+```java
+if (condition) {
+    // code block to be executed if the condition is true
+} else if (anotherCondition) {
+    // code block to be executed if anotherCondition is true
+} else {
+    // code block to be executed if all conditions are false
+}
+```
+Example:
+
+```java
+int num = 10;
+if (num > 0) {
+    System.out.println("Positive number");
+} else if (num < 0) {
+    System.out.println("Negative number");
+} else {
+    System.out.println("Zero");
+}
+```
+### Switch Statement
+The switch statement evaluates an expression and executes code blocks based on matching cases. It provides an alternative to long if-else chains. The syntax for the switch statement is as follows:
+
+```java
+switch (expression) {
+    case value1:
+        // code block
+        break;
+    case value2:
+        // code block
+        break;
+    ...
+    default:
+        // code block to be executed if none of the cases match
+}
+```
+Example:
+
+```java
+int day = 3;
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    ...
+    default:
+        System.out.println("Invalid day");
+}
+```
+### Loops (while, do-while, for)
+Loops in Java allow you to execute a block of code repeatedly. There are three types of loops in Java:
+
+- while loop: Executes a block of code repeatedly as long as a condition is true.
+- do-while loop: Similar to the while loop, but the code block is executed at least once before the condition is checked.
+- for loop: Executes a block of code repeatedly for a fixed number of times.
+Example:
+
+```java
+// while loop
+int i = 0;
+while (i < 5) {
+    System.out.println(i);
+    i++;
+}
+
+// do-while loop
+int j = 0;
+do {
+    System.out.println(j);
+    j++;
+} while (j < 5);
+
+// for loop
+for (int k = 0; k < 5; k++) {
+    System.out.println(k);
+}
+```
+### Break and Continue Statements
+The `break` statement is used to exit a loop prematurely, while the `continue` statement is used to skip the rest of the current iteration and continue with the next iteration. These statements are often used within loops to control their flow.
+
+Example:
+
+```java
+// break statement
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break; // exit the loop when i equals 5
+    }
+    System.out.println(i);
+}
+
+// continue statement
+for (int i = 0; i < 5; i++) {
+    if (i == 2) {
+        continue; // skip iteration when i equals 2
+    }
+    System.out.println(i);
+}
+```
+That's it for this module on control flow statements in Java! In the next module, we'll explore arrays and their manipulation.
+
+```vbnet
+
+This tutorial page covers the various control flow statements in Java, providing examples for each concept. Feel free to customize it further to suit your website's needs!
+```
