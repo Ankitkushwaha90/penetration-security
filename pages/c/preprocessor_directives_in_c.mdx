@@ -1,0 +1,70 @@
+---
+title: "Preprocessor Directives in C | Learn #define, #include, and Conditional Compilation"
+description: "Discover preprocessor directives in C programming. Learn about #define, #include, #ifdef, #ifndef, #endif, and conditional compilation."
+---
+
+# Preprocessor Directives in C Programming
+
+Preprocessor directives are special commands that are processed by the C preprocessor before the compilation of the program. They are used to perform tasks such as macro definition, file inclusion, and conditional compilation. In this tutorial, we'll cover the basics of preprocessor directives and common directives used in C programming.
+
+## Overview of Preprocessor Directives
+
+Preprocessor directives begin with the `#` symbol and are processed before the actual compilation of the program. They are used to instruct the compiler to perform certain tasks or modify the source code before compilation. Common tasks performed by preprocessor directives include macro substitution, file inclusion, and conditional compilation.
+
+## #define Directive
+
+The `#define` directive is used to define macros, which are symbolic names that represent a value or a piece of code. Macros are replaced with their corresponding values during the preprocessing stage. Here's an example of using the `#define` directive to define a macro:
+
+```c
+#define PI 3.14159
+```
+In this example, the macro `PI` is defined with the value `3.14159`. Whenever `PI` appears in the code, it will be replaced with `3.14159` during preprocessing.
+
+### #include Directive
+The `#include` directive is used to include the contents of another file in the current source file. It is commonly used to include header files that contain declarations of functions, macros, and data types used in the program. Here's an example of using the `#include` directive:
+
+```c
+#include <stdio.h>
+```
+In this example, the contents of the `stdio.h` header file, which contains declarations for standard input/output functions, are included in the current source file.
+
+### #ifdef, #ifndef, #endif Directives
+The `#ifdef`, `#ifndef`, and `#endif` directives are used for conditional compilation, allowing certain parts of the code to be compiled based on predefined macros or conditions.
+
+- `#ifdef`: Checks if a macro is defined.
+- `#ifndef`: Checks if a macro is not defined.
+- `#endif`: Marks the end of a conditional compilation block.
+Here's an example of using conditional compilation directives:
+
+```c
+#define DEBUG
+
+#ifdef DEBUG
+    // Debugging code
+    printf("Debugging information\n");
+#endif
+```
+In this example, the debugging code inside the `#ifdef DEBUG` block will only be included in the compiled code if the `DEBUG` macro is defined.
+
+### Conditional Compilation
+Conditional compilation allows you to include or exclude certain parts of the code based on predefined conditions. This is useful for enabling or disabling debugging code, platform-specific code, or feature toggles. Here's an example of conditional compilation:
+
+```c
+#define DEBUG
+
+#ifdef DEBUG
+    // Debugging code
+    printf("Debugging information\n");
+#else
+    // Production code
+    printf("Production information\n");
+#endif
+```
+In this example, the debugging code will be included in the compiled code if the `DEBUG` macro is defined, otherwise, the production code will be included.
+
+By mastering preprocessor directives in C programming, you'll have better control over the compilation process and can effectively manage code organization and optimization. In the next tutorials, we'll explore more advanced topics such as pointers, structures, and file handling.
+
+```arduino
+
+This tutorial page provides a comprehensive explanation of preprocessor directives in C programming, including an overview, `#define`, `#include`, `#ifdef`, `#ifndef`, `#endif`, and conditional compilation, along with examples, in MDX format.
+```
