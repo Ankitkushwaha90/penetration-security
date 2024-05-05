@@ -1,0 +1,77 @@
+---
+title: Data Types and Variables
+description: Learn about primitive data types, declaring variables, constants, and type casting in Java programming.
+---
+### Data Types and Variables in Java
+# Module 2: Data Types and Variables
+
+In Java, data types represent the type of data that can be stored in a variable. Variables are used to store data values that can be manipulated and used in your Java programs. In this module, we'll cover primitive data types, declaring variables, constants, and type casting in Java.
+
+## Primitive Data Types
+
+Java has eight primitive data types, which are the most basic data types available in the language. They are:
+
+1. **byte:** 8-bit signed integer
+2. **short:** 16-bit signed integer
+3. **int:** 32-bit signed integer
+4. **long:** 64-bit signed integer
+5. **float:** 32-bit floating-point number
+6. **double:** 64-bit floating-point number
+7. **char:** 16-bit Unicode character
+8. **boolean:** Represents true or false
+
+Example:
+
+```java
+int age = 30;
+double salary = 50000.50;
+char grade = 'A';
+boolean isStudent = true;
+```
+### Declaring Variables
+Variables in Java must be declared before they can be used. The syntax for declaring variables is as follows:
+
+```java
+dataType variableName;
+```
+Example:
+
+```java
+int number;
+double price;
+char letter;
+```
+You can also initialize variables when declaring them:
+
+```java
+int count = 10;
+double weight = 68.5;
+char symbol = 'X';
+```
+### Constants
+Constants are variables whose values cannot be changed once assigned. In Java, constants are declared using the `final` keyword. By convention, constant names are written in uppercase.
+
+```java
+final double PI = 3.14159;
+final int MAX_SIZE = 100;
+final String APP_NAME = "MyApp";
+```
+### Type Casting
+Type casting is the process of converting one data type into another. In Java, there are two types of casting: implicit casting (widening) and explicit casting (narrowing).
+
+- Implicit Casting: Java automatically converts smaller data types to larger data types without any loss of data.
+```java
+int num1 = 10;
+double num2 = num1; // implicit casting
+```
+- Explicit Casting: When you convert a larger data type to a smaller data type, you need to use explicit casting. However, explicit casting may result in loss of data.
+```java
+double num1 = 10.5;
+int num2 = (int) num1; // explicit casting
+```
+That's it for this module on data types and variables in Java! In the next module, we'll dive deeper into operators and expressions.
+
+```vbnet
+
+This tutorial page covers the basics of data types, variables, constants, and type casting in Java. Feel free to customize it further to suit your website's needs!
+```
