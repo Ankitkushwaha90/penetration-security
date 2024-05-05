@@ -1,0 +1,71 @@
+---
+title: "Basic Concepts of C Programming | Learn C Basics"
+description: "Master the fundamental concepts of C programming language. Explore the structure of a C program, variables, data types, constants, operators, and input/output functions."
+---
+
+# Basic Concepts of C Programming
+
+In this tutorial, we'll cover the basic concepts of C programming, which form the foundation for writing C programs. By understanding these concepts, you'll be able to create simple yet powerful applications in C.
+
+## Structure of a C Program
+
+A C program consists of various elements such as functions, variables, and statements. Here's the basic structure of a C program:
+
+```c
+#include <stdio.h>
+
+// Function prototypes
+int main() {
+    // Statements
+    return 0;
+}
+```
+- `#include <stdio.h>`: This line includes the standard input/output library, which provides functions like `printf()` and `scanf()` for input and output operations.
+- `int main() { ... }`: Every C program must contain a `main()` function, which serves as the entry point for the program. The program execution begins from the `main()` function.
+- `// Statements`: This section contains statements that define the behavior of the program. Statements can include variable declarations, function calls, control flow statements, and more.
+- `return 0;`: The `return` statement is used to exit the `main()` function and return a value to the operating system. A return value of 0 typically indicates successful execution of the program.
+### Variables and Data Types
+Variables are used to store data in a C program. Each variable has a data type that determines the type of data it can hold. Common data types in C include `int`, `float`, `char`, `double`, and `void`. Here's how you declare variables in C:
+
+```c
+int age = 30;
+float salary = 2500.50;
+char grade = 'A';
+```
+### Constants
+Constants are fixed values that do not change during the execution of a program. In C, constants can be defined using the const keyword or preprocessor #define directive. Here are examples of constants in C:
+
+```c
+const int MAX_SIZE = 100;
+#define PI 3.14
+```
+### Operators
+Operators are symbols that perform operations on operands. C supports various types of operators, including arithmetic, relational, logical, assignment, and bitwise operators. Here are some examples of operators in C:
+
+```c
+int sum = 10 + 5;       // Addition
+int difference = 10 - 5; // Subtraction
+int product = 10 * 5;    // Multiplication
+int quotient = 10 / 5;   // Division
+int remainder = 10 % 5;  // Modulus
+```
+### Input and Output Functions
+Input and output functions are used to interact with the user and display information on the screen. The `printf()` function is used to display output, while the `scanf()` function is used to read input from the user. Here's how you use these functions in C:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("You entered: %d", num);
+    return 0;
+}
+```
+By mastering these basic concepts, you'll have a solid understanding of the fundamentals of C programming. In the next tutorials, we'll delve deeper into control flow statements, functions, arrays, pointers, and more.
+
+```lua
+
+This tutorial page covers the basic concepts of C programming, including the structure of a C program, variables and data types, constants, operators, and input/output functions, in MDX format.
+```
