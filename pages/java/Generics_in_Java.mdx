@@ -1,0 +1,78 @@
+---
+title: Generics in Java
+description: Learn about generics in Java, including an introduction to generics, generic classes, generic methods, and wildcards.
+---
+
+# Generics in Java
+
+Generics in Java allow you to create classes, interfaces, and methods that operate on various types while providing compile-time type safety. They enable you to write reusable and type-safe code. In this tutorial, we'll explore the fundamentals of generics in Java.
+
+## Introduction to Generics
+
+Generics were introduced in Java 5 to address the issue of type safety and to enable the creation of type-parameterized classes and methods. They allow you to define classes and methods with placeholder types that are specified when the class or method is used.
+
+```java
+// Generic class example
+public class Box<T> {
+    private T content;
+
+    public void setContent(T content) {
+        this.content = content;
+    }
+
+    public T getContent() {
+        return content;
+    }
+}
+
+// Using a generic class
+Box<Integer> integerBox = new Box<>();
+integerBox.setContent(10);
+int value = integerBox.getContent();
+```
+### Generic Classes
+A generic class in Java is a class that can operate on any data type. It is defined with one or more type parameters enclosed in angle brackets (`<>`). These type parameters can be used as placeholders for actual types when the class is instantiated.
+
+```java
+public class Box<T> {
+    // Class definition with type parameter T
+}
+``` 
+### Generic Methods
+Similar to generic classes, Java allows you to define generic methods that can operate on any type. Generic methods can have their own type parameters, independent of the type parameters of the class they belong to.
+
+```java
+public class Utils {
+    // Generic method example
+    public static <T> void printArray(T[] array) {
+        for (T element : array) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+}
+```
+### Wildcards
+Wildcards in Java generics allow you to specify a range of acceptable types when working with generic classes or methods. There are three types of `wildcards: ?`, `? extends`, and `? super`.
+
+- `?`: Represents an unknown type.
+- `? extends T`: Represents any type that is a subtype of `T`.
+- `? super T`: Represents any type that is a supertype of `T`.
+
+```java
+public void printList(List<?> list) {
+    for (Object obj : list) {
+        System.out.print(obj + " ");
+    }
+    System.out.println();
+}
+```
+### Conclusion
+Generics in Java provide a powerful mechanism for creating reusable, type-safe code. By using generics, you can write classes and methods that operate on a wide range of data types while ensuring compile-time type safety. Understanding generics is essential for writing robust and flexible Java programs.
+
+That's it for this tutorial on generics in Java! In the next module, we'll delve into advanced topics in Java programming.
+
+```vbnet
+
+This tutorial page covers the fundamentals of generics in Java, including an introduction to generics, generic classes, generic methods, and wildcards. Feel free to customize it further to suit your website's needs!
+```
