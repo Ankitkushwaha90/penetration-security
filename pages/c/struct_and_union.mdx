@@ -1,0 +1,73 @@
+---
+title: "Structures and Unions in C Programming | Learn Struct Basics and Union Introduction"
+description: "Explore structures and unions in C programming. Learn about structure basics, declaring and accessing structure variables, nested structures, introduction to unions, and differences between structures and unions."
+---
+
+# Structures and Unions in C Programming
+
+Structures and unions are composite data types in C programming that allow you to group together variables of different types under a single name. They provide a way to represent complex data types in a more organized and flexible manner. In this tutorial, we'll cover the basics of structures and unions, including their introduction, declaration, access, nesting, and differences.
+
+## Introduction to Structures
+
+A structure is a user-defined data type in C that allows you to combine different data types into a single entity. Each member of a structure can have its own data type. Structures are useful for representing entities that have multiple properties. Here's how you declare a structure in C:
+
+```c
+struct Person {
+    char name[50];
+    int age;
+    float salary;
+};
+```
+In this example, we've defined a structure named `Person` with three members: `name`, `age`, and `salary`.
+
+### Declaring and Accessing Structure Variables
+Once you've defined a structure, you can declare variables of that structure type and access their members using the dot operator (`.`). Here's how you declare and access structure variables in C:
+
+```c
+struct Person employee;
+strcpy(employee.name, "John Doe");
+employee.age = 30;
+employee.salary = 2500.50;
+```
+In this example, we've declared a structure variable named `employee` of type `Person` and assigned values to its members.
+
+### Nested Structures
+Structures can be nested within each other to create more complex data structures. Nested structures allow you to represent hierarchical relationships between data elements. Here's an example of nested structures:
+
+```c
+struct Date {
+    int day;
+    int month;
+    int year;
+};
+
+struct Employee {
+    char name[50];
+    struct Date dob;
+    float salary;
+};
+```
+In this example, we've defined a structure named `Date` to represent a date, and another structure named `Employee` that contains a `Date` structure as one of its members.
+
+###Introduction to Unions
+A union is a special data type in C that allows you to store different data types in the same memory location. Unlike structures, where each member has its own memory space, members of a union share the same memory space. Here's how you declare a union in C:
+
+```c
+union Value {
+    int intValue;
+    float floatValue;
+    char stringValue[50];
+};
+```
+In this example, we've defined a union named `Value` with three members: `intValue`, `floatValue`, and `stringValue`. All members share the same memory space.
+
+### Differences Between Structures and Unions
+- 1.Memory Allocation: Structures allocate memory for each member separately, while unions share the same memory space for all members.
+- 2.Size: The size of a structure is determined by the sum of the sizes of its members, while the size of a union is determined by the size of its largest member.
+- 3.Accessing Members: In structures, you can access each member independently, while in unions, you can only access one member at a time.
+By mastering structures and unions in C programming, you'll be able to create more complex and flexible data structures to suit your program's needs. In the next tutorials, we'll explore more advanced topics such as file handling, dynamic memory allocation, and advanced data structures.
+
+```python
+
+This tutorial page provides a comprehensive explanation of structures and unions in C programming, including introduction, declaration, access, nesting, and differences, along with examples, in MDX format.
+```
