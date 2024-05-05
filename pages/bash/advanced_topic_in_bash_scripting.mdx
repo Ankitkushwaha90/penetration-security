@@ -1,0 +1,41 @@
+# Advanced Topics in Bash Scripting
+
+Bash scripting offers advanced features that enable more sophisticated and powerful scripts. In this tutorial, we'll explore three advanced topics: regular expressions, command substitution, and process management.
+
+## Regular Expressions
+
+Regular expressions (regex) are patterns used to match character combinations in strings. Bash supports regex through built-in commands like `grep`, `sed`, and `awk`.
+
+### Example: Using grep with Regular Expressions
+
+```bash
+echo "Hello, World!" | grep -E '^[A-Z][a-z]+$'
+```
+In the above example, the regex pattern `^[A-Z][a-z]+$` matches strings with an uppercase letter followed by one or more lowercase letters.
+
+### Command Substitution
+Command substitution allows you to execute a command and use its output as part of another command or assignment. It's denoted by wrapping the command in $() or backticks ``.
+
+##### Example: Command Substitution
+```bash
+files_count=$(ls | wc -l)
+echo "Number of files: $files_count"
+```
+In the above example, `$(ls | wc -l)` executes the `ls` command to list files in the current directory and pipes the output to `wc -l` to count the number of lines (files).
+
+### Process Management
+Bash provides commands to manage processes, such as starting, stopping, and monitoring processes. Common commands include ps, kill, and nohup.
+
+##### Example: Starting a Background Process
+```bash
+nohup ./script.sh > output.log 2>&1 &
+```
+In the above example, `nohup` starts the script `script.sh` as a background process, redirecting stdout and stderr to `output.log`.
+
+### Conclusion
+Advanced topics like regular expressions, command substitution, and process management enhance the capabilities of Bash scripting, allowing you to write more complex and efficient scripts. By mastering these topics, you'll be able to tackle a wide range of scripting tasks with Bash.
+
+```vbnet
+
+This tutorial covers advanced topics in Bash scripting, including regular expressions, command substitution, and process management. Feel free to customize or expand upon it to suit your tutorial website's needs.
+```
