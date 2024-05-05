@@ -1,0 +1,101 @@
+---
+title: Networking in Java
+description: Learn about networking in Java, including basics of networking, socket programming, HTTP client and server, and URL handling.
+---
+
+# Introduction to Networking in Java
+
+Networking in Java enables communication between computers over a network. It allows applications to exchange data, share resources, and communicate with remote systems. In this tutorial, we'll explore the basics of networking in Java, including socket programming, HTTP client and server, and URL handling.
+
+## Basics of Networking
+
+Networking involves the communication between multiple devices over a network. It includes concepts such as IP addresses, ports, protocols, and sockets. In Java, networking is primarily handled through the `java.net` package, which provides classes for creating network connections, sending and receiving data, and working with URLs.
+
+```java
+import java.net.InetAddress;
+
+public class NetworkBasics {
+    public static void main(String[] args) {
+        try {
+            InetAddress address = InetAddress.getByName("www.example.com");
+            System.out.println("IP Address: " + address.getHostAddress());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+### Socket Programming
+Socket programming in Java allows applications to communicate with each other using sockets. Sockets provide a bidirectional communication channel between two endpoints on a network. Java provides classes like `Socket` and `ServerSocket` for creating client and server sockets, respectively.
+
+```java
+import java.net.Socket;
+import java.io.*;
+
+public class Client {
+    public static void main(String[] args) {
+        try (Socket socket = new Socket("localhost", 8080)) {
+            OutputStream output = socket.getOutputStream();
+            PrintWriter writer = new PrintWriter(output, true);
+            writer.println("Hello, Server!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+### HTTP Client and Server
+Java provides classes for building HTTP clients and servers, allowing you to send HTTP requests and receive HTTP responses over the network. The `HttpURLConnection` class is commonly used for making HTTP requests, while the `HttpServer` class is used for creating HTTP servers.
+
+```java
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.io.*;
+
+public class HttpClient {
+    public static void main(String[] args) {
+        try {
+            URL url = new URL("http://www.example.com");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+### URL Handling
+Java provides the `URL` class for working with URLs, allowing you to parse, manipulate, and retrieve information from URLs. You can use the `URL` class to create URL objects, extract components of URLs, and open connections to resources identified by URLs.
+
+```java
+import java.net.URL;
+
+public class UrlHandling {
+    public static void main(String[] args) {
+        try {
+            URL url = new URL("http://www.example.com/path/to/resource");
+            System.out.println("Protocol: " + url.getProtocol());
+            System.out.println("Host: " + url.getHost());
+            System.out.println("Path: " + url.getPath());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+### Conclusion
+Networking is an essential aspect of modern software development, allowing applications to communicate and share resources over a network. In Java, networking capabilities are provided through the `java.net` package, which includes classes for working with sockets, HTTP, and URLs. By understanding the basics of networking in Java, you can build robust and scalable networked applications.
+
+That's it for this tutorial on networking in Java! Whether you're building client-server applications, web services, or distributed systems, Java's networking features provide a powerful toolkit for implementing networked solutions.
+
+```vbnet
+
+This tutorial page covers the basics of networking in Java, including an introduction to networking concepts, socket programming, HTTP client and server, and URL handling. Feel free to customize it further to suit your website's needs!
+```
