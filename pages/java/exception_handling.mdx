@@ -1,0 +1,101 @@
+---
+title: Exception Handling in Java
+description: Learn about exception handling in Java, including understanding exceptions, try-catch block, multiple catch blocks, finally block, and custom exceptions.
+---
+
+# Exception Handling in Java
+
+Exception handling is a mechanism used to handle runtime errors (exceptions) in Java programs. It allows you to gracefully handle unexpected situations that may arise during program execution. In this tutorial, we'll cover the key aspects of exception handling in Java.
+
+## Understanding Exceptions
+
+An exception is an event that occurs during the execution of a program and disrupts the normal flow of instructions. Exceptions can occur for various reasons, such as invalid input, file not found, or division by zero. In Java, exceptions are represented by objects of type `Throwable` or its subclasses.
+
+```java
+try {
+    // Code that may throw an exception
+    int result = 10 / 0; // Division by zero
+} catch (ArithmeticException e) {
+    // Handle the exception
+    System.out.println("Error: " + e.getMessage());
+}
+```
+### try-catch Block
+The `try-catch` block is used to handle exceptions in Java. The `try` block contains the code that may throw an exception, and the catch block is used to `catch` and handle the exception if it occurs.
+
+```java
+try {
+    // Code that may throw an exception
+} catch (ExceptionType1 e1) {
+    // Handle ExceptionType1
+} catch (ExceptionType2 e2) {
+    // Handle ExceptionType2
+} finally {
+    // Code to be executed regardless of whether an exception occurred
+}
+```
+### Multiple Catch Blocks
+You can have multiple `catch` blocks to handle different types of exceptions separately. This allows you to handle exceptions more precisely based on their types.
+
+```java
+try {
+    // Code that may throw an exception
+} catch (ArithmeticException e) {
+    // Handle arithmetic exception
+} catch (NullPointerException e) {
+    // Handle null pointer exception
+} catch (Exception e) {
+    // Handle other exceptions
+}
+```
+### finally Block
+The `finally` block is used to execute code that needs to be executed regardless of whether an exception occurred or not. It is typically used for cleanup tasks such as closing resources (e.g., files, database connections).
+
+```java
+Copy code
+FileInputStream inputStream = null;
+try {
+    inputStream = new FileInputStream("file.txt");
+    // Code to read from the file
+} catch (IOException e) {
+    // Handle file I/O exception
+} finally {
+    // Close the input stream
+    if (inputStream != null) {
+        try {
+            inputStream.close();
+        } catch (IOException e) {
+            // Handle close exception
+        }
+    }
+}
+```
+### Custom Exceptions
+In addition to built-in exceptions, you can also create custom exceptions to handle specific error conditions in your applications. Custom exceptions should extend the `Exception` class or one of its subclasses.
+
+```java
+public class CustomException extends Exception {
+    public CustomException(String message) {
+        super(message);
+    }
+}
+
+// Throwing a custom exception
+try {
+    throw new CustomException("Custom error message");
+} catch (CustomException e) {
+    System.out.println("Error: " + e.getMessage());
+}
+```
+### Conclusion
+Exception handling is an essential aspect of Java programming, allowing you to write robust and reliable code that gracefully handles unexpected errors. By understanding how to use try-catch blocks, multiple catch blocks, finally block, and custom exceptions, you'll be better equipped to handle exceptions effectively in your Java applications.
+
+That's it for this tutorial on exception handling in Java! In the next module, we'll explore the Java Standard Library.
+
+```vbnet
+
+This tutorial page covers the fundamentals of exception handling in Java, including understanding exceptions, try-catch blocks, multiple catch blocks, finally blocks, and custom exceptions. Feel free to customize it further to suit your website's needs!
+```
+
+
+
