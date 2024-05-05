@@ -1,0 +1,130 @@
+---
+title: JDBC (Java Database Connectivity)
+description: Learn about JDBC (Java Database Connectivity), including connecting to databases, executing SQL queries, retrieving and manipulating data, and working with transactions.
+---
+
+# JDBC (Java Database Connectivity)
+
+JDBC (Java Database Connectivity) is a Java API that enables Java applications to interact with databases. It provides a standard interface for connecting to relational databases, executing SQL queries, and processing the results. In this tutorial, we'll explore the basics of JDBC, including connecting to databases, executing SQL queries, retrieving and manipulating data, and working with transactions.
+
+## Connecting to Databases
+
+To connect to a database using JDBC, you need to establish a connection by specifying the database URL, username, and password. The `DriverManager` class is used to manage the JDBC drivers and establish connections to databases.
+
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DatabaseConnection {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "username";
+        String password = "password";
+
+        try {
+            Connection connection = DriverManager.getConnection(url, username, password);
+            System.out.println("Connected to the database");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+### Executing SQL Queries
+Once connected to the database, you can execute SQL queries to perform operations such as inserting, updating, deleting, and selecting data from database tables. JDBC provides interfaces like `Statement` and `PreparedStatement` for executing SQL queries.
+
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ExecuteQuery {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "username";
+        String password = "password";
+
+        try (Connection connection = DriverManager.getConnection(url, username, password);
+             Statement statement = connection.createStatement()) {
+            String sql = "SELECT * FROM employees";
+            statement.execute(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+### Retrieving and Manipulating Data
+After executing a query, you can retrieve and manipulate the results using JDBC's `ResultSet` interface. The `ResultSet` provides methods for navigating through the result set and accessing the data returned by the query.
+
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class RetrieveData {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "username";
+        String password = "password";
+
+        try (Connection connection = DriverManager.getConnection(url, username, password);
+             Statement statement = connection.createStatement()) {
+            String sql = "SELECT * FROM employees";
+            ResultSet resultSet = statement.executeQuery(sql);
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                double salary = resultSet.getDouble("salary");
+                System.out.println("ID: " + id + ", Name: " + name + ", Salary: " + salary);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+### Transactions
+Transactions in JDBC allow you to group multiple SQL statements into a single unit of work that either succeeds or fails as a whole. You can control transactions using JDBC's `Connection` interface, which provides methods like `commit()` and `rollback()`.
+
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class TransactionExample {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "username";
+        String password = "password";
+
+        try (Connection connection = DriverManager.getConnection(url, username, password);
+             Statement statement = connection.createStatement()) {
+            connection.setAutoCommit(false);
+
+            // Execute SQL statements
+            statement.executeUpdate("INSERT INTO employees (name, salary) VALUES ('Alice', 50000)");
+            statement.executeUpdate("UPDATE employees SET salary = 55000 WHERE name = 'Alice'");
+
+            connection.commit();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+### Conclusion
+JDBC (Java Database Connectivity) provides a powerful mechanism for Java applications to interact with relational databases. By connecting to databases, executing SQL queries, retrieving and manipulating data, and managing transactions, JDBC enables developers to build robust and scalable database-driven applications.
+
+That's it for this tutorial on JDBC! Whether you're building web applications, desktop applications, or enterprise systems, JDBC provides a reliable and efficient way to work with databases in Java.
+
+```vbnet
+
+This tutorial page covers the basics of JDBC (Java Database Connectivity), including connecting to databases, executing SQL queries, retrieving and manipulating data, and working with transactions. Feel free to customize it further to suit your website's needs!
+```
