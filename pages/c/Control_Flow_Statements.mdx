@@ -1,0 +1,66 @@
+---
+title: "Control Flow Statements in C | Learn Decision Making and Loops"
+description: "Master control flow statements in C programming. Explore if-else, nested if-else, switch-case statements, and different types of loops including while, do-while, and for loops. Learn about break and continue statements for better control over program flow."
+---
+
+# Control Flow Statements in C
+
+Control flow statements in C allow you to control the flow of execution based on certain conditions or loops. In this tutorial, we'll cover decision-making structures and loops in C programming.
+
+## Decision Making with if-else Statements
+
+The `if-else` statement is used to make decisions in C programming based on the evaluation of a condition. Here's the syntax of the `if-else` statement:
+
+```c
+if (condition) {
+    // code to be executed if the condition is true
+} else {
+    // code to be executed if the condition is false
+}
+```
+### Nested if-else Statements
+You can nest `if-else` statements within each other to create complex decision-making logic. Here's an example of nested `if-else` statements:
+
+```c
+int num = 10;
+if (num > 0) {
+    if (num % 2 == 0) {
+        printf("The number is positive and even.");
+    } else {
+        printf("The number is positive and odd.");
+    }
+} else {
+    printf("The number is negative.");
+}
+```
+### Switch Case Statements
+The `switch-case` statement is used to select one of many code blocks to be executed based on the value of an expression. Here's the syntax of the `switch-case` statement:
+
+```c
+switch (expression) {
+    case value1:
+        // code to be executed if expression equals value1
+        break;
+    case value2:
+        // code to be executed if expression equals value2
+        break;
+    // more cases...
+    default:
+        // code to be executed if expression doesn't match any case
+}
+```
+### Loops: while, do-while, for
+Loops in C programming are used to execute a block of code repeatedly until a certain condition is met. C supports three types of loops: `while`, `do-while`, and `for` loops.
+
+- `while loop`: Executes a block of code repeatedly as long as a specified condition is true.
+- `do-while loop`: Similar to the `while` loop, but the condition is evaluated after the block of code is executed, ensuring that the block is executed at least once.
+- `for loop`: Executes a block of code a specified number of times.
+### Break and Continue Statements
+- The `break` statement is used to exit the current loop or switch-case statement and transfer control to the statement following the terminated loop or switch-case.
+- The `continue` statement is used to skip the remaining code inside a loop and proceed to the next iteration of the loop.
+By mastering control flow statements in C, you'll have better control over the flow of execution in your programs. In the next tutorials, we'll explore functions, arrays, pointers, and more.
+
+```arduino
+
+This tutorial page covers control flow statements in C programming, including if-else statements, nested if-else statements, switch-case statements, different types of loops, and break and continue statements, in MDX format.
+```
