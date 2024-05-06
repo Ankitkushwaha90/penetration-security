@@ -1,0 +1,48 @@
+---
+title: Recursion in Python Tutorial
+description: Learn about recursion in Python, including its definition, how it works, and examples of recursive functions. This tutorial provides Python code examples to help you understand recursion.
+---
+
+# Recursion in Python
+
+In this tutorial, we'll cover recursion in Python, including its definition, how it works, and examples of recursive functions.
+
+## What is Recursion?
+
+Recursion is a programming technique where a function calls itself to solve smaller instances of the same problem. It's a powerful concept used in solving problems that can be broken down into smaller, similar subproblems.
+
+## How Recursion Works
+
+A recursive function consists of two parts: the base case and the recursive case. The base case is the condition under which the function stops calling itself and returns a value. The recursive case is where the function calls itself with a modified input to solve a smaller instance of the problem.
+
+## Example of Recursive Function
+
+Here's an example of a recursive function to calculate the factorial of a number:
+
+```python
+def factorial(n):
+    # Base case: if n is 0 or 1, return 1
+    if n == 0 or n == 1:
+        return 1
+    # Recursive case: call the function with n-1 and multiply by n
+    else:
+        return n * factorial(n - 1)
+
+# Test the function
+print(factorial(5))  # Output: 120
+```
+In this example, the function calls itself with a smaller input until it reaches the base case (`n == 0` or `n == 1`), and then it returns 1.
+
+### Recursion vs. Iteration
+Recursion and iteration (looping) are both techniques for repeating actions, but they differ in their implementation. Recursion is often more concise and elegant for solving certain problems, while iteration may be more efficient in terms of performance and memory usage.
+
+### When to Use Recursion
+Recursion is suitable for solving problems that can be broken down into smaller, similar subproblems, such as computing factorials, Fibonacci numbers, and traversing tree structures.
+
+### Conclusion
+In this tutorial, we've covered recursion in Python, including its definition, how it works, and examples of recursive functions. You should now have a good understanding of how recursion can be used to solve problems in Python.
+
+```css
+
+This MDX code includes SEO tags `title` and `description` to optimize the page for search engines.
+```
