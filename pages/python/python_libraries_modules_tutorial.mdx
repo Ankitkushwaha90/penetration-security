@@ -1,0 +1,72 @@
+---
+title: Using Python Libraries and Modules Tutorial
+description: Learn how to use Python libraries, create and use modules, work with the math and random modules, and create and use packages. This tutorial includes Python code examples to help you understand these concepts.
+---
+
+# Using Python Libraries and Modules
+
+In this tutorial, we'll cover how to use Python libraries, create and use modules, work with the `math` and `random` modules, and create and use packages.
+
+## Using Libraries and Modules
+
+Python libraries provide pre-written code for various tasks. You can import and use them in your programs. Here's an example of using the `math` module:
+
+```python
+import math
+
+print(math.sqrt(16))  # Output: 4.0
+```
+### Creating and Using Modules
+Modules are Python files containing functions and variables that you can import and use in other Python files. Here's an example of creating and using a module:
+
+```python
+# mymodule.py
+def greet(name):
+    print("Hello,", name)
+
+# main.py
+import mymodule
+
+mymodule.greet("John")  # Output: Hello, John
+```
+### Working with Math Module
+The math module provides mathematical functions and constants. Here are some examples:
+
+```python
+import math
+
+print(math.pi)          # Output: 3.141592653589793
+print(math.sin(math.pi/2))  # Output: 1.0
+```
+### Working with Random Module
+The random module provides functions for generating random numbers. Here's an example:
+
+```python
+import random
+
+print(random.randint(1, 10))  # Output: Random integer between 1 and 10
+```
+### Creating and Using Packages
+Packages are directories containing multiple modules. You can create your own packages and use them in your programs. Here's an example structure:
+
+```markdown
+my_package/
+├── __init__.py
+├── module1.py
+└── module2.py
+```
+You can then import modules from your package:
+
+```python
+# main.py
+from my_package import module1
+
+module1.function()
+```
+### Conclusion
+In this tutorial, we've covered how to use Python libraries, create and use modules, work with the math and random modules, and create and use packages. Understanding these concepts will help you write more efficient and organized Python code.
+
+```css
+
+This MDX code includes SEO tags `title` and `description` to optimize the page for search engines.
+```
