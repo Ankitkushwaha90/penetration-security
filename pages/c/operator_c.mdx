@@ -1,0 +1,149 @@
+### Advanced Topics in C Programming
+### Introduction
+In this tutorial, we will delve into some advanced topics in C programming. These topics are essential for mastering the language and writing efficient and robust code. We will cover bitwise operators, enumerated data types, typedef, command line arguments, error handling with errno, and multi-file programming.
+
+### Bitwise Operators
+Bitwise operators manipulate individual bits of operands. These operators are useful in tasks like setting, clearing, or toggling specific bits.
+
+##### Types of Bitwise Operators
+- 1.AND (`&`): Sets each bit to 1 if both bits are 1.
+- 2.OR (`|`): Sets each bit to 1 if either bit is 1.
+- 3.XOR (`^`): Sets each bit to 1 if only one of the two bits is 1.
+- 4.NOT (`~`): Flips all the bits.
+- 5.Left Shift (`<<`): Shifts the bits to the left.
+- 6.Right Shift (`>>`): Shifts the bits to the right.
+###### Example
+```c
+#include <stdio.h>
+
+int main() {
+    unsigned int a = 5;  // Binary: 0000 0101
+    unsigned int b = 3;  // Binary: 0000 0011
+
+    unsigned int result_and = a & b;  // Result: 0000 0001
+    unsigned int result_or = a | b;    // Result: 0000 0111
+    unsigned int result_xor = a ^ b;   // Result: 0000 0110
+    unsigned int result_not_a = ~a;    // Result: 1111 1010
+    unsigned int result_shift_left = a << 1;  // Result: 0000 1010
+    unsigned int result_shift_right = a >> 1; // Result: 0000 0010
+
+    printf("AND: %u\n", result_and);
+    printf("OR: %u\n", result_or);
+    printf("XOR: %u\n", result_xor);
+    printf("NOT of a: %u\n", result_not_a);
+    printf("Left shift of a: %u\n", result_shift_left);
+    printf("Right shift of a: %u\n", result_shift_right);
+
+    return 0;
+}
+```
+###### Enumerated Data Types
+Enumerated data types allow you to create your own data types with a set of named constants. This helps in writing code that is more readable and maintainable.
+
+###### Syntax
+```c
+enum enum_name {const1, const2, ..., constN};
+```
+###### Example
+```c
+#include <stdio.h>
+
+enum month {Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec};
+
+int main() {
+    enum month m = Jan;
+    printf("Month: %d\n", m);  // Output: 0
+
+    return 0;
+}
+#####Typedef
+Typedef allows you to create your own data type names for existing data types. This improves code readability and maintainability.
+
+###### Syntax
+```c
+typedef existing_data_type new_data_type;
+```
+###### Example
+```c
+#include <stdio.h>
+
+typedef int Integer;
+
+int main() {
+    Integer num = 10;
+    printf("Number: %d\n", num);  // Output: 10
+
+    return 0;
+}
+Command Line Arguments
+Command line arguments allow you to pass parameters to a C program when it is executed. These arguments can be accessed within the program.
+
+Syntax
+c
+int main(int argc, char *argv[]) {
+    // code
+    return 0;
+}
+```
+###### Example
+```c
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+    for (int i = 0; i < argc; i++) {
+        printf("Argument %d: %s\n", i, argv[i]);
+    }
+
+    return 0;
+}
+```
+##### Error Handling with errno
+errno is a global variable in C which is set by system calls and library functions in case of an error. It indicates what type of error occurred.
+
+###### Example
+```c
+#include <stdio.h>
+#include <errno.h>
+
+int main() {
+    FILE *file = fopen("nonexistent.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file. Error code: %d\n", errno);
+    }
+
+    return 0;
+}
+```
+##### Multi-file Programming
+Multi-file programming involves dividing your program into multiple source files for better organization and reusability.
+
+##### Example
+Consider two source files:
+
+##### main.c
+
+```c
+#include <stdio.h>
+
+void fun(); // Function prototype
+
+int main() {
+    fun();
+    return 0;
+}
+```
+##### fun.c
+```c
+#include <stdio.h>
+
+void fun() {
+    printf("Hello from fun()\n");
+}
+```
+##### Compilation Command
+
+```css
+gcc main.c fun.c -o output
+```
+### Conclusion
+These advanced topics in C programming provide you with a deeper understanding of the language and equip you with the necessary tools to write efficient and robust code. Practice these concepts to enhance your programming skills further.
