@@ -1,0 +1,74 @@
+---
+title: Working with Functions and Modules in Python Tutorial
+description: Learn about functions and modules in Python, including function structure, basic function calls, argument types, variable scope, and mutability/immutability of arguments. This tutorial provides examples and explanations to help you understand these concepts.
+---
+
+# Working with Functions and Modules in Python
+
+In this tutorial, we'll cover functions and modules in Python, including function structure, basic function calls, argument types, variable scope, and mutability/immutability of arguments.
+
+## Function Structure
+
+A function in Python is defined using the `def` keyword, followed by the function name and parameters enclosed in parentheses. Here's an example:
+
+```python
+def greet(name):
+    print("Hello,", name)
+```
+### Basic Function Calls
+You can call a function by using its name followed by parentheses containing the arguments. Here's how you call the greet function:
+
+```python
+greet("John")
+```
+### Argument Types
+Python supports different types of function arguments, including positional arguments, keyword arguments, default arguments, and variable-length arguments. Here are examples of each:
+
+```python
+# Positional arguments
+def add(a, b):
+    return a + b
+
+# Keyword arguments
+def greet(name, greeting="Hello"):
+    print(greeting, name)
+
+# Default arguments
+def power(x, n=2):
+    return x ** n
+
+# Variable-length arguments
+def sum_all(*args):
+    return sum(args)
+```
+### Variable Scope
+Variables in Python have a scope, which determines their accessibility. There are two types of variable scopes: global scope and local scope. Here's an example:
+
+```python
+x = 10  # Global variable
+
+def func():
+    y = 20  # Local variable
+    print(x)  # Access global variable
+    print(y)  # Access local variable
+
+func()
+```
+### Mutability/Immutability of Arguments
+In Python, some data types are mutable (can be modified) and some are immutable (cannot be modified). Understanding mutability is important when working with function arguments. Here's an example:
+
+```python
+def modify_list(my_list):
+    my_list.append(4)  # Modifying a mutable argument
+
+my_list = [1, 2, 3]
+modify_list(my_list)
+print(my_list)  # Output: [1, 2, 3, 4]
+```
+### Conclusion
+In this tutorial, we've covered functions and modules in Python, including function structure, basic function calls, argument types, variable scope, and mutability/immutability of arguments. You should now have a good understanding of how to define and use functions in Python effectively.
+
+```css
+
+This MDX code includes SEO tags `title` and `description` to optimize the page for search engines.
+```
