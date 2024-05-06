@@ -1,0 +1,66 @@
+---
+title: List Operations in Python Tutorial
+description: Learn about searching, insertion, and deletion in lists in Python. This tutorial provides examples and explanations of how to perform these operations on lists.
+---
+
+# List Operations in Python
+
+In this tutorial, we'll cover searching, insertion, and deletion in lists in Python, including examples and explanations of how to perform these operations.
+
+## Searching in Lists
+
+You can search for elements in a list using various methods, such as the `index()` method or a loop. Here's an example of searching for an element in a list:
+
+```python
+my_list = [1, 2, 3, 4, 5]
+
+# Using index() method
+index = my_list.index(3)
+print("Index of 3:", index)  # Output: Index of 3: 2
+
+# Using a loop
+for i, num in enumerate(my_list):
+    if num == 3:
+        print("Index of 3:", i)
+        break
+```
+### Insertion in Lists
+You can insert elements into a list using the insert() method or concatenation. Here's an example of inserting an element into a list:
+
+```python
+my_list = [1, 2, 3, 5]
+
+# Using insert() method
+my_list.insert(3, 4)
+print("After insertion:", my_list)  # Output: After insertion: [1, 2, 3, 4, 5]
+
+# Using concatenation
+my_list = my_list[:3] + [4] + my_list[3:]
+print("After insertion:", my_list)  # Output: After insertion: [1, 2, 3, 4, 5]
+```
+### Deletion in Lists
+You can delete elements from a list using the remove() method, del statement, or pop() method. Here's an example of deleting an element from a list:
+
+```python
+my_list = [1, 2, 3, 4, 5]
+
+# Using remove() method
+my_list.remove(3)
+print("After deletion:", my_list)  # Output: After deletion: [1, 2, 4, 5]
+
+# Using del statement
+del my_list[3]
+print("After deletion:", my_list)  # Output: After deletion: [1, 2, 4]
+
+# Using pop() method
+popped_element = my_list.pop()
+print("Popped element:", popped_element)
+print("After deletion:", my_list)  # Output: Popped element: 4 | After deletion: [1, 2]
+```
+### Conclusion
+In this tutorial, we've covered searching, insertion, and deletion in lists in Python. These operations are essential for manipulating lists and are commonly used in various programming tasks.
+
+```css
+
+This MDX code includes SEO tags `title` and `description` to optimize the page for search engines.
+```
