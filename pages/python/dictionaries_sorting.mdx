@@ -1,0 +1,63 @@
+---
+title: Dictionaries and Sorting in Python Tutorial
+description: Learn about dictionaries and sorting in Python with examples. This tutorial covers basic operations, manipulation, and common use cases for dictionaries and sorting algorithms.
+---
+
+# Dictionaries and Sorting in Python
+
+In this tutorial, we'll cover dictionaries and sorting in Python, including basic operations, manipulation, and common use cases.
+
+## Dictionaries
+
+A dictionary is a collection of key-value pairs, where each key is unique. Here's how you can work with dictionaries:
+
+```python
+# Define a dictionary
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+
+# Access values
+print(my_dict["name"])  # Output: John
+
+# Add new key-value pairs
+my_dict["job"] = "Engineer"
+print(my_dict)  # Output: {'name': 'John', 'age': 30, 'city': 'New York', 'job': 'Engineer'}
+
+# Iterate through keys and values
+
+for key, value in my_dict.items():
+    print(key, ":", value)
+```
+### Sorting
+Python provides built-in functions to sort lists and dictionaries. Here are examples of sorting:
+
+##### Sorting Lists
+```python
+my_list = [3, 1, 4, 1, 5, 9, 2, 6]
+
+# Sort in ascending order
+my_list.sort()
+print(my_list)  # Output: [1, 1, 2, 3, 4, 5, 6, 9]
+
+# Sort in descending order
+my_list.sort(reverse=True)
+print(my_list)  # Output: [9, 6, 5, 4, 3, 2, 1, 1]
+```
+##### Sorting Dictionaries
+```python
+my_dict = {"b": 2, "a": 1, "c": 3}
+
+# Sort keys
+sorted_keys = sorted(my_dict.keys())
+print(sorted_keys)  # Output: ['a', 'b', 'c']
+
+# Sort values
+sorted_values = sorted(my_dict.values())
+print(sorted_values)  # Output: [1, 2, 3]
+```
+### Conclusion
+In this tutorial, we've covered dictionaries and sorting in Python, including basic operations, manipulation, and common use cases. You should now have a good understanding of how to work with dictionaries and sorting algorithms in Python.
+
+```css
+
+This MDX code includes SEO tags `title` and `description` to optimize the page for search engines.
+```
