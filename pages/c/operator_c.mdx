@@ -9,14 +9,14 @@ In this tutorial, we will delve into some advanced topics in C programming. Thes
 ### Bitwise Operators
 Bitwise operators manipulate individual bits of operands. These operators are useful in tasks like setting, clearing, or toggling specific bits.
 
-##### Types of Bitwise Operators
-- 1.AND (`&`): Sets each bit to 1 if both bits are 1.
-- 2.OR (`|`): Sets each bit to 1 if either bit is 1.
-- 3.XOR (`^`): Sets each bit to 1 if only one of the two bits is 1.
-- 4.NOT (`~`): Flips all the bits.
-- 5.Left Shift (`<<`): Shifts the bits to the left.
-- 6.Right Shift (`>>`): Shifts the bits to the right.
-###### Example
+### Types of Bitwise Operators
+- 1.AND (&): Sets each bit to 1 if both bits are 1.
+- 2.OR (|): Sets each bit to 1 if either bit is 1.
+- 3.XOR (^): Sets each bit to 1 if only one of the two bits is 1.
+- 4.NOT (~): Flips all the bits.
+- 5.Left Shift (<<): Shifts the bits to the left.
+- 6.Right Shift (>>): Shifts the bits to the right.
+### Example
 ```c
 #include <stdio.h>
 
@@ -41,14 +41,14 @@ int main() {
     return 0;
 }
 ```
-##### Enumerated Data Types
+### Enumerated Data Types
 Enumerated data types allow you to create your own data types with a set of named constants. This helps in writing code that is more readable and maintainable.
 
-###### Syntax
+### Syntax
 ```c
 enum enum_name {const1, const2, ..., constN};
 ```
-###### Example
+### Example
 ```c
 #include <stdio.h>
 
@@ -60,14 +60,15 @@ int main() {
 
     return 0;
 }
-##### Typedef
+```
+### Typedef
 Typedef allows you to create your own data type names for existing data types. This improves code readability and maintainability.
 
-###### Syntax
+### Syntax
 ```c
 typedef existing_data_type new_data_type;
 ```
-###### Example
+### Example
 ```c
 #include <stdio.h>
 
@@ -80,17 +81,17 @@ int main() {
     return 0;
 }
 ```
-##### Command Line Arguments
+### Command Line Arguments
 Command line arguments allow you to pass parameters to a C program when it is executed. These arguments can be accessed within the program.
 
-###### Syntax
+### Syntax
 ```c
 int main(int argc, char *argv[]) {
     // code
     return 0;
 }
 ```
-###### Example
+### Example
 ```c
 #include <stdio.h>
 
@@ -102,10 +103,10 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-##### Error Handling with errno
+### Error Handling with errno
 errno is a global variable in C which is set by system calls and library functions in case of an error. It indicates what type of error occurred.
 
-###### Example
+### Example
 ```c
 #include <stdio.h>
 #include <errno.h>
@@ -119,13 +120,13 @@ int main() {
     return 0;
 }
 ```
-##### Multi-file Programming
+### Multi-file Programming
 Multi-file programming involves dividing your program into multiple source files for better organization and reusability.
 
-##### Example
+### Example
 Consider two source files:
 
-##### main.c
+### main.c
 
 ```c
 #include <stdio.h>
@@ -137,7 +138,7 @@ int main() {
     return 0;
 }
 ```
-##### fun.c
+### fun.c
 ```c
 #include <stdio.h>
 
@@ -145,7 +146,7 @@ void fun() {
     printf("Hello from fun()\n");
 }
 ```
-##### Compilation Command
+### Compilation Command
 
 ```css
 gcc main.c fun.c -o output
