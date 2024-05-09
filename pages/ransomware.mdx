@@ -1,52 +1,57 @@
-Encrypting and Decrypting Files with Python
-In this tutorial, we'll learn how to use Python to encrypt and decrypt files using the cryptography library. We'll create a simple script that encrypts files using the Fernet symmetric encryption method and then decrypts them back to their original form.
+---
+title: "Encrypting Files with Python and Fernet"
+description "This tutorial will guide you through the process of encrypting files using Python and the Fernet encryption algorithm from the cryptography library."
+---
+## Encrypting Files with Python and Fernet
+This tutorial will guide you through the process of encrypting files using Python and the Fernet encryption algorithm from the cryptography library.
 
-Prerequisites
-Before we begin, make sure you have Python installed on your system. You'll also need to install the cryptography library, which can be done using pip:
+### Prerequisites
+Before we start, ensure you have Python installed on your system. Additionally, you'll need to install the cryptography library using pip:
 
-bash
-Copy code
+```bash
 pip install cryptography
-Understanding the Script
-Let's go through the script step by step to understand how it works:
+```
+### Understanding the Script
+Let's break down the script step by step:
 
-python
-Copy code
+```python
 #!/usr/bin/env python3
 
 import os
 from cryptography.fernet import Fernet
-We start by importing the necessary modules. os module is used for interacting with the operating system, and Fernet class from the cryptography.fernet module is used for encryption and decryption.
+```
+We begin by importing the necessary modules: os for interacting with the operating system and Fernet from cryptography.fernet for encryption.
 
-python
-Copy code
+```python
 files = []
 
 for file in os.listdir():
-	if file == "voldemort.py" or file == "thekey.key" or file == "decrypt.py":
+	if file == "voldemort.py" or file == "thekey.key":
 		continue
 	if os.path.isfile(file):
 		files.append(file)
 
 print(files)
-Next, we initialize an empty list files to store the names of files in the current directory (excluding certain files like "voldemort.py", "thekey.key", and "decrypt.py"). We then iterate over each file in the directory, check if it's a regular file, and if so, append its name to the files list.
+```
+Here, we iterate through the files in the current directory, excluding specific files like `"voldemort.py"` and `"thekey.key"`. We append the names of regular files to the `files` list.
 
-python
-Copy code
-with open("thekey.key", "rb") as key:
-	secretkey = key.read()
-We open and read the contents of the file named "thekey.key", which contains the secret key used for encryption and decryption.
+```python
+key = Fernet.generate_key()
 
-python
-Copy code
+with open("thekey.key", "wb") as thekey:
+	thekey.write(key)
+```
+A new key is generated using the `Fernet.generate_key()` method. This key is then saved to a file named "thekey.key" in binary write mode.
+
+```python
 for file in files:
 	with open(file, "rb") as thefile:
 		contents = thefile.read()
-	contents_decrypted = Fernet(secretkey).decrypt(contents)
+	contents_encrypted = Fernet(key).encrypt(contents)
 	with open(file, "wb") as thefile:
-		thefile.write(contents_decrypted)
-For each file in the files list, we open it in binary read mode, read its contents, and then decrypt the contents using the Fernet symmetric encryption method and the secret key we obtained earlier. Finally, we write the decrypted contents back to the file in binary write mode.
+		thefile.write(contents_encrypted)
+```
+For each `file` in the files list, its contents are read and encrypted using the Fernet encryption algorithm and the generated key. The encrypted contents are then written back to the file.
 
-Conclusion
-That's it! You've learned how to encrypt and decrypt files using Python and the cryptography library. Feel free to modify the script to suit your needs or integrate it into your projects.
-
+### Conclusion
+Congratulations! You've learned how to encrypt files using Python and the Fernet encryption algorithm. This technique can be useful for protecting sensitive data stored in files. Remember to keep your encryption key secure, as it's essential for decrypting the files later.
