@@ -28,6 +28,30 @@ public class Car {
 // Creating an object of the Car class
 Car myCar = new Car();
 ```
+```java 
+// Defining the Car class
+public class Car {
+    // Fields
+    String make;
+    String model;
+    int year;
+ 
+    // Method
+    public  void start() {
+        System.out.println("The car is starting...");
+    }
+
+    // Main method to create an object and invoke start()
+    public static void main(String[] args) {
+        // Creating an object of the Car class
+        Car myCar = new Car();
+
+        // Invoking the start() method
+        myCar.start();
+    }
+}
+
+```
 ### Constructors
 A constructor is a special method used to initialize objects. It has the same name as the class and is invoked when an object of the class is created. Constructors can be used to set initial values for object fields.
 
@@ -47,6 +71,35 @@ public class Car {
 
 // Creating an object of the Car class using a constructor
 Car myCar = new Car("Toyota", "Corolla", 2022);
+```
+```java
+public class Car {
+    String make;
+    String model;
+    int year;
+ 
+    // Constructor
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Method to print car details
+    public void printCarDetails() {
+        System.out.println("Car Make: " + make);
+        System.out.println("Car Model: " + model);
+        System.out.println("Car Year: " + year);
+    }
+
+    public static void main(String[] args){
+        // Creating an object of the Car class using a constructor
+        Car myCar = new Car("Toyota", "Corolla", 2022);
+        
+        // Printing the content of myCar
+        myCar.printCarDetails();
+    }
+}
 ```
 ### Encapsulation
 Encapsulation is the mechanism of wrapping data (fields) and methods within a single unit (class). It helps in hiding the internal state of an object and only exposing the necessary functionality.
