@@ -29,7 +29,7 @@ for file in os.listdir():
 
 print(files)
 ```
-Next, we initialize an empty list files to store the names of files in the current directory (excluding certain files like "voldemort.py", "thekey.key", and "decrypt.py"). We then iterate over each file in the directory, check if it's a regular file, and if so, append its name to the files list.
+Next, we initialize an empty list `files` to store the names of files in the current directory (excluding certain files like "voldemort.py", "thekey.key", and "decrypt.py"). We then iterate over each file in the directory, check if it's a regular file, and if so, append its name to the `files` list.
 
 ```python
 with open("thekey.key", "rb") as key:
@@ -45,7 +45,7 @@ for file in files:
 	with open(file, "wb") as thefile:
 		thefile.write(contents_decrypted)
 ```
-For each file in the files list, we open it in binary read mode, read its contents, and then decrypt the contents using the Fernet symmetric encryption method and the secret key we obtained earlier. Finally, we write the decrypted contents back to the file in binary write mode.
+For each file in the `files` list, we open it in binary read mode, read its contents, and then decrypt the contents using the Fernet symmetric encryption method and the secret key we obtained earlier. Finally, we write the decrypted contents back to the file in binary write mode.
 
 ### Conclusion
 That's it! You've learned how to encrypt and decrypt files using Python and the cryptography library. Feel free to modify the script to suit your needs or integrate it into your projects.
