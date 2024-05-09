@@ -1,0 +1,86 @@
+---
+title: Functions and Scope in JavaScript
+description: Learn about declaring and invoking functions, function parameters and return values, and function scope and closures in JavaScript.
+---
+
+# Functions and Scope in JavaScript
+
+Functions are a fundamental concept in JavaScript that allow you to encapsulate reusable blocks of code. In this section, we'll explore how to declare and invoke functions, work with function parameters and return values, and understand function scope and closures.
+
+## Declaring and Invoking Functions
+
+### Declaring Functions
+
+In JavaScript, you can declare a function using the `function` keyword followed by the function name and parentheses containing any parameters.
+
+```javascript
+function greet() {
+  console.log("Hello, world!");
+}
+```
+# Invoking Functions
+Once a function is declared, you can invoke or call it using its name followed by parentheses.
+
+```javascript
+greet(); // Output: Hello, world!
+```
+# Function Parameters and Return Values
+### Function Parameters
+Functions can accept parameters, which act as placeholders for values passed to the function when it is called.
+
+```javascript
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+greet("John"); // Output: Hello, John!
+```
+### Return Values
+Functions can also return values using the return keyword. This allows functions to compute a value and return it to the caller.
+
+```javascript
+function add(a, b) {
+  return a + b;
+}
+
+var result = add(3, 5);
+console.log(result); // Output: 8
+```
+# Function Scope and Closures
+### Function Scope
+JavaScript uses function scope, meaning variables declared inside a function are only accessible within that function.
+
+```javascript
+function sayHello() {
+  var message = "Hello!";
+  console.log(message); // Output: Hello!
+}
+
+sayHello();
+console.log(message); // Error: message is not defined
+```
+#### Closures
+Closures allow functions to retain access to variables from their parent scope even after the parent function has finished executing.
+
+```javascript
+function outer() {
+  var count = 0;
+
+  function inner() {
+    count++;
+    console.log(count);
+  }
+
+  return inner;
+}
+
+var increment = outer();
+increment(); // Output: 1
+increment(); // Output: 2
+```
+Understanding functions and scope in JavaScript is crucial for writing clean, modular, and maintainable code.
+
+```sql
+
+This MDX code provides an explanation of declaring and invoking functions, working with function parameters and return values, and understanding function scope and closures in JavaScript. Examples are provided to illustrate each concept.
+```
