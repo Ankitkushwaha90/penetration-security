@@ -87,6 +87,54 @@ try {
     System.out.println("Error: " + e.getMessage());
 }
 ```
+
+### calculator
+```java
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Welcome to the Calculator!");
+        System.out.println("Available operations: +, -, *, /");
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter the operator: ");
+        char operator = scanner.next().charAt(0);
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+        
+        double result = 0;
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 != 0) {
+                    result = num1 / num2;
+                } else {
+                    System.out.println("Error: Division by zero!");
+                    return;
+                }
+                break;
+            default:
+                System.out.println("Error: Invalid operator!");
+                return;
+        }
+        
+        System.out.println("Result: " + result);
+        scanner.close();
+    }
+}
+
+```
 ### Conclusion
 Exception handling is an essential aspect of Java programming, allowing you to write robust and reliable code that gracefully handles unexpected errors. By understanding how to use try-catch blocks, multiple catch blocks, finally block, and custom exceptions, you'll be better equipped to handle exceptions effectively in your Java applications.
 
