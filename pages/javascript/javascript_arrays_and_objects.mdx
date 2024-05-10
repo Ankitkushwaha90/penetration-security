@@ -1,0 +1,69 @@
+---
+title: "JavaScript Arrays and Objects"
+description: "Learn how to create and manipulate arrays, work with array methods like map, filter, and reduce, and understand objects and object-oriented programming concepts in JavaScript."
+---
+
+# JavaScript Arrays and Objects Tutorial
+
+In this tutorial, we will cover the basics of working with arrays and objects in JavaScript, along with common array methods like `map`, `filter`, and `reduce`.
+
+## Arrays
+
+### Creating Arrays
+
+Arrays in JavaScript can be created using square brackets `[]`. For example:
+
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+```
+### Accessing Array Elements
+You can access elements of an array using square bracket notation and the index of the element. Remember, array indices start from 0. For example:
+
+```javascript
+console.log(numbers[0]); // Output: 1
+```
+
+## Array Methods
+### Map
+The map method creates a new array by applying a function to each element in the original array. For example:
+
+```javascript
+let doubled = numbers.map(num => num * 2);
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+```
+### Filter
+The `filter` method creates a new array with elements that pass the test implemented by the provided function. For example:
+
+```javascript
+let evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // Output: [2, 4]
+```
+### Reduce
+The `reduce` method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. For example:
+
+```javascript
+let sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // Output: 15
+``` 
+
+## Objects
+### Creating Objects
+Objects in JavaScript are key-value pairs enclosed in curly braces `{}`. For example:
+
+```javascript
+let person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+```
+### Accessing Object Properties
+You can access object properties using dot notation or square bracket notation. For example:
+
+```javascript
+console.log(person.name); // Output: John
+console.log(person["age"]); // Output: 30
+```
+### Conclusion
+In this tutorial, we've covered the basics of arrays, array methods, objects, and how to work with them in JavaScript. Practice these concepts to become proficient in JavaScript programming.
+""";
