@@ -141,6 +141,96 @@ public class Car extends Vehicle {
     // Additional fields and methods specific to Car...
 }
 ```
+
+### Example
+```java 
+// Parent class
+public class Vehicle {
+    // Fields
+    private String brand;
+    private String model;
+    private int year;
+
+    // Constructor
+    public Vehicle(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Getters and Setters
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    // Method
+    public void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Year: " + year);
+    }
+}
+
+// Child class inheriting from Vehicle
+public class Car extends Vehicle {
+    // Additional field specific to Car
+    private int numberOfSeats;
+
+    // Constructor
+    public Car(String brand, String model, int year, int numberOfSeats) {
+        super(brand, model, year);
+        this.numberOfSeats = numberOfSeats;
+    }
+
+    // Getter and Setter for numberOfSeats
+    public int getNumberOfSeats() {
+        return numberOfSeats;
+    }
+
+    public void setNumberOfSeats(int numberOfSeats) {
+        this.numberOfSeats = numberOfSeats;
+    }
+
+    // Overridden method
+    @Override
+    public void displayInfo() {
+        super.displayInfo(); // Calling the superclass method
+        System.out.println("Number of Seats: " + numberOfSeats);
+    }
+}
+
+// Main class to demonstrate the usage
+public class Main {
+    public static void main(String[] args) {
+        // Creating an instance of Car
+        Car myCar = new Car("Toyota", "Corolla", 2022, 5);
+        
+        // Calling methods
+        myCar.displayInfo(); // This will call the overridden method in Car class
+    }
+}
+```
+
 ### Polymorphism
 Polymorphism allows objects to be treated as instances of their parent class. It enables the same method to behave differently based on the object that invokes it. Polymorphism is achieved through method overriding and method overloading.
 
