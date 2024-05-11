@@ -266,6 +266,40 @@ public class Calculator {
     }
 }
 ```
+
+### Example of extends
+
+```java 
+class Animal{
+    void eat(){
+        System.out.println("Animal is eat");
+    }
+}
+
+class Dog extends Animal{
+    void bark(){
+        System.out.println("Dog is bark");
+    }
+}
+
+class Pop extends Dog{
+    void pop(){
+        System.out.println("Void is pop");
+    }
+}
+
+class Try_class{
+    public static void main(String[] args){
+        Animal a = new Animal();
+        Pop b = new Pop();
+
+        b.pop();
+        a.eat();
+        b.eat();
+        b.bark();
+    }
+}
+```
 ### Conclusion
 Object-oriented programming is a powerful paradigm that allows you to model real-world entities in your software. By understanding the concepts of classes, objects, constructors, encapsulation, inheritance, polymorphism, method overloading, and method overriding, you'll be able to design and implement robust Java applications.
 
