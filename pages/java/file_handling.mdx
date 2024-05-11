@@ -81,6 +81,36 @@ try {
     e.printStackTrace();
 }
 ```
+
+### Example 
+```java
+// Import the File class
+import java.io.File;
+
+// Import the IOException class to handle errors
+import java.io.IOException;
+
+public class File_ {
+	public static void main(String[] args)
+	{
+
+		try {
+			File Obj = new File("myfile.txt");
+			if (Obj.createNewFile()) {
+				System.out.println("File created: "
+								+ Obj.getName());
+			}
+			else {
+				System.out.println("File already exists.");
+			}
+		}
+		catch (IOException e) {
+			System.out.println("An error has occurred.");
+			e.printStackTrace();
+		}
+	}
+}
+```
 ### Conclusion
 File handling is an essential aspect of Java programming, allowing you to read from and write to files, work with file streams, manipulate files, and handle exceptions that may occur during file operations. By mastering file handling techniques, you can develop robust and efficient applications that interact with the file system effectively.
 
