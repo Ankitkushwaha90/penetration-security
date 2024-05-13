@@ -1,0 +1,90 @@
+---
+title: "Practice Questions and Answers"
+description: "A collection of basic matrix-type questions for practice."
+---
+
+### WAP to print the given paƩern 
+```java
+public class StarPattern {
+    public static void main(String[] args) {
+        int rows = 5; // Number of rows in the pattern
+
+        // Outer loop for rows
+        for (int i = 1; i <= rows; i++) {
+            // Inner loop for columns
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* "); // Print * and a space
+            }
+            System.out.println(); // Move to the next line after each row
+        }
+    }
+}
+```
+
+### WAP of matrix mulƟplicaƟon
+```java
+public class MatrixMultiplication {
+    public static void main(String[] args) {
+        int[][] firstMatrix = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+        int[][] secondMatrix = { {9, 8, 7}, {6, 5, 4}, {3, 2, 1} };
+
+        int rowsFirst = firstMatrix.length;
+        int colsFirst = firstMatrix[0].length;
+        int colsSecond = secondMatrix[0].length;
+
+        int[][] resultMatrix = new int[rowsFirst][colsSecond];
+
+        // Matrix multiplication
+        for (int i = 0; i < rowsFirst; i++) {
+            for (int j = 0; j < colsSecond; j++) {
+                for (int k = 0; k < colsFirst; k++) {
+                    resultMatrix[i][j] += firstMatrix[i][k] * secondMatrix[k][j];
+                }
+            }
+        }
+
+        // Displaying the result
+        System.out.println("Result of matrix multiplication:");
+        for (int i = 0; i < rowsFirst; i++) {
+            for (int j = 0; j < colsSecond; j++) {
+                System.out.print(resultMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+### WAP of matrix addiƟon 
+```java
+public class MatrixAddition {
+    public static void main(String[] args) {
+        int[][] firstMatrix = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+        int[][] secondMatrix = { {9, 8, 7}, {6, 5, 4}, {3, 2, 1} };
+
+        int rows = firstMatrix.length;
+        int cols = firstMatrix[0].length;
+
+        int[][] resultMatrix = new int[rows][cols];
+
+        // Matrix addition
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                resultMatrix[i][j] = firstMatrix[i][j] + secondMatrix[i][j];
+            }
+        }
+
+        // Displaying the result
+        System.out.println("Result of matrix addition:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(resultMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+  
+```
+### 
+
