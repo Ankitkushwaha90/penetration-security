@@ -247,6 +247,121 @@ public class ArmstrongNumbers {
     }
 }
 ```
+### WAP to check vowel or consonant 
+```java
+public class VowelConsonantCheck {
+    public static void main(String[] args) {
+        char ch = 'a'; // Change this character to check different characters
+
+        if (isVowel(ch)) {
+            System.out.println(ch + " is a vowel.");
+        } else {
+            System.out.println(ch + " is a consonant.");
+        }
+    }
+
+    // Function to check if a character is a vowel
+    public static boolean isVowel(char ch) {
+        ch = Character.toLowerCase(ch);
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+}
+```
+### WAP to check the given year is leap year or not
+```java 
+public class LeapYearCheck {
+    public static void main(String[] args) {
+        int year = 2024; // Change this value to check different years
+
+        if (isLeapYear(year)) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+    }
+
+    // Function to check if a year is a leap year
+    public static boolean isLeapYear(int year) {
+        // A year is a leap year if it is divisible by 4 and not divisible by 100, or if it is divisible by 400
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+    }
+}
+```
+### WAP to find greatest of three numbers 
+```java
+public class GreatestOfThree {
+    public static void main(String[] args) {
+        int num1 = 10, num2 = 20, num3 = 30; // Change these values to compare different numbers
+
+        int greatest = findGreatest(num1, num2, num3);
+        System.out.println("The greatest of the three numbers is: " + greatest);
+    }
+
+    // Function to find the greatest of three numbers
+    public static int findGreatest(int num1, int num2, int num3) {
+        int max = num1;
+        if (num2 > max) {
+            max = num2;
+        }
+        if (num3 > max) {
+            max = num3;
+        }
+        return max;
+    }
+}
+```
+### WAP a program to check whether the given number is even or odd 
+```java
+public class EvenOddCheck {
+    public static void main(String[] args) {
+        int number = 7; // Change this value to check different numbers
+
+        if (isEven(number)) {
+            System.out.println(number + " is an even number.");
+        } else {
+            System.out.println(number + " is an odd number.");
+        }
+    }
+
+    // Function to check if a number is even
+    public static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+}
+```
+### WAP to perform bitwise operaƟon 
+```java
+public class BitwiseOperations {
+    public static void main(String[] args) {
+        int num1 = 5; // Example number 1
+        int num2 = 3; // Example number 2
+
+        // Bitwise AND
+        int resultAnd = num1 & num2;
+        System.out.println("Bitwise AND of " + num1 + " and " + num2 + " is: " + resultAnd);
+
+        // Bitwise OR
+        int resultOr = num1 | num2;
+        System.out.println("Bitwise OR of " + num1 + " and " + num2 + " is: " + resultOr);
+
+        // Bitwise XOR
+        int resultXor = num1 ^ num2;
+        System.out.println("Bitwise XOR of " + num1 + " and " + num2 + " is: " + resultXor);
+
+        // Bitwise NOT (Unary Operator)
+        int resultNotNum1 = ~num1;
+        System.out.println("Bitwise NOT of " + num1 + " is: " + resultNotNum1);
+
+        // Left Shift
+        int resultLeftShift = num1 << 1;
+        System.out.println("Left shift of " + num1 + " by 1 bit is: " + resultLeftShift);
+
+        // Right Shift
+        int resultRightShift = num1 >> 1;
+        System.out.println("Right shift of " + num1 + " by 1 bit is: " + resultRightShift);
+    }
+}
+```
 
 
 
