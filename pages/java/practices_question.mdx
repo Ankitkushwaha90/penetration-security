@@ -86,5 +86,167 @@ public class MatrixAddition {
 }
   
 ```
-### 
+### WAP to print fabonacci series 
+```java
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        int n = 10; // Number of terms in the series
+        int firstTerm = 0, secondTerm = 1;
+
+        System.out.println("Fibonacci Series:");
+        System.out.print(firstTerm + " " + secondTerm + " ");
+
+        for (int i = 3; i <= n; i++) {
+            int nextTerm = firstTerm + secondTerm;
+            System.out.print(nextTerm + " ");
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+    }
+}
+```
+### WAP to print palindrome number
+
+```java
+public class PalindromeNumber {
+    public static void main(String[] args) {
+        int num = 121; // Change this value to check different numbers
+
+        if (isPalindrome(num)) {
+            System.out.println(num + " is a palindrome number.");
+        } else {
+            System.out.println(num + " is not a palindrome number.");
+        }
+    }
+
+    // Function to check if a number is palindrome
+    public static boolean isPalindrome(int num) {
+        int reversedNum = 0;
+        int originalNum = num;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reversedNum = reversedNum * 10 + digit;
+            num /= 10;
+        }
+
+        return originalNum == reversedNum;
+    }
+}
+```
+### WAP to print palindrome string
+
+```java
+public class PalindromeString {
+    public static void main(String[] args) {
+        String str = "radar"; // Change this value to check different strings
+
+        if (isPalindrome(str)) {
+            System.out.println("\"" + str + "\"" + " is a palindrome string.");
+        } else {
+            System.out.println("\"" + str + "\"" + " is not a palindrome string.");
+        }
+    }
+
+    // Function to check if a string is palindrome
+    public static boolean isPalindrome(String str) {
+        int left = 0;
+        int right = str.length() - 1;
+
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+}
+```
+
+### WAP to find factorial of given number 
+```java
+public class Factorial {
+    public static void main(String[] args) {
+        int num = 5; // Change this value to find factorial of different numbers
+        long factorial = findFactorial(num);
+        System.out.println("Factorial of " + num + " is: " + factorial);
+    }
+
+    // Function to find factorial
+    public static long findFactorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            long fact = 1;
+            for (int i = 2; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+    }
+}
+```
+### WAP to print prime number 
+```java
+public class PrimeNumbers {
+    public static void main(String[] args) {
+        int limit = 50; // Change this value to set the limit for prime numbers
+
+        System.out.println("Prime numbers up to " + limit + ":");
+        for (int i = 2; i <= limit; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    // Function to check if a number is prime
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
+### WAP to print Armstrong number
+```java
+public class ArmstrongNumbers {
+    public static void main(String[] args) {
+        int limit = 1000; // Change this value to set the limit for Armstrong numbers
+
+        System.out.println("Armstrong numbers up to " + limit + ":");
+        for (int i = 1; i <= limit; i++) {
+            if (isArmstrong(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    // Function to check if a number is Armstrong
+    public static boolean isArmstrong(int num) {
+        int originalNum = num;
+        int numDigits = String.valueOf(num).length();
+        int sum = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            sum += Math.pow(digit, numDigits);
+            num /= 10;
+        }
+
+        return sum == originalNum;
+    }
+}
+```
+
+
 
