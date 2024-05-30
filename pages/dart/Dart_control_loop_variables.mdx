@@ -1,0 +1,212 @@
+---
+title: "Dart Programming Basics: Variables, Data Types, Constants, Operators, Control Flow, and Loops"
+description: "Learn the basics of Dart programming including variables, data types, constants, operators, control flow statements, and loops with examples."
+keywords: ["Dart", "Variables", "Data Types", "Constants", "Operators", "Control Flow", "Loops", "Programming Basics"]
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import TutorialLayout from '@theme/TutorialLayout';
+
+<TutorialLayout>
+
+# Dart Programming Basics
+
+In this tutorial, you'll learn the basics of Dart programming including variables, data types, constants, operators, control flow statements, and loops.
+
+## Variables and Data Types
+
+### Variables
+
+In Dart, variables are used to store data. You can declare a variable using the `var`, `final`, or `const` keywords.
+
+<CodeBlock language="dart">
+{`
+void main() {
+  var name = 'John'; // String variable
+  var age = 30; // Integer variable
+  print('Name: \$name, Age: \$age');
+}
+`}
+</CodeBlock>
+
+### Data Types
+
+Dart supports various data types including:
+
+- `int`: Integer values.
+- `double`: Floating point values.
+- `String`: Textual data.
+- `bool`: Boolean values (true or false).
+- `List`: Collection of items.
+- `Map`: Collection of key-value pairs.
+
+<CodeBlock language="dart">
+{`
+void main() {
+  int age = 30;
+  double height = 5.9;
+  String name = 'John';
+  bool isStudent = true;
+  List<String> colors = ['Red', 'Green', 'Blue'];
+  Map<String, String> capitals = {'USA': 'Washington, D.C.', 'France': 'Paris'};
+  
+  print('Age: \$age, Height: \$height, Name: \$name, Is Student: \$isStudent');
+  print('Colors: \$colors');
+  print('Capitals: \$capitals');
+}
+`}
+</CodeBlock>
+
+## Constants
+
+Constants are variables whose values cannot be changed. Use `final` or `const` to declare constants.
+
+<CodeBlock language="dart">
+{`
+void main() {
+  final String country = 'USA';
+  const double pi = 3.14;
+  
+  print('Country: \$country, PI: \$pi');
+}
+`}
+</CodeBlock>
+
+## Operators
+
+Dart supports various operators for arithmetic, comparison, logical, and assignment operations.
+
+<CodeBlock language="dart">
+{`
+void main() {
+  int a = 10;
+  int b = 20;
+  
+  // Arithmetic operators
+  print('a + b = \${a + b}');
+  print('a - b = \${a - b}');
+  print('a * b = \${a * b}');
+  print('a / b = \${a / b}');
+  
+  // Comparison operators
+  print('a == b: \${a == b}');
+  print('a != b: \${a != b}');
+  print('a > b: \${a > b}');
+  print('a < b: \${a < b}');
+  
+  // Logical operators
+  bool x = true;
+  bool y = false;
+  print('x && y: \${x && y}');
+  print('x || y: \${x || y}');
+  print('!x: \${!x}');
+}
+`}
+</CodeBlock>
+
+## Control Flow Statements
+
+### if-else
+
+The `if-else` statement is used for conditional execution.
+
+<CodeBlock language="dart">
+{`
+void main() {
+  int number = 10;
+  
+  if (number > 0) {
+    print('Number is positive');
+  } else if (number < 0) {
+    print('Number is negative');
+  } else {
+    print('Number is zero');
+  }
+}
+`}
+</CodeBlock>
+
+### switch-case
+
+The `switch-case` statement is used for multiple conditional checks.
+
+<CodeBlock language="dart">
+{`
+void main() {
+  String grade = 'A';
+  
+  switch (grade) {
+    case 'A':
+      print('Excellent');
+      break;
+    case 'B':
+      print('Good');
+      break;
+    case 'C':
+      print('Average');
+      break;
+    case 'D':
+      print('Poor');
+      break;
+    default:
+      print('Invalid grade');
+  }
+}
+`}
+</CodeBlock>
+
+## Loops
+
+### for loop
+
+The `for` loop is used to iterate over a range of values.
+
+<CodeBlock language="dart">
+{`
+void main() {
+  for (int i = 1; i <= 5; i++) {
+    print('Iteration \$i');
+  }
+}
+`}
+</CodeBlock>
+
+### while loop
+
+The `while` loop is used to execute a block of code as long as a condition is true.
+
+<CodeBlock language="dart">
+{`
+void main() {
+  int i = 1;
+  
+  while (i <= 5) {
+    print('Iteration \$i');
+    i++;
+  }
+}
+`}
+</CodeBlock>
+
+### do-while loop
+
+The `do-while` loop is similar to the `while` loop, but it guarantees at least one execution of the loop body.
+
+<CodeBlock language="dart">
+{`
+void main() {
+  int i = 1;
+  
+  do {
+    print('Iteration \$i');
+    i++;
+  } while (i <= 5);
+}
+`}
+</CodeBlock>
+
+## Conclusion
+
+In this tutorial, you learned about variables, data types, constants, operators, control flow statements, and loops in Dart. These are the foundational concepts you'll need to build more complex Dart applications.
+
+</TutorialLayout>
