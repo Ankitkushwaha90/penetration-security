@@ -1,0 +1,48 @@
+---
+title: "Blinking an LED with Arduino"
+description: "Learn how to blink an LED using Arduino, a beginner-friendly electronics project."
+keywords: ["Arduino", "LED", "Blinking LED", "Tutorial", "Electronics"]
+---
+
+import TutorialLayout from '@theme/TutorialLayout';
+import CodeBlock from '@theme/CodeBlock';
+
+<TutorialLayout>
+
+# Blinking an LED with Arduino
+
+In this tutorial, you'll learn how to blink an LED using Arduino, a beginner-friendly electronics project.
+
+## What You'll Need
+
+- Arduino board (e.g., Arduino Uno)
+- LED (any color)
+- Resistor (220-330 ohms)
+- Breadboard
+- Jumper wires
+
+## Circuit Diagram
+
+Here's the circuit diagram for blinking an LED with Arduino:
+
+```plaintext
+Arduino Digital Pin 13 --> Resistor --> LED --> Ground
+```
+### Arduino Sketch
+```arduino
+void setup() {
+  pinMode(13, OUTPUT); // Set digital pin 13 as output
+}
+
+void loop() {
+  digitalWrite(13, HIGH); // Turn LED on
+  delay(1000); // Wait for 1 second
+  digitalWrite(13, LOW); // Turn LED off
+  delay(1000); // Wait for 1 second
+}
+```
+### Explanation
+In the `setup()` function, we configure pin 13 as an output pin using `pinMode()`.
+In the `loop()` function, we continuously turn the LED on and off with a delay of 1 second between each state change using `digitalWrite()` and `delay()` functions.
+### Conclusion
+Congratulations! You've successfully blinked an LED using Arduino. Experiment with different delay times and LED connections to customize your LED blinking experience.
