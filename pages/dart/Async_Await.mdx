@@ -21,8 +21,7 @@ A `Future` represents a potential value or error that will be available at some 
 
 You can create a Future using the `Future` constructor.
 
-<CodeBlock language="dart">
-{`
+```dart
 void main() {
   Future<String> fetchData() {
     return Future.delayed(Duration(seconds: 2), () => 'Data loaded');
@@ -44,8 +43,7 @@ The `async` and `await` keywords provide a way to work with asynchronous code th
 
 Use the `async` keyword to mark a function as asynchronous and the `await` keyword to wait for a future to complete.
 
-<CodeBlock language="dart">
-{`
+```dart
 void main() async {
   Future<String> fetchData() async {
     await Future.delayed(Duration(seconds: 2));
@@ -65,8 +63,7 @@ void main() async {
 
 You can use try-catch blocks to handle errors in asynchronous functions.
 
-<CodeBlock language="dart">
-{`
+```dart
 void main() async {
   Future<String> fetchData() async {
     await Future.delayed(Duration(seconds: 2));
@@ -86,7 +83,7 @@ void main() async {
 
 Here's an example of using async-await to fetch data from a network.
 
-```bash
+```dart
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
