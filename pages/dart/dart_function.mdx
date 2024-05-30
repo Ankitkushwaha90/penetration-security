@@ -1,0 +1,137 @@
+---
+title: "Dart Functions: Declaration, Parameters, and Expressions"
+description: "Learn how to declare functions in Dart, including parameters and return types, optional and named parameters, and function expressions with examples."
+keywords: ["Dart", "Functions", "Parameters", "Return Types", "Optional Parameters", "Named Parameters", "Function Expressions"]
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import TutorialLayout from '@theme/TutorialLayout';
+
+<TutorialLayout>
+
+# Dart Functions: Declaration, Parameters, and Expressions
+
+In this tutorial, you'll learn how to declare functions in Dart, including parameters and return types, optional and named parameters, and function expressions.
+
+## Declaring Functions
+
+In Dart, you can declare a function using the `void` keyword if it doesn't return a value or specify a return type if it does.
+
+
+void sayHello() {
+  print('Hello, World!');
+}
+
+int add(int a, int b) {
+  return a + b;
+}
+
+void main() {
+  sayHello();
+  int sum = add(5, 3);
+  print('Sum: \$sum');
+}
+
+
+## Parameters and Return Types
+
+### Parameters
+
+Functions can take parameters to pass values into them.
+
+
+void greet(String name) {
+  print('Hello, \$name!');
+}
+
+void main() {
+  greet('Alice');
+}
+
+
+### Return Types
+
+Specify the return type of a function to indicate what type of value it returns.
+
+
+double multiply(double a, double b) {
+  return a * b;
+}
+
+void main() {
+  double result = multiply(4.5, 3.2);
+  print('Result: \$result');
+}
+
+
+## Optional Parameters
+
+Dart allows you to define optional parameters, which can be positional or named.
+
+### Positional Optional Parameters
+
+Use square brackets `[]` to define positional optional parameters.
+
+
+void printInfo(String name, [int? age]) {
+  print('Name: \$name');
+  if (age != null) {
+    print('Age: \$age');
+  }
+}
+
+void main() {
+  printInfo('Bob');
+  printInfo('Bob', 25);
+}
+
+
+### Named Optional Parameters
+
+Use curly braces `{}` to define named optional parameters. Named parameters can also have default values.
+
+
+void describe({String name = 'Unknown', int age = 0}) {
+  print('Name: \$name, Age: \$age');
+}
+
+void main() {
+  describe(name: 'Charlie', age: 30);
+  describe(age: 25);
+  describe();
+}
+
+
+## Function Expressions
+
+### Anonymous Functions
+
+Dart allows you to create functions without names, known as anonymous functions.
+
+
+void main() {
+  var numbers = [1, 2, 3, 4];
+  
+  numbers.forEach((number) {
+    print('Number: \$number');
+  });
+}
+
+
+### Lambda Expressions
+
+A lambda expression is a concise way to represent anonymous functions using the `=>` syntax.
+
+
+void main() {
+  var numbers = [1, 2, 3, 4];
+  
+  numbers.forEach((number) => print('Number: \$number'));
+}
+
+
+## Conclusion
+
+In this tutorial, you learned how to declare functions in Dart, handle parameters and return types, use optional and named parameters, and work with function expressions. These concepts are essential for writing modular and reusable code in Dart.
+
+</TutorialLayout>
