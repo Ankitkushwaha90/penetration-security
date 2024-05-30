@@ -1,0 +1,244 @@
+---
+title: "Dart OOP: Classes, Objects, Constructors, Inheritance, Polymorphism, Abstract Classes, Interfaces, and Mixins"
+description: "Learn the principles of object-oriented programming in Dart, including classes, objects, constructors, inheritance, polymorphism, abstract classes, interfaces, and mixins with examples."
+keywords: ["Dart", "OOP", "Classes", "Objects", "Constructors", "Inheritance", "Polymorphism", "Abstract Classes", "Interfaces", "Mixins"]
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import TutorialLayout from '@theme/TutorialLayout';
+
+<TutorialLayout>
+
+# Dart OOP: Classes, Objects, Constructors, Inheritance, Polymorphism, Abstract Classes, Interfaces, and Mixins
+
+In this tutorial, you'll learn the principles of object-oriented programming (OOP) in Dart, including classes and objects, constructors, inheritance, polymorphism, abstract classes and interfaces, and mixins.
+
+## Classes and Objects
+
+A class is a blueprint for creating objects (instances). An object is an instance of a class.
+
+
+class Person {
+  String name;
+  int age;
+
+  // Constructor
+  Person(this.name, this.age);
+
+  // Method
+  void display() {
+    print('Name: \$name, Age: \$age');
+  }
+}
+
+void main() {
+  var person = Person('Alice', 30);
+  person.display();
+}
+
+
+## Constructors
+
+### Default Constructor
+
+A default constructor is created automatically if no other constructors are defined.
+
+
+class Animal {
+  String name;
+
+  // Default constructor
+  Animal(this.name);
+
+  void display() {
+    print('Animal: \$name');
+  }
+}
+
+void main() {
+  var animal = Animal('Lion');
+  animal.display();
+}
+
+
+### Named Constructors
+
+Named constructors allow you to create multiple constructors for a class.
+
+
+class Vehicle {
+  String type;
+
+  // Named constructor
+  Vehicle.car() {
+    type = 'Car';
+  }
+
+  Vehicle.bike() {
+    type = 'Bike';
+  }
+
+  void display() {
+    print('Vehicle type: \$type');
+  }
+}
+
+void main() {
+  var car = Vehicle.car();
+  var bike = Vehicle.bike();
+  car.display();
+  bike.display();
+}
+
+
+## Inheritance
+
+Inheritance allows you to create a new class that reuses, extends, and modifies the behavior of another class.
+
+
+class Animal {
+  String name;
+
+  Animal(this.name);
+
+  void display() {
+    print('Animal: \$name');
+  }
+}
+
+// Inheriting Animal class
+class Dog extends Animal {
+  String breed;
+
+  Dog(String name, this.breed) : super(name);
+
+  void display() {
+    super.display();
+    print('Breed: \$breed');
+  }
+}
+
+void main() {
+  var dog = Dog('Buddy', 'Golden Retriever');
+  dog.display();
+}
+
+
+## Polymorphism
+
+Polymorphism allows methods to do different things based on the object it is acting upon.
+
+
+class Shape {
+  void draw() {
+    print('Drawing a shape');
+  }
+}
+
+class Circle extends Shape {
+  @override
+  void draw() {
+    print('Drawing a circle');
+  }
+}
+
+class Square extends Shape {
+  @override
+  void draw() {
+    print('Drawing a square');
+  }
+}
+
+void main() {
+  Shape shape;
+  shape = Circle();
+  shape.draw(); // Drawing a circle
+  shape = Square();
+  shape.draw(); // Drawing a square
+}
+
+
+## Abstract Classes and Interfaces
+
+### Abstract Classes
+
+Abstract classes cannot be instantiated and are used to define common behavior.
+
+
+abstract class Animal {
+  void makeSound(); // Abstract method
+}
+
+class Dog extends Animal {
+  @override
+  void makeSound() {
+    print('Bark');
+  }
+}
+
+void main() {
+  var dog = Dog();
+  dog.makeSound(); // Bark
+}
+
+
+### Interfaces
+
+In Dart, all classes implicitly define an interface. You can implement multiple interfaces by using the `implements` keyword.
+
+
+class Printer {
+  void printDocument() {
+    print('Printing document...');
+  }
+}
+
+class Scanner {
+  void scanDocument() {
+    print('Scanning document...');
+  }
+}
+
+class AllInOnePrinter implements Printer, Scanner {
+  @override
+  void printDocument() {
+    print('All-in-one printer: Printing document...');
+  }
+
+  @override
+  void scanDocument() {
+    print('All-in-one printer: Scanning document...');
+  }
+}
+
+void main() {
+  var device = AllInOnePrinter();
+  device.printDocument();
+  device.scanDocument();
+}
+
+
+## Mixins
+
+Mixins are a way of reusing a class's code in multiple class hierarchies.
+
+
+mixin Flyable {
+  void fly() {
+    print('Flying');
+  }
+}
+
+class Bird with Flyable {}
+
+void main() {
+  var bird = Bird();
+  bird.fly(); // Flying
+}
+
+
+## Conclusion
+
+In this tutorial, you learned about classes and objects, constructors, inheritance, polymorphism, abstract classes, interfaces, and mixins in Dart. These concepts form the foundation of object-oriented programming and help you build more complex and organized code.
+
+</TutorialLayout>
