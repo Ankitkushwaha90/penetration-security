@@ -17,7 +17,7 @@ In this tutorial, you'll learn how to declare functions in Dart, including param
 
 In Dart, you can declare a function using the `void` keyword if it doesn't return a value or specify a return type if it does.
 
-
+```bash
 void sayHello() {
   print('Hello, World!');
 }
@@ -31,7 +31,7 @@ void main() {
   int sum = add(5, 3);
   print('Sum: \$sum');
 }
-
+```
 
 ## Parameters and Return Types
 
@@ -39,7 +39,7 @@ void main() {
 
 Functions can take parameters to pass values into them.
 
-
+```bash
 void greet(String name) {
   print('Hello, \$name!');
 }
@@ -47,13 +47,13 @@ void greet(String name) {
 void main() {
   greet('Alice');
 }
-
+```
 
 ### Return Types
 
 Specify the return type of a function to indicate what type of value it returns.
 
-
+```bash
 double multiply(double a, double b) {
   return a * b;
 }
@@ -62,7 +62,7 @@ void main() {
   double result = multiply(4.5, 3.2);
   print('Result: \$result');
 }
-
+```
 
 ## Optional Parameters
 
@@ -72,7 +72,7 @@ Dart allows you to define optional parameters, which can be positional or named.
 
 Use square brackets `[]` to define positional optional parameters.
 
-
+```bash
 void printInfo(String name, [int? age]) {
   print('Name: \$name');
   if (age != null) {
@@ -84,13 +84,13 @@ void main() {
   printInfo('Bob');
   printInfo('Bob', 25);
 }
-
+```
 
 ### Named Optional Parameters
 
 Use curly braces `{}` to define named optional parameters. Named parameters can also have default values.
 
-
+```bash
 void describe({String name = 'Unknown', int age = 0}) {
   print('Name: \$name, Age: \$age');
 }
@@ -100,7 +100,7 @@ void main() {
   describe(age: 25);
   describe();
 }
-
+```
 
 ## Function Expressions
 
@@ -108,7 +108,7 @@ void main() {
 
 Dart allows you to create functions without names, known as anonymous functions.
 
-
+```bash
 void main() {
   var numbers = [1, 2, 3, 4];
   
@@ -116,19 +116,19 @@ void main() {
     print('Number: \$number');
   });
 }
-
+```
 
 ### Lambda Expressions
 
 A lambda expression is a concise way to represent anonymous functions using the `=>` syntax.
 
-
+```bash
 void main() {
   var numbers = [1, 2, 3, 4];
   
   numbers.forEach((number) => print('Number: \$number'));
 }
-
+```
 
 ## Conclusion
 
