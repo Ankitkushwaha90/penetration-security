@@ -21,7 +21,7 @@ The try-catch block in Dart is used to handle exceptions that might occur during
 
 You can catch exceptions using a try-catch block.
 
-```bash
+```dart
 void main() {
   try {
     int result = 10 ~/ 0;
@@ -36,7 +36,7 @@ void main() {
 
 You can catch specific exceptions by specifying the type of exception.
 
-```bash
+```dart
 void main() {
   try {
     int result = 10 ~/ 0;
@@ -51,7 +51,7 @@ void main() {
 
 The `finally` block is used to execute code regardless of whether an exception is thrown or not.
 
-```bash
+```dart
 void main() {
   try {
     int result = 10 ~/ 0;
@@ -70,7 +70,7 @@ You can throw exceptions using the `throw` keyword.
 
 ### Throwing a Basic Exception
 
-```bash
+```dart
 void checkAge(int age) {
   if (age < 18) {
     throw Exception('Age must be 18 or older');
@@ -90,7 +90,7 @@ void main() {
 
 You can create custom exceptions by extending the `Exception` class.
 
-```bash
+```dart
 class AgeException implements Exception {
   String errorMessage() {
     return 'Age must be 18 or older';
