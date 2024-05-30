@@ -1,0 +1,84 @@
+---
+title: "Dart Development: Debugging, Testing, and Project Structure"
+description: "Learn how to debug Dart applications, write tests with the Dart test framework, and organize code and project structure effectively."
+keywords: ["Dart", "Debugging", "Testing", "Project Structure", "Development"]
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import TutorialLayout from '@theme/TutorialLayout';
+
+<TutorialLayout>
+
+# Dart Development: Debugging, Testing, and Project Structure
+
+In this tutorial, you'll learn how to debug Dart applications, write tests with the Dart test framework, and organize code and project structure effectively.
+
+## Debugging Dart Applications
+
+Dart provides robust tools for debugging applications, including breakpoints, stepping through code, and inspecting variables.
+
+### Using Debugging Tools in IDEs
+
+Most IDEs, such as Visual Studio Code and IntelliJ IDEA, provide built-in debugging support for Dart.
+
+### Adding Breakpoints
+
+You can add breakpoints to your code by clicking on the left gutter of the code editor in your IDE.
+
+### Stepping Through Code
+
+Use the debugging controls (step into, step over, step out) to navigate through your code while debugging.
+
+## Testing with the Dart Test Framework
+
+Writing tests is essential for ensuring the correctness of your Dart code. Dart provides a built-in test framework for writing and running tests.
+
+### Writing Unit Tests
+
+Create test files with test cases using the `test` package.
+
+```dart
+import 'package:test/test.dart';
+
+void main() {
+  test('Addition test', () {
+    expect(1 + 1, equals(2));
+  });
+
+  test('Multiplication test', () {
+    expect(2 * 3, equals(6));
+  });
+}
+```
+
+### Running Tests
+
+Use the `pub run test` command to run tests in your Dart project.
+
+## Code Organization and Project Structure
+
+Organizing your Dart code and project structure is crucial for maintainability and scalability.
+
+### Folder Structure
+
+Create a clear folder structure for your Dart project, separating source code, tests, and assets.
+
+```bash
+my_project/
+├── lib/
+│   └── src/
+│       └── my_module.dart
+├── test/
+│   └── my_module_test.dart
+└── pubspec.yaml
+```
+
+### Modularization
+
+Break your code into modules and packages to promote reusability and maintainability.
+
+## Conclusion
+
+In this tutorial, you learned how to debug Dart applications effectively, write tests with the Dart test framework, and organize code and project structure for better maintainability and scalability. These skills are essential for developing high-quality Dart applications.
+
+</TutorialLayout>
