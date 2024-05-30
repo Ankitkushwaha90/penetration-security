@@ -19,42 +19,42 @@ A List is an ordered collection of items. Lists in Dart are similar to arrays in
 
 ### Creating a List
 
-
+```bash
 void main() {
   List<String> fruits = ['Apple', 'Banana', 'Mango'];
   print(fruits); // Output: [Apple, Banana, Mango]
 }
-
+```
 
 ### Adding Items to a List
 
-
+```bash
 void main() {
   List<String> fruits = ['Apple', 'Banana', 'Mango'];
   fruits.add('Orange');
   print(fruits); // Output: [Apple, Banana, Mango, Orange]
 }
-
+```
 
 ### Removing Items from a List
 
-
+```bash
 void main() {
   List<String> fruits = ['Apple', 'Banana', 'Mango'];
   fruits.remove('Banana');
   print(fruits); // Output: [Apple, Mango]
 }
-
+```
 
 ### Accessing List Items
 
-
+```bash
 void main() {
   List<String> fruits = ['Apple', 'Banana', 'Mango'];
   print(fruits[0]); // Output: Apple
   print(fruits.length); // Output: 3
 }
-
+```
 
 ## Maps
 
@@ -62,7 +62,7 @@ A Map is a collection of key-value pairs. Each key in a Map is unique.
 
 ### Creating a Map
 
-
+```bash
 void main() {
   Map<String, String> capitals = {
     'USA': 'Washington, D.C.',
@@ -71,11 +71,11 @@ void main() {
   };
   print(capitals); // Output: {USA: Washington, D.C., France: Paris, Japan: Tokyo}
 }
-
+```
 
 ### Adding Items to a Map
 
-
+```bash
 void main() {
   Map<String, String> capitals = {
     'USA': 'Washington, D.C.',
@@ -84,11 +84,11 @@ void main() {
   capitals['Japan'] = 'Tokyo';
   print(capitals); // Output: {USA: Washington, D.C., France: Paris, Japan: Tokyo}
 }
-
+```
 
 ### Removing Items from a Map
 
-
+```bash
 void main() {
   Map<String, String> capitals = {
     'USA': 'Washington, D.C.',
@@ -98,11 +98,11 @@ void main() {
   capitals.remove('France');
   print(capitals); // Output: {USA: Washington, D.C., Japan: Tokyo}
 }
-
+```
 
 ### Accessing Map Items
 
-
+```bash
 void main() {
   Map<String, String> capitals = {
     'USA': 'Washington, D.C.',
@@ -113,7 +113,7 @@ void main() {
   print(capitals.keys); // Output: (USA, France, Japan)
   print(capitals.values); // Output: (Washington, D.C., Paris, Tokyo)
 }
-
+```
 
 ## Sets
 
@@ -121,42 +121,42 @@ A Set is an unordered collection of unique items.
 
 ### Creating a Set
 
-
+```bash
 void main() {
   Set<String> fruits = {'Apple', 'Banana', 'Mango'};
   print(fruits); // Output: {Apple, Banana, Mango}
 }
-
+```
 
 ### Adding Items to a Set
 
-
+```bash
 void main() {
   Set<String> fruits = {'Apple', 'Banana', 'Mango'};
   fruits.add('Orange');
   print(fruits); // Output: {Apple, Banana, Mango, Orange}
 }
-
+```
 
 ### Removing Items from a Set
 
-
+```bash
 void main() {
   Set<String> fruits = {'Apple', 'Banana', 'Mango'};
   fruits.remove('Banana');
   print(fruits); // Output: {Apple, Mango}
 }
-
+```
 
 ### Checking for Item Existence
 
-
+```bash
 void main() {
   Set<String> fruits = {'Apple', 'Banana', 'Mango'};
   print(fruits.contains('Apple')); // Output: true
   print(fruits.contains('Orange')); // Output: false
 }
-
+```
 
 ## Conclusion
 
