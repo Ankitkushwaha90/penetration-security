@@ -1,0 +1,106 @@
+---
+title: "Setting Up Dart Development Environment"
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import TutorialLayout from '@theme/TutorialLayout';
+
+<TutorialLayout>
+
+# Setting Up Dart Development Environment
+
+In this tutorial, you will learn how to install the Dart SDK and set up your Integrated Development Environment (IDE) for Dart development. We'll cover the setup for both Visual Studio Code and IntelliJ IDEA.
+
+## Installing Dart SDK
+
+To develop Dart applications, you need to install the Dart SDK.
+
+### Step 1: Download Dart SDK
+
+Go to the [Dart SDK download page](https://dart.dev/get-dart) and download the SDK for your operating system.
+
+### Step 2: Install Dart SDK
+
+#### On Windows
+
+1. Extract the downloaded ZIP file.
+2. Add the Dart SDK `bin` directory to your system's PATH.
+
+#### On macOS
+
+1. Open Terminal.
+2. Run the following command to install Dart using Homebrew:
+```sh
+   brew tap dart-lang/dart
+   brew install dart
+```
+##### On Linux
+- 1. Open Terminal.
+- 2. Run the following commands to install Dart:
+```sh
+sudo apt update
+sudo apt install apt-transport-https
+sudo sh -c 'wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
+sudo sh -c 'wget -qO- https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list'
+sudo apt update
+sudo apt install dart
+```
+### Verify Installation
+After installing, verify the installation by running:
+
+```sh
+dart --version
+```
+You should see the Dart SDK version installed on your system.
+
+### Setting Up Visual Studio Code
+Visual Studio Code is a lightweight but powerful source code editor that runs on your desktop.
+
+### Step 1: Install Visual Studio Code
+- Download and install Visual Studio Code from the official website.
+
+### Step 2: Install Dart Extension
+- 1. Open Visual Studio Code.
+- 2. Go to the Extensions view by clicking on the Extensions icon in the Activity Bar or pressing `Ctrl+Shift+X`.
+- 3. Search for "Dart" and install the Dart extension by Dart Code.
+### Step 3: Create a Dart Project
+- 1.Open a new terminal in Visual Studio Code.
+- 2.Run the following command to create a new Dart project:
+```sh
+dart create my_dart_app
+```
+- 3.Open the newly created project:
+``sh
+cd my_dart_app
+code .
+```
+### Step 4: Run Your Dart Application
+- 1. Open the `bin/main.dart` file.
+- 2. Press `F5` to start debugging or run the application.
+## Setting Up IntelliJ IDEA
+IntelliJ IDEA is a popular IDE for developing Dart applications.
+
+### Step 1: Install IntelliJ IDEA
+- Download and install IntelliJ IDEA from the official website.
+
+### Step 2: Install Dart Plugin
+- 1.Open IntelliJ IDEA.
+- 2.Go to `File > Settings` (or `IntelliJ IDEA > Preferences` on macOS).
+- 3.Select `Plugins` and search for "Dart".
+- 4.Install the Dart plugin and restart IntelliJ IDEA.
+### Step 3: Create a Dart Project
+- 1. Go to `File > New > Project`.
+- 2. Select `Dart` and configure the Dart SDK path.
+- 3. Create a new Dart project.
+### Step 4: Run Your Dart Application
+- 1. Open the `main.dart` file.
+- 2. Click on the Run icon or press Shift+F10 to run the application.
+### Conclusion
+You have now set up your Dart development environment and are ready to start building Dart applications. Choose the IDE that best fits your needs and start coding!
+
+</TutorialLayout>
+```
+### Explanation of MDX Components
+- `import CodeBlock from '@theme/CodeBlock';` and `import TutorialLayout from '@theme/TutorialLayout';`: These imports bring in custom components for code blocks and the layout used in the tutorial.
+- `<TutorialLayout>`: Wraps the content to apply the tutorial-specific layout.
+- `<CodeBlock>`: A component to format and highlight the code snippets.
