@@ -1,0 +1,105 @@
+---
+title: "Advanced Dart Concepts: Generics, Reflection, Isolates, Extension Methods"
+description: "Learn about advanced Dart concepts including Generics, Reflection and Metadata, Isolates for concurrent programming, and Extension Methods with examples."
+keywords: ["Dart", "Generics", "Reflection", "Metadata", "Isolates", "Extension Methods", "Advanced Concepts", "Programming"]
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import TutorialLayout from '@theme/TutorialLayout';
+
+<TutorialLayout>
+
+# Advanced Dart Concepts: Generics, Reflection, Isolates, Extension Methods
+
+In this tutorial, you'll learn about advanced Dart concepts including Generics, Reflection and Metadata, Isolates for concurrent programming, and Extension Methods.
+
+## Generics
+
+Generics allow you to write code that works with different data types in a type-safe manner.
+
+### Creating Generic Classes
+
+You can create generic classes in Dart by specifying type parameters.
+
+```dart
+class Box<T> {
+  T value;
+  Box(this.value);
+}
+
+void main() {
+  var box = Box<int>(10);
+  print(box.value); // Output: 10
+}
+```
+
+## Reflection and Metadata
+
+Reflection allows you to inspect and manipulate the structure of your Dart code at runtime.
+
+### Using Reflection
+
+Dart provides a `reflect` library for reflection capabilities.
+
+```dart
+import 'dart:mirrors';
+
+class MyClass {
+  void myMethod() {
+    print('Hello from myMethod');
+  }
+}
+
+void main() {
+  var instance = MyClass();
+  var mirror = reflect(instance);
+  mirror.invoke(Symbol('myMethod'), []);
+}
+```
+
+## Isolates for Concurrent Programming
+
+Isolates are Dart's solution for concurrent programming, allowing you to run code in parallel.
+
+### Creating Isolates
+
+You can create isolates using the `Isolate.spawn` function.
+
+```dart
+import 'dart:isolate';
+
+void isolateFunction() {
+  print('Isolate is running');
+}
+
+void main() {
+  Isolate.spawn(isolateFunction, null);
+}
+```
+
+## Extension Methods
+
+Extension methods allow you to add functionality to existing classes without modifying their source code.
+
+### Creating Extension Methods
+
+Define extension methods using the `extension` keyword.
+
+```dart
+extension StringExtension on String {
+  String capitalize() {
+    return '${this[0].toUpperCase()}${this.substring(1)}';
+  }
+}
+
+void main() {
+  var name = 'john';
+  print(name.capitalize()); // Output: John
+}
+```
+
+## Conclusion
+
+In this tutorial, you learned about advanced Dart concepts including Generics, Reflection and Metadata, Isolates for concurrent programming, and Extension Methods. These concepts provide powerful tools for building flexible and efficient Dart applications.
+
+</TutorialLayout>
