@@ -1,0 +1,114 @@
+---
+title: "Flutter Tutorial: Introduction, UI Building, User Input, Navigation"
+description: "Learn Flutter development with an introduction to Flutter, building UI with widgets, handling user input and gestures, and navigation and routing."
+keywords: ["Flutter", "UI Development", "User Input", "Navigation", "Mobile App Development"]
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import TutorialLayout from '@theme/TutorialLayout';
+
+<TutorialLayout>
+
+# Flutter Tutorial: Introduction, UI Building, User Input, Navigation
+
+In this tutorial, you'll learn the basics of Flutter development, including an introduction to Flutter, building UI with widgets, handling user input and gestures, and navigation and routing in Flutter.
+
+## Introduction to Flutter
+
+Flutter is Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.
+
+### Installing Flutter
+
+To get started with Flutter, install the Flutter SDK by following the instructions on the [official Flutter website](https://flutter.dev/docs/get-started/install).
+
+### Setting up Your Development Environment
+
+After installing Flutter, set up your preferred code editor (such as Visual Studio Code or Android Studio) with the Flutter and Dart plugins.
+
+## Building UI with Flutter Widgets
+
+Flutter uses a reactive-style framework, where you can build flexible and expressive UIs using a wide variety of pre-built widgets.
+
+### Creating a Simple UI
+
+Here's an example of building a simple UI with Flutter:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter Tutorial'),
+        ),
+        body: Center(
+          child: Text('Hello, Flutter!'),
+        ),
+      ),
+    );
+  }
+}
+```
+
+## Handling User Input and Gestures
+
+Flutter provides built-in widgets and APIs for handling user input, such as tapping, dragging, and typing.
+
+### Handling Taps
+
+You can handle taps on widgets using the `GestureDetector` widget.
+
+```dart
+GestureDetector(
+  onTap: () {
+    // Handle tap
+  },
+  child: Container(
+    color: Colors.blue,
+    width: 100,
+    height: 100,
+    child: Center(
+      child: Text('Tap me'),
+    ),
+  ),
+)
+```
+
+## Navigation and Routing in Flutter
+
+Navigation and routing are essential for building multi-page applications in Flutter.
+
+### Navigating to a New Screen
+
+You can navigate to a new screen using the `Navigator` class and `MaterialPageRoute`.
+
+```dart
+Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => SecondScreen()),
+);
+```
+
+### Passing Data Between Screens
+
+You can pass data between screens by providing arguments to the `MaterialPageRoute` constructor.
+
+```dart
+Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => SecondScreen(data: 'Hello')),
+);
+```
+
+## Conclusion
+
+In this tutorial, you got an introduction to Flutter, learned how to build UI with widgets, handle user input and gestures, and navigate between screens. Flutter's rich set of features makes it a powerful framework for developing cross-platform applications.
+
+</TutorialLayout>
