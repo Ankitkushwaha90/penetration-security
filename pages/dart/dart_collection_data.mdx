@@ -1,0 +1,165 @@
+---
+title: "Dart Collections: Lists, Maps, and Sets"
+description: "Learn about Dart collections including Lists, Maps, and Sets with examples. Understand how to create, manipulate, and utilize these collections in Dart programming."
+keywords: ["Dart", "Collections", "Lists", "Maps", "Sets", "Programming"]
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import TutorialLayout from '@theme/TutorialLayout';
+
+<TutorialLayout>
+
+# Dart Collections: Lists, Maps, and Sets
+
+In this tutorial, you'll learn about Dart collections including Lists, Maps, and Sets. You will understand how to create, manipulate, and utilize these collections in Dart programming.
+
+## Lists
+
+A List is an ordered collection of items. Lists in Dart are similar to arrays in other programming languages.
+
+### Creating a List
+
+
+void main() {
+  List<String> fruits = ['Apple', 'Banana', 'Mango'];
+  print(fruits); // Output: [Apple, Banana, Mango]
+}
+
+
+### Adding Items to a List
+
+
+void main() {
+  List<String> fruits = ['Apple', 'Banana', 'Mango'];
+  fruits.add('Orange');
+  print(fruits); // Output: [Apple, Banana, Mango, Orange]
+}
+
+
+### Removing Items from a List
+
+
+void main() {
+  List<String> fruits = ['Apple', 'Banana', 'Mango'];
+  fruits.remove('Banana');
+  print(fruits); // Output: [Apple, Mango]
+}
+
+
+### Accessing List Items
+
+
+void main() {
+  List<String> fruits = ['Apple', 'Banana', 'Mango'];
+  print(fruits[0]); // Output: Apple
+  print(fruits.length); // Output: 3
+}
+
+
+## Maps
+
+A Map is a collection of key-value pairs. Each key in a Map is unique.
+
+### Creating a Map
+
+
+void main() {
+  Map<String, String> capitals = {
+    'USA': 'Washington, D.C.',
+    'France': 'Paris',
+    'Japan': 'Tokyo'
+  };
+  print(capitals); // Output: {USA: Washington, D.C., France: Paris, Japan: Tokyo}
+}
+
+
+### Adding Items to a Map
+
+
+void main() {
+  Map<String, String> capitals = {
+    'USA': 'Washington, D.C.',
+    'France': 'Paris'
+  };
+  capitals['Japan'] = 'Tokyo';
+  print(capitals); // Output: {USA: Washington, D.C., France: Paris, Japan: Tokyo}
+}
+
+
+### Removing Items from a Map
+
+
+void main() {
+  Map<String, String> capitals = {
+    'USA': 'Washington, D.C.',
+    'France': 'Paris',
+    'Japan': 'Tokyo'
+  };
+  capitals.remove('France');
+  print(capitals); // Output: {USA: Washington, D.C., Japan: Tokyo}
+}
+
+
+### Accessing Map Items
+
+
+void main() {
+  Map<String, String> capitals = {
+    'USA': 'Washington, D.C.',
+    'France': 'Paris',
+    'Japan': 'Tokyo'
+  };
+  print(capitals['USA']); // Output: Washington, D.C.
+  print(capitals.keys); // Output: (USA, France, Japan)
+  print(capitals.values); // Output: (Washington, D.C., Paris, Tokyo)
+}
+
+
+## Sets
+
+A Set is an unordered collection of unique items.
+
+### Creating a Set
+
+
+void main() {
+  Set<String> fruits = {'Apple', 'Banana', 'Mango'};
+  print(fruits); // Output: {Apple, Banana, Mango}
+}
+
+
+### Adding Items to a Set
+
+
+void main() {
+  Set<String> fruits = {'Apple', 'Banana', 'Mango'};
+  fruits.add('Orange');
+  print(fruits); // Output: {Apple, Banana, Mango, Orange}
+}
+
+
+### Removing Items from a Set
+
+
+void main() {
+  Set<String> fruits = {'Apple', 'Banana', 'Mango'};
+  fruits.remove('Banana');
+  print(fruits); // Output: {Apple, Mango}
+}
+
+
+### Checking for Item Existence
+
+
+void main() {
+  Set<String> fruits = {'Apple', 'Banana', 'Mango'};
+  print(fruits.contains('Apple')); // Output: true
+  print(fruits.contains('Orange')); // Output: false
+}
+
+
+## Conclusion
+
+In this tutorial, you learned about Dart collections, including Lists, Maps, and Sets. These collections are essential for managing groups of related data and provide powerful methods to manipulate and access the data efficiently.
+
+</TutorialLayout>
