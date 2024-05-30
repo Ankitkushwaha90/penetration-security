@@ -1,0 +1,110 @@
+---
+title: "Dart Libraries: Using Built-in Libraries, Creating Custom Libraries, and Dependency Management with Pub"
+description: "Learn how to use built-in libraries, create and use custom libraries, and manage dependencies with Pub in Dart with examples."
+keywords: ["Dart", "Libraries", "Built-in Libraries", "Custom Libraries", "Pub", "Dependency Management", "Programming"]
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import TutorialLayout from '@theme/TutorialLayout';
+
+<TutorialLayout>
+
+# Dart Libraries: Using Built-in Libraries, Creating Custom Libraries, and Dependency Management with Pub
+
+In this tutorial, you'll learn how to use built-in libraries, create and use custom libraries, and manage dependencies with Pub in Dart with examples.
+
+## Using Built-in Libraries
+
+Dart provides a rich set of built-in libraries for various tasks such as math operations, file I/O, and more.
+
+### Importing Built-in Libraries
+
+You can import a built-in library using the `import` keyword.
+
+```dart
+import 'dart:math';
+
+void main() {
+  var random = Random();
+  print(random.nextInt(100)); // Output: A random number between 0 and 99
+}
+```
+
+## Creating and Using Custom Libraries
+
+You can create your own custom libraries to encapsulate and reuse code.
+
+### Creating a Custom Library
+
+1. Create a Dart file and define a library using the `library` keyword.
+2. Export the necessary parts using the `export` keyword.
+
+`lib/my_library.dart`
+```dart
+library my_library;
+
+void greet(String name) {
+  print('Hello, \$name!');
+}
+```
+
+### Using a Custom Library
+
+1. Import the custom library in another Dart file.
+
+`main.dart`
+```dart
+import 'lib/my_library.dart';
+
+void main() {
+  greet('Alice'); // Output: Hello, Alice!
+}
+```
+
+## Dependency Management with Pub
+
+Pub is Dart's package manager, which helps you manage dependencies in your Dart projects.
+
+### Adding Dependencies
+
+1. Open the `pubspec.yaml` file and add the dependency under `dependencies`.
+
+`pubspec.yaml`
+```yaml
+name: my_project
+description: A new Dart project
+version: 1.0.0
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  http: ^0.13.3
+```
+
+2. Run `pub get` to install the dependencies.
+
+### Using Packages
+
+Import and use the package in your Dart code.
+
+`main.dart`
+```dart
+import 'package:http/http.dart' as http;
+
+void main() async {
+  var url = Uri.parse('https://jsonplaceholder.typicode.com/posts/1');
+  var response = await http.get(url);
+  if (response.statusCode == 200) {
+    print(response.body); // Output: JSON data from the API
+  } else {
+    print('Request failed with status: \${response.statusCode}.');
+  }
+}
+```
+
+## Conclusion
+
+In this tutorial, you learned how to use built-in libraries, create and use custom libraries, and manage dependencies with Pub in Dart. These skills are essential for organizing and managing code efficiently in Dart projects.
+
+</TutorialLayout>
