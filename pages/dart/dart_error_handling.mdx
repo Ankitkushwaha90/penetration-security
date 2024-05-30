@@ -1,0 +1,119 @@
+---
+title: "Dart Error Handling: Try-Catch Blocks and Throwing Exceptions"
+description: "Learn how to handle errors in Dart using try-catch blocks and how to throw exceptions with examples."
+keywords: ["Dart", "Error Handling", "Try-Catch Blocks", "Throwing Exceptions", "Programming"]
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import TutorialLayout from '@theme/TutorialLayout';
+
+<TutorialLayout>
+
+# Dart Error Handling: Try-Catch Blocks and Throwing Exceptions
+
+In this tutorial, you'll learn how to handle errors in Dart using try-catch blocks and how to throw exceptions with examples.
+
+## Try-Catch Blocks
+
+The try-catch block in Dart is used to handle exceptions that might occur during the execution of a program.
+
+### Basic Try-Catch
+
+You can catch exceptions using a try-catch block.
+
+```bash
+void main() {
+  try {
+    int result = 10 ~/ 0;
+    print(result);
+  } catch (e) {
+    print('An error occurred: \$e');
+  }
+}
+```
+
+### Catching Specific Exceptions
+
+You can catch specific exceptions by specifying the type of exception.
+
+```bash
+void main() {
+  try {
+    int result = 10 ~/ 0;
+    print(result);
+  } on IntegerDivisionByZeroException {
+    print('Cannot divide by zero');
+  }
+}
+```
+
+### Finally Block
+
+The `finally` block is used to execute code regardless of whether an exception is thrown or not.
+
+```bash
+void main() {
+  try {
+    int result = 10 ~/ 0;
+    print(result);
+  } catch (e) {
+    print('An error occurred: \$e');
+  } finally {
+    print('This is the finally block');
+  }
+}
+```
+
+## Throwing Exceptions
+
+You can throw exceptions using the `throw` keyword.
+
+### Throwing a Basic Exception
+
+```bash
+void checkAge(int age) {
+  if (age < 18) {
+    throw Exception('Age must be 18 or older');
+  }
+}
+
+void main() {
+  try {
+    checkAge(16);
+  } catch (e) {
+    print('Caught an exception: \$e');
+  }
+}
+```
+
+### Creating Custom Exceptions
+
+You can create custom exceptions by extending the `Exception` class.
+
+```bash
+class AgeException implements Exception {
+  String errorMessage() {
+    return 'Age must be 18 or older';
+  }
+}
+
+void checkAge(int age) {
+  if (age < 18) {
+    throw AgeException();
+  }
+}
+
+void main() {
+  try {
+    checkAge(16);
+  } catch (e) {
+    print('Caught an exception: \${(e as AgeException).errorMessage()}');
+  }
+}
+```
+
+## Conclusion
+
+In this tutorial, you learned how to handle errors in Dart using try-catch blocks and how to throw exceptions. Error handling is crucial for creating robust and reliable applications.
+
+</TutorialLayout>
