@@ -17,7 +17,7 @@ In this tutorial, you'll learn the principles of object-oriented programming (OO
 
 A class is a blueprint for creating objects (instances). An object is an instance of a class.
 
-
+```bash
 class Person {
   String name;
   int age;
@@ -35,7 +35,7 @@ void main() {
   var person = Person('Alice', 30);
   person.display();
 }
-
+```
 
 ## Constructors
 
@@ -43,7 +43,7 @@ void main() {
 
 A default constructor is created automatically if no other constructors are defined.
 
-
+```bash
 class Animal {
   String name;
 
@@ -59,13 +59,13 @@ void main() {
   var animal = Animal('Lion');
   animal.display();
 }
-
+```
 
 ### Named Constructors
 
 Named constructors allow you to create multiple constructors for a class.
 
-
+```bash
 class Vehicle {
   String type;
 
@@ -89,13 +89,13 @@ void main() {
   car.display();
   bike.display();
 }
-
+```
 
 ## Inheritance
 
 Inheritance allows you to create a new class that reuses, extends, and modifies the behavior of another class.
 
-
+```bash
 class Animal {
   String name;
 
@@ -122,13 +122,13 @@ void main() {
   var dog = Dog('Buddy', 'Golden Retriever');
   dog.display();
 }
-
+```
 
 ## Polymorphism
 
 Polymorphism allows methods to do different things based on the object it is acting upon.
 
-
+```bash
 class Shape {
   void draw() {
     print('Drawing a shape');
@@ -156,7 +156,7 @@ void main() {
   shape = Square();
   shape.draw(); // Drawing a square
 }
-
+```
 
 ## Abstract Classes and Interfaces
 
@@ -164,7 +164,7 @@ void main() {
 
 Abstract classes cannot be instantiated and are used to define common behavior.
 
-
+```bash
 abstract class Animal {
   void makeSound(); // Abstract method
 }
@@ -180,13 +180,13 @@ void main() {
   var dog = Dog();
   dog.makeSound(); // Bark
 }
-
+```
 
 ### Interfaces
 
 In Dart, all classes implicitly define an interface. You can implement multiple interfaces by using the `implements` keyword.
 
-
+```bash
 class Printer {
   void printDocument() {
     print('Printing document...');
@@ -216,13 +216,13 @@ void main() {
   device.printDocument();
   device.scanDocument();
 }
-
+```
 
 ## Mixins
 
 Mixins are a way of reusing a class's code in multiple class hierarchies.
 
-
+```bash
 mixin Flyable {
   void fly() {
     print('Flying');
@@ -235,7 +235,7 @@ void main() {
   var bird = Bird();
   bird.fly(); // Flying
 }
-
+```
 
 ## Conclusion
 
