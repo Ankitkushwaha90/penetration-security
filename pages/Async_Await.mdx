@@ -1,0 +1,117 @@
+---
+title: "Dart Asynchronous Programming: Futures and Async-Await"
+description: "Learn how to handle asynchronous programming in Dart using Futures and the async-await syntax with examples."
+keywords: ["Dart", "Asynchronous Programming", "Futures", "Async-Await", "Programming"]
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import TutorialLayout from '@theme/TutorialLayout';
+
+<TutorialLayout>
+
+# Dart Asynchronous Programming: Futures and Async-Await
+
+In this tutorial, you'll learn how to handle asynchronous programming in Dart using Futures and the async-await syntax with examples.
+
+## Futures
+
+A `Future` represents a potential value or error that will be available at some time in the future.
+
+### Creating a Future
+
+You can create a Future using the `Future` constructor.
+
+<CodeBlock language="dart">
+{`
+void main() {
+  Future<String> fetchData() {
+    return Future.delayed(Duration(seconds: 2), () => 'Data loaded');
+  }
+
+  fetchData().then((data) {
+    print(data);
+  }).catchError((e) {
+    print('Error: \$e');
+  });
+}
+```
+
+## Async-Await
+
+The `async` and `await` keywords provide a way to work with asynchronous code that looks more like synchronous code.
+
+### Using Async-Await
+
+Use the `async` keyword to mark a function as asynchronous and the `await` keyword to wait for a future to complete.
+
+<CodeBlock language="dart">
+{`
+void main() async {
+  Future<String> fetchData() async {
+    await Future.delayed(Duration(seconds: 2));
+    return 'Data loaded';
+  }
+
+  try {
+    String data = await fetchData();
+    print(data);
+  } catch (e) {
+    print('Error: \$e');
+  }
+}
+```
+
+### Handling Errors with Async-Await
+
+You can use try-catch blocks to handle errors in asynchronous functions.
+
+<CodeBlock language="dart">
+{`
+void main() async {
+  Future<String> fetchData() async {
+    await Future.delayed(Duration(seconds: 2));
+    throw Exception('Failed to load data');
+  }
+
+  try {
+    String data = await fetchData();
+    print(data);
+  } catch (e) {
+    print('Caught an error: \$e');
+  }
+}
+```
+
+## Example: Fetching Data from a Network
+
+Here's an example of using async-await to fetch data from a network.
+
+```bash
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+Future<void> fetchData() async {
+  final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts/1'));
+
+  if (response.statusCode == 200) {
+    var data = jsonDecode(response.body);
+    print('Title: \${data['title']}');
+  } else {
+    throw Exception('Failed to load data');
+  }
+}
+
+void main() async {
+  try {
+    await fetchData();
+  } catch (e) {
+    print('Caught an error: \$e');
+  }
+}
+```
+
+## Conclusion
+
+In this tutorial, you learned how to handle asynchronous programming in Dart using Futures and the async-await syntax. These tools are essential for managing asynchronous operations in a clear and readable manner.
+
+</TutorialLayout>
