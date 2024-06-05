@@ -72,8 +72,7 @@ int[] copiedArray = Arrays.copyOf(numbers, numbers.length);
 
 If you're asking for an example of defining an array in Java within an object-oriented context, you can encapsulate the array within a class and define methods to interact with it. Here's a simple example:
 
-java
-Copy code
+```java
 public class MyArray {
     private int[] array; // The array encapsulated within the class
 
@@ -116,10 +115,10 @@ public class MyArray {
 
     // Other methods for array manipulation can be added here
 }
+```
 Then, you can use this class in your main program like this:
 
-java
-Copy code
+```java
 public class Main {
     public static void main(String[] args) {
         MyArray myArray = new MyArray(5); // Creating an instance of MyArray with size 5
@@ -130,7 +129,7 @@ public class Main {
         System.out.println("Value at index 1: " + myArray.get(1)); // Getting value at index 1
     }
 }
-
+```
 This approach encapsulates the array within a class and provides methods to interact with it, ensuring better encapsulation and reusability. You can further extend this class to include more functionalities or customize it according to your requirements.
 
 You
