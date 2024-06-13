@@ -1,0 +1,72 @@
+---
+title: "client to server information gathering"
+---
+# information gather from client to server using python code
+
+- server code
+```python 
+import socket
+
+# Server configuration
+HOST = '127.0.0.1'  # Server's IP address
+PORT = 12345        # Port to listen on
+
+# Create a socket object
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Bind the socket to the address
+server_socket.bind((HOST, PORT))
+
+# Listen for incoming connections
+server_socket.listen()
+
+print("Server is listening...")
+
+# Accept a client connection
+client_socket, client_address = server_socket.accept()
+print(f"Connection from {client_address} established.")
+
+# Receive data from the client
+client_data = client_socket.recv(1024).decode()
+
+# Print the received data
+print(f"Data received from client: {client_data}")
+
+# Close the connection
+client_socket.close()
+
+```
+
+- client code 
+```python 
+import socket
+import platform
+
+# Function to gather system information
+def gather_system_info():
+    system_info = f"Operating System: {platform.platform()}\n"
+    system_info += f"Machine: {platform.machine()}\n"
+    system_info += f"Processor: {platform.processor()}\n"
+    system_info += f"Python Version: {platform.python_version()}\n"
+    return system_info
+
+# Client configuration
+SERVER_HOST = '127.0.0.1'  # Server's IP address
+SERVER_PORT = 12345        # Port to connect to
+
+# Create a socket object
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Connect to the server
+client_socket.connect((SERVER_HOST, SERVER_PORT))
+
+# Gather system information
+system_info = gather_system_info()
+
+# Send system information to the server
+client_socket.send(system_info.encode())
+
+# Close the connection
+client_socket.close()
+
+```
