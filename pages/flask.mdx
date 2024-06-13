@@ -3,18 +3,16 @@ title: "flask tutorial"
 description: "tutorial backend"
 ---
 
-Creating a website using Flask involves setting up routes for different pages, rendering HTML templates, and serving static files. Below is a simple example of how to create a basic website with Flask:
+### Creating a website using Flask involves setting up routes for different pages, rendering HTML templates, and serving static files. Below is a simple example of how to create a basic website with Flask:
 
-Install Flask:
+- 1. Install Flask:
 If you haven't already, install Flask using pip:
-
-Copy code
+ 
 pip install flask
 Create a Flask application:
 Create a Python file for your Flask application, e.g., app.py, and import Flask:
 
-python
-Copy code
+- 2. python
 from flask import Flask
 
 app = Flask(__name__)
@@ -22,11 +20,11 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return 'Welcome to my website!'
-Define routes:
+```
+- 3. Define routes:
 Define routes for different pages of your website. Each route corresponds to a different URL. For example:
 
-python
-Copy code
+```python
 @app.route('/about')
 def about():
     return 'About page'
@@ -34,23 +32,24 @@ def about():
 @app.route('/contact')
 def contact():
     return 'Contact page'
-Render HTML templates:
+```
+- 4. Render HTML templates:
 Flask uses Jinja2 templating engine for rendering HTML templates. Create a folder named templates in your project directory and put your HTML templates there. Here's how you can render an HTML template:
 
-python
-Copy code
+```python
 from flask import render_template
 
 @app.route('/blog')
 def blog():
     return render_template('blog.html', title='My Blog', posts=[...])
-Serve static files:
+```
+- 5. Serve static files:
 You can serve static files such as CSS, JavaScript, and images using Flask's static folder. Create a folder named static in your project directory and put your static files there. For example:
 
 ```python
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 ```
-Run the Flask application:
+- 6. Run the Flask application:
 At the bottom of your app.py file, add:
 
 ```python
@@ -58,13 +57,13 @@ if __name__ == '__main__':
     //app.run(debug=True)
     app.run(host='127.0.0.1', port=5000)
 ```
-Run your Flask application:
+- 7. Run your Flask application:
 Open a terminal, navigate to the directory containing app.py, and run:
 
 ```cmd
 python app.py
 ```
-8. - Access your website:
+- 8. Access your website:
 Open a web browser and navigate to http://127.0.0.1:5000/ (by default) to see your website.
 
 Here's an example folder structure for your Flask project:
