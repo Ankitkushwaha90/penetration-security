@@ -1,0 +1,109 @@
+# Java Streams Tutorial
+
+In this tutorial, we will explore how to use Java Streams to process a list of integers. We'll cover filtering, sorting, mapping, and reducing elements in a list using the `Stream` API.
+
+## Example Code
+
+Here's the complete Java code we'll be discussing:
+
+<SyntaxHighlighter language="java" style={coy}>
+{`import java.util.*;
+import java.util.function.Predicate;
+
+public class Streamuse {
+    public static void main(String[] args){
+        List<Integer> nums = Arrays.asList(4, 5, 8, 7, 9, 1, 2, 6, 10);
+
+        // Using Predicate to filter odd numbers
+        Predicate<Integer> predi = n -> n % 2 == 1;
+
+        // Stream processing: filter, sort, map, and reduce
+        int result = nums.stream()
+            .filter(predi)
+            .sorted()
+            .map(n -> n * 2)
+            .reduce(0, (c, e) -> c + e);
+
+        System.out.println(result);
+    }
+}`}
+</SyntaxHighlighter>
+
+## Explanation
+
+### 1. Import Statements
+
+First, we import the necessary classes from the `java.util` package and the `Predicate` interface from the `java.util.function` package.
+
+```java
+import java.util.*;
+import java.util.function.Predicate;
+```
+### 2. Main Method and List Initialization
+We define the main method and initialize a list of integers using Arrays.asList().
+
+```java
+
+public class Streamuse {
+    public static void main(String[] args){
+        List<Integer> nums = Arrays.asList(4, 5, 8, 7, 9, 1, 2, 6, 10);
+    }
+}
+```
+### 3. Predicate Definition
+We define a Predicate to filter out odd numbers from the list. The Predicate is defined using a lambda expression.
+
+```java
+Predicate<Integer> predi = n -> n % 2 == 1;
+```
+### 4. Stream Processing
+ We use the Stream API to process the list. The operations are chained together to perform the following steps:
+
+- Filter: Keep only odd numbers.
+- Sort: Sort the filtered numbers in ascending order.
+- Map: Multiply each number by 2.
+- Reduce: Sum all the mapped numbers.
+  
+```java
+int result = nums.stream()
+    .filter(predi)
+    .sorted()
+    .map(n -> n * 2)
+    .reduce(0, (c, e) -> c + e);
+
+System.out.println(result);
+```
+### 5. Output
+- Finally, we print the result to the console.
+
+### Additional Examples
+- Here are some additional ways you can process streams:
+
+### Printing Each Element
+- To print each element after processing, you can use the forEach method.
+
+```java
+nums.stream()
+    .filter(n -> n % 2 == 1)
+    .sorted()
+    .map(n -> n * 2)
+    .forEach(n -> System.out.println(n));
+```
+### Counting Elements
+- To count the number of elements in the stream:
+
+```java
+long count = nums.stream().count();
+System.out.println(count);
+```
+### Intermediate Stream Variables
+- You can also create intermediate stream variables to see the results at each step:
+
+```java
+Stream<Integer> filteredData = nums.stream().filter(n -> n % 2 == 1);
+Stream<Integer> sortedData = filteredData.sorted();
+Stream<Integer> mappedData = sortedData.map(n -> n * 2);
+
+mappedData.forEach(n -> System.out.println(n));
+```
+This tutorial should give you a good understanding of how to use Java Streams to process collections in a functional and declarative way. Happy coding!
