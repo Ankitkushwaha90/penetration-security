@@ -56,12 +56,11 @@ There are three ways to add CSS to your HTML document:
 ### CSS Selectors
 Selectors are used to target HTML elements to apply styles. The most common types of selectors are:
 
-Element Selector: Targets all elements of a specific type.
-Class Selector: Targets elements with a specific class attribute.
-ID Selector: Targets a specific element with an ID.
-Example:
-css
-Copy code
+- **Element Selector**: Targets all elements of a specific type.
+- **Class Selector**: Targets elements with a specific class attribute.
+- **ID Selector**: Targets a specific element with an ID.
+### Example:
+```css
 /* Element Selector */
 p {
   color: green;
@@ -76,25 +75,26 @@ p {
 #unique-heading {
   font-size: 24px;
 }
+```
 <CodeBlock> ```html <h1 id="unique-heading">Hello, World!</h1> <p class="blue-text">This is a blue paragraph.</p> ``` </CodeBlock>
 CSS Properties
 CSS consists of property-value pairs that define specific style rules. Here are some common properties:
 
-Color: Sets the text color of an element.
-Font-size: Sets the size of the text.
-Background-color: Sets the background color of an element.
-Margin: Controls the space outside of an element.
-Padding: Controls the space inside an element's border.
-Example:
-css
-Copy code
+**Color** : Sets the text color of an element.
+**Font-size**: Sets the size of the text.
+**Background-color**: Sets the background color of an element.
+**Margin**: Controls the space outside of an element.
+**Padding**: Controls the space inside an element's border.
+### Example:
+```css
 body {
   background-color: #f0f0f0;
   font-size: 16px;
   margin: 0;
   padding: 20px;
 }
-CSS Box Model
+```
+### CSS Box Model
 Every HTML element is treated as a box, which consists of:
 
 Content: The actual content of the element.
