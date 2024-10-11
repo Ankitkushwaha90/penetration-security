@@ -1,0 +1,139 @@
+---
+title: "CSS Basics Tutorial"
+description: "Learn the basics of CSS for styling your web pages."
+---
+
+import Note from '../components/Note'
+import CodeBlock from '../components/CodeBlock'
+
+# CSS Basics
+
+In this tutorial, you'll learn the basics of CSS and how to apply styles to your HTML elements. CSS (Cascading Style Sheets) is used to define the look and feel of a website, from fonts and colors to layouts and animations.
+
+## What is CSS?
+
+CSS stands for Cascading Style Sheets. It controls how HTML elements are displayed. It helps separate the content (HTML) from the visual presentation of the content (CSS).
+
+<Note>
+CSS enables you to style elements globally or locally. Global styles apply to all elements, while local styles only apply to specific elements.
+</Note>
+
+## Adding CSS to HTML
+
+There are three ways to add CSS to your HTML document:
+
+1. **Inline CSS**: Add CSS directly to the HTML element.
+2. **Internal CSS**: Add CSS inside the `<style>` tag within the `<head>` of your HTML document.
+3. **External CSS**: Link an external CSS file to your HTML document.
+
+### Example of Inline CSS:
+
+```html
+<p style="color: red;">This is a red paragraph.</p>
+```
+### Example of Internal CSS:
+```html
+<head>
+  <style>
+    p {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <p>This paragraph will be blue.</p>
+</body>
+```
+### Example of External CSS:
+```html
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <p>This paragraph will follow the styles defined in the external CSS file.</p>
+</body>
+```
+### CSS Selectors
+Selectors are used to target HTML elements to apply styles. The most common types of selectors are:
+
+Element Selector: Targets all elements of a specific type.
+Class Selector: Targets elements with a specific class attribute.
+ID Selector: Targets a specific element with an ID.
+Example:
+css
+Copy code
+/* Element Selector */
+p {
+  color: green;
+}
+
+/* Class Selector */
+.blue-text {
+  color: blue;
+}
+
+/* ID Selector */
+#unique-heading {
+  font-size: 24px;
+}
+<CodeBlock> ```html <h1 id="unique-heading">Hello, World!</h1> <p class="blue-text">This is a blue paragraph.</p> ``` </CodeBlock>
+CSS Properties
+CSS consists of property-value pairs that define specific style rules. Here are some common properties:
+
+Color: Sets the text color of an element.
+Font-size: Sets the size of the text.
+Background-color: Sets the background color of an element.
+Margin: Controls the space outside of an element.
+Padding: Controls the space inside an element's border.
+Example:
+css
+Copy code
+body {
+  background-color: #f0f0f0;
+  font-size: 16px;
+  margin: 0;
+  padding: 20px;
+}
+CSS Box Model
+Every HTML element is treated as a box, which consists of:
+
+Content: The actual content of the element.
+Padding: Space between the content and the border.
+Border: The line surrounding the padding (optional).
+Margin: Space outside the border.
+<Note> Understanding the CSS box model is crucial for controlling the layout and spacing of elements. </Note>
+Example:
+css
+Copy code
+div {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 20px;
+}
+<CodeBlock> ```html <div>This is a box model example.</div> ``` </CodeBlock>
+Responsive Design with CSS
+Responsive design ensures that your website looks good on all devices. CSS helps with this through:
+
+Media Queries: Apply different styles based on screen size.
+Flexbox: A layout model that allows elements to be arranged dynamically within a container.
+Grid: A two-dimensional layout system for complex designs.
+Media Query Example:
+css
+Copy code
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+<Note> Media queries help make your design responsive by adapting the layout to different screen sizes. </Note>
+Conclusion
+CSS is a powerful tool for creating visually appealing web pages. By mastering the basics, you can enhance the look and functionality of your website.
+
+Make sure to experiment with different properties and selectors as you continue to explore CSS.
+
+<Note> Keep learning! CSS is the foundation of web design, and there's always more to discover. </Note> ```
+Key Components:
+Title & Meta: The title and description fields in the frontmatter define the page's metadata.
+Importing Components: Components like Note and CodeBlock can be imported to display special notes or code examples.
+Markdown + JSX: The content is written in a mix of Markdown and JSX, which can include React components.
