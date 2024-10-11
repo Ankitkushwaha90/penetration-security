@@ -1,0 +1,253 @@
+Here is a list of common DOM elements in HTML, along with example JavaScript code for creating, selecting, and manipulating each of them. This code demonstrates how to work with different types of HTML elements using JavaScript.
+
+### 1. Creating and Manipulating a <div> Element
+```html
+<div id="myDiv">This is a div element</div>
+```
+```javascript
+// Selecting the div element by ID
+const myDiv = document.getElementById("myDiv");
+
+// Changing the content of the div
+myDiv.innerHTML = "Updated div content";
+
+// Changing the style of the div
+myDiv.style.backgroundColor = "lightblue";
+```
+### 2. Working with a <p> (Paragraph) Element
+```html
+<p id="myParagraph">This is a paragraph.</p>
+```
+```javascript
+// Selecting the paragraph by ID
+const myParagraph = document.getElementById("myParagraph");
+
+// Changing the text content of the paragraph
+myParagraph.textContent = "Paragraph text has been changed.";
+
+// Changing the font size of the paragraph
+myParagraph.style.fontSize = "20px";
+```
+### 3. Creating and Appending an <h1> (Heading) Element
+```javascript
+// Creating a new h1 element
+const newHeading = document.createElement("h1");
+
+// Setting content for the heading
+newHeading.textContent = "This is a dynamic heading";
+
+// Appending the heading to the body of the document
+document.body.appendChild(newHeading);
+```
+### 4. Handling an <input> Element
+```html
+<input type="text" id="myInput" value="Enter text here">
+<button onclick="updateInput()">Change Input Value</button>
+```
+```javascript
+function updateInput() {
+  // Selecting the input element by ID
+  const myInput = document.getElementById("myInput");
+
+  // Changing the value of the input field
+  myInput.value = "New input value";
+}
+```
+### 5. Working with a <button> Element
+```html
+<button id="myButton">Click Me</button>
+```
+```javascript
+// Selecting the button element by ID
+const myButton = document.getElementById("myButton");
+
+// Adding an event listener to the button
+myButton.addEventListener("click", function() {
+  alert("Button clicked!");
+});
+```
+### 6. Handling a <select> Element (Dropdown)
+```html
+<select id="mySelect">
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+</select>
+```
+```javascript
+// Selecting the select element by ID
+const mySelect = document.getElementById("mySelect");
+
+// Getting the value of the selected option
+const selectedValue = mySelect.value;
+
+// Changing the selected option
+mySelect.value = "option2";
+```
+### 7. Creating and Appending a <ul> (Unordered List) and <li> (List Items)
+```javascript
+// Creating a new ul element
+const ul = document.createElement("ul");
+
+// Creating and appending list items
+for (let i = 1; i <= 3; i++) {
+  const li = document.createElement("li");
+  li.textContent = "List item " + i;
+  ul.appendChild(li);
+}
+```
+// Appending the list to the body of the document
+document.body.appendChild(ul);
+### 8. Working with an <img> (Image) Element
+```html
+<img id="myImage" src="image.jpg" alt="A beautiful view">
+```
+```javascript
+// Selecting the image element by ID
+const myImage = document.getElementById("myImage");
+
+// Changing the source of the image
+myImage.src = "new-image.jpg";
+
+// Changing the alt text of the image
+myImage.alt = "A new beautiful view";
+```
+### 9. Handling an <a> (Anchor Link) Element
+```html
+<a href="https://www.example.com" id="myLink">Visit Example</a>
+```
+```javascript
+// Selecting the link element by ID
+const myLink = document.getElementById("myLink");
+
+// Changing the href (URL) of the link
+myLink.href = "https://www.google.com";
+
+// Changing the link text
+myLink.textContent = "Visit Google";
+```
+### 10. Creating and Manipulating a <form> Element
+```html
+<form id="myForm">
+  <input type="text" name="username" placeholder="Enter your username">
+  <input type="submit" value="Submit">
+</form>
+```
+```javascript
+// Selecting the form element by ID
+const myForm = document.getElementById("myForm");
+
+// Adding an event listener to prevent form submission
+myForm.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the form from submitting
+  alert("Form submission prevented!");
+});
+```
+### 11. Working with an <ol> (Ordered List) Element
+```javascript
+
+// Creating a new ol element
+const ol = document.createElement("ol");
+
+// Adding list items
+for (let i = 1; i <= 3; i++) {
+  const li = document.createElement("li");
+  li.textContent = "Ordered item " + i;
+  ol.appendChild(li);
+}
+
+// Appending the ordered list to the body
+document.body.appendChild(ol);
+```
+### 12. Handling an <iframe> Element
+```html
+<iframe id="myIframe" src="https://www.example.com" width="300" height="200"></iframe>
+```
+```javascript
+// Selecting the iframe element by ID
+const myIframe = document.getElementById("myIframe");
+
+// Changing the source of the iframe
+myIframe.src = "https://www.google.com";
+
+// Changing the width and height of the iframe
+myIframe.width = "500";
+myIframe.height = "300";
+```
+### 13. Manipulating a <span> Element
+```html
+<span id="mySpan">This is a span.</span>
+```
+```javascript
+// Selecting the span element by ID
+const mySpan = document.getElementById("mySpan");
+
+// Changing the text inside the span
+mySpan.textContent = "Updated span content";
+
+// Changing the color of the span text
+mySpan.style.color = "red";
+```
+### 14. Working with an <audio> Element
+```html
+<audio id="myAudio" controls>
+  <source src="audio-file.mp3" type="audio/mpeg">
+</audio>
+```
+```javascript
+// Selecting the audio element by ID
+const myAudio = document.getElementById("myAudio");
+
+// Playing the audio
+myAudio.play();
+
+// Pausing the audio
+myAudio.pause();
+```
+### 15. Handling a <video> Element
+```html
+<video id="myVideo" width="320" height="240" controls>
+  <source src="video-file.mp4" type="video/mp4">
+</video>
+```
+```javascript
+// Selecting the video element by ID
+const myVideo = document.getElementById("myVideo");
+
+// Playing the video
+myVideo.play();
+
+// Pausing the video
+myVideo.pause();
+
+// Changing the video source
+myVideo.src = "new-video-file.mp4";
+```
+### 16. Working with a <table> Element
+```html
+<table id="myTable">
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+  </tr>
+  <tr>
+    <td>Row 1, Cell 1</td>
+    <td>Row 1, Cell 2</td>
+  </tr>
+</table>
+```
+```javascript
+// Selecting the table by ID
+const myTable = document.getElementById("myTable");
+
+// Adding a new row to the table
+const newRow = myTable.insertRow();
+
+// Adding cells to the new row
+const newCell1 = newRow.insertCell();
+newCell1.textContent = "New row, Cell 1";
+
+const newCell2 = newRow.insertCell();
+newCell2.textContent = "New row, Cell 2";
+```
+### Conclusion
+This is a comprehensive set of DOM elements and how you can manipulate them using JavaScript. The examples show how to select, modify, create, and append elements to the DOM dynamically.
