@@ -1,0 +1,154 @@
+CSS has a vast number of properties that you can use to style your HTML elements. Below is a categorized list of the most commonly used CSS properties with example code snippets for each. This list covers properties for layout, positioning, text, backgrounds, borders, and more.
+
+### 1. Box Model Properties
+These properties define the size and spacing of elements.
+
+```css
+/* Box Model Properties */
+width: 100px;               /* Sets the width of an element */
+height: 100px;              /* Sets the height of an element */
+padding: 10px;              /* Space inside the element, between content and border */
+margin: 20px;               /* Space outside the element, between border and surrounding elements */
+border: 1px solid black;    /* Border surrounding the element */
+box-sizing: border-box;     /* Includes padding and border in the element's total width/height */
+```
+### 2. Display & Visibility Properties
+These properties determine how elements are displayed on the page.
+
+```css
+/* Display & Visibility */
+display: block;             /* The element takes up the full width */
+display: inline;            /* The element takes up as much space as its content */
+display: flex;              /* Flexbox layout */
+display: grid;              /* Grid layout */
+visibility: hidden;         /* Hides the element, but still takes up space */
+opacity: 0.5;             /* Sets the opacity level of the element */
+```
+### 3. Positioning Properties
+These properties are used to control the positioning of elements.
+
+```css
+/* Positioning */
+position: relative;         /* Positioned relative to its normal position */
+position: absolute;         /* Positioned relative to the nearest positioned ancestor */
+position: fixed;            /* Positioned relative to the viewport (always stays in place) */
+position: sticky;           /* Positioned based on the user's scroll position */
+top: 10px;                  /* Moves the element 10px from the top */
+left: 20px;                 /* Moves the element 20px from the left */
+z-index: 1;                 /* Defines the stack order of an element */
+```
+### 4. Flexbox Layout Properties
+These properties control the layout of elements within a flex container.
+
+```css
+/* Flexbox */
+display: flex;              /* Enables Flexbox layout */
+flex-direction: row;        /* Aligns items in a row (default) */
+justify-content: center;    /* Centers items horizontally */
+align-items: center;        /* Centers items vertically */
+flex-wrap: wrap;            /* Allows flex items to wrap to the next line */
+flex-grow: 1;               /* Allows the flex item to grow */
+flex-shrink: 1;             /* Allows the flex item to shrink */
+```
+### 5. Grid Layout Properties
+These properties define the grid structure and layout of elements within a grid container.
+
+```css
+/* Grid Layout */
+display: grid;                      /* Enables Grid layout */
+grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+grid-template-rows: 200px 100px;    /* Defines row sizes */
+gap: 10px;                          /* Space between grid items */
+grid-area: header;                  /* Defines a grid area name */
+place-items: center;                /* Centers items horizontally and vertically */
+```
+### 6. Text Properties
+These properties define the appearance of text in elements.
+
+```css
+/* Text */
+color: #333;                        /* Text color */
+font-size: 16px;                    /* Text size */
+font-family: Arial, sans-serif;     /* Font family */
+font-weight: bold;                  /* Font weight */
+text-align: center;                 /* Aligns text horizontally */
+text-decoration: underline;         /* Adds an underline to the text */
+letter-spacing: 2px;                /* Space between characters */
+line-height: 1.5;                   /* Space between lines of text */
+text-transform: uppercase;          /* Transforms text to uppercase */
+```
+### 7. Background Properties
+These properties are used to set the background of an element.
+
+```css
+/* Background */
+background-color: #f0f0f0;          /* Background color */
+background-image: url('image.jpg'); /* Background image */
+background-size: cover;             /* Scales background image to cover the element */
+background-repeat: no-repeat;       /* Prevents the background image from repeating */
+background-position: center;        /* Centers the background image */
+```
+### 8. Border & Outline Properties
+These properties define the border and outline around an element.
+
+```css
+/* Border */
+border: 2px solid #000;             /* Defines the border style */
+border-radius: 10px;                /* Rounds the corners of an element */
+border-color: red;                  /* Sets the color of the border */
+outline: 2px dashed blue;           /* Outline outside the border */
+```
+### 9. List Properties
+These properties are used to style lists.
+
+```css
+/* Lists */
+list-style-type: disc;              /* Sets the bullet point style for lists */
+list-style-position: inside;        /* Positions bullet points inside the list items */
+```
+### 10. Animation & Transition Properties
+These properties are used to create animations and transitions for elements.
+
+```css
+/* Animation */
+animation-name: slideIn;            /* Name of the animation */
+animation-duration: 2s;             /* Duration of the animation */
+animation-timing-function: ease-in; /* Defines how the animation progresses */
+animation-iteration-count: infinite;/* Repeats the animation infinitely */
+
+/* Transition */
+transition: all 0.3s ease-in-out;   /* Transitions all properties over 0.3 seconds */
+```
+### 11. Transform Properties
+These properties are used to apply transformations to elements, like scaling or rotating.
+
+```css
+/* Transform */
+transform: rotate(45deg);           /* Rotates the element 45 degrees */
+transform: scale(1.2);              /* Scales the element to 120% of its size */
+transform: translateX(50px);        /* Moves the element 50px along the X-axis */
+```
+### 12. Miscellaneous Properties
+Some additional useful CSS properties.
+
+```css
+cursor: pointer;                    /* Changes the cursor when hovering over an element */
+overflow: hidden;                   /* Hides content that overflows the element */
+box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Adds a shadow to the element */
+filter: blur(5px);                  /* Blurs the content of the element */
+visibility: visible;                /* Makes the element visible */
+white-space: nowrap;                /* Prevents text from wrapping */
+```
+### 13. Media Queries
+Media queries are used for responsive design.
+
+```css
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;    /* Changes the background color on small screens */
+  }
+}
+```
+Conclusion
+This list includes many of the fundamental and commonly used CSS properties that you’ll work with to style your web pages. By understanding and using these properties effectively, you can create flexible, responsive, and visually appealing layouts.
