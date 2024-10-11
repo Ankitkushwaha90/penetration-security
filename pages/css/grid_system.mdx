@@ -70,7 +70,16 @@ You can explicitly place grid items in specific rows and columns using the follo
   grid-row: 1 / 2; /* Span one row */
 }
 ```
-<CodeBlock> ```html <div class="container"> <div class="item1">Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div> <div>Item 6</div> </div> ``` </CodeBlock>
+```html <div class="container"> 
+  <div class="item1">Item 1</div> 
+  <div>Item 2</div>
+  <div>Item 3</div> 
+  <div>Item 4</div> 
+  <div>Item 5</div> 
+  <div>Item 6</div> 
+</div> 
+``` 
+
 This places item1 across the first and second columns, spanning one row.
 
 ### Grid Lines
@@ -110,7 +119,15 @@ Example:
   grid-area: footer;
 }
 ```
-<CodeBlock> ```html <div class="container"> <div class="header">Header</div> <div class="sidebar">Sidebar</div> <div class="main">Main Content</div> <div class="footer">Footer</div> </div> ``` </CodeBlock>
+
+```html 
+<div class="container"> 
+  <div class="header">Header</div> 
+  <div class="sidebar">Sidebar</div> 
+  <div class="main">Main Content</div> 
+  <div class="footer">Footer</div> 
+</div> 
+``` 
 This creates a layout with a header at the top, a sidebar on the left, main content in the center, and a footer at the bottom.
 
 ### Responsive Grid Design
